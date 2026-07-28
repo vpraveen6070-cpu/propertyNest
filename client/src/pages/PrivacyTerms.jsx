@@ -9,7 +9,7 @@ export default function PrivacyTerms() {
         <section style={{ marginBottom: '30px' }}>
           <h2 style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'var(--primary)' }}>1. Data Protection & Privacy</h2>
           <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-            EstateNexus is committed to protecting your personal information. All user credentials, property enquiry messages, and financial data are encrypted using industry-standard protocols. We do not sell or lease user data to third-party marketing companies.
+            PropertyNest is committed to protecting your personal information. All user credentials, property enquiry messages, and financial data are encrypted using industry-standard protocols. We do not sell or lease user data to third-party marketing companies.
           </p>
         </section>
 
@@ -23,7 +23,7 @@ export default function PrivacyTerms() {
         <section>
           <h2 style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'var(--primary)' }}>3. Fair Housing & Anti-Discrimination</h2>
           <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-            EstateNexus strictly complies with equal opportunity fair housing laws. Discriminations based on race, religion, gender, family status, or national origin are strictly prohibited on this platform.
+            PropertyNest strictly complies with equal opportunity fair housing laws. Discriminations based on race, religion, gender, family status, or national origin are strictly prohibited on this platform.
           </p>
         </section>
       </div>

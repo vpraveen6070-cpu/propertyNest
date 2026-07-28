@@ -94,7 +94,7 @@ export default function Register() {
             <Building2 size={24} />
           </div>
           <h1 style={{ fontSize: '1.8rem', marginBottom: '6px', color: 'var(--ink)' }}>Create Your Account</h1>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '0.9rem', fontWeight: 500 }}>Join EstateNexus as a Buyer, Seller, or Certified Agent</p>
+          <p style={{ color: 'var(--ink-soft)', fontSize: '0.9rem', fontWeight: 500 }}>Join PropertyNest as a Buyer, Seller, or Certified Agent</p>
         </div>
 
         {error && (

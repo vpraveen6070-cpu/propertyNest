@@ -25,8 +25,8 @@ export default function Contact() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
               <div className="brand-logo-icon"><MapPin size={20} /></div>
               <div>
-                <strong>Global Headquarters</strong>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>500 Corporate Plaza, 12th Floor, New York, NY 10001</p>
+                <strong>National Headquarters</strong>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>BKC Corporate Plaza, 12th Floor, Mumbai, MH 400051</p>
               </div>
             </div>
 
@@ -34,7 +34,7 @@ export default function Contact() {
               <div className="brand-logo-icon"><Phone size={20} /></div>
               <div>
                 <strong>Support Hotline</strong>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>+1 (800) 555-ESTATE (3782)</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>+91 1800-555-NEST (6378)</p>
               </div>
             </div>
 
@@ -42,7 +42,7 @@ export default function Contact() {
               <div className="brand-logo-icon"><Mail size={20} /></div>
               <div>
                 <strong>Email Inquiries</strong>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>support@estatenexus.com</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>support@propertynest.com</p>
               </div>
             </div>
           </div>

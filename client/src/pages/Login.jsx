@@ -93,7 +93,7 @@ export default function Login() {
           <div className="brand-logo-icon" style={{ margin: '0 auto 12px', boxShadow: '0 8px 20px rgba(32, 79, 66, 0.35)' }}>
             <Building2 size={24} />
           </div>
-          <h1 style={{ fontSize: '1.8rem', marginBottom: '6px', color: 'var(--ink)' }}>Sign In To EstateNexus</h1>
+          <h1 style={{ fontSize: '1.8rem', marginBottom: '6px', color: 'var(--ink)' }}>Sign In To PropertyNest</h1>
           <p style={{ color: 'var(--ink-soft)', fontSize: '0.9rem', fontWeight: 500 }}>Access your property dashboard & saved listings</p>
         </div>
 

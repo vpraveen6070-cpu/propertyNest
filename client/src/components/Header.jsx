@@ -26,7 +26,7 @@ export default function Header() {
           <div className="brand-logo-icon">
             <Building2 size={22} />
           </div>
-          <span>Estate<span style={{ color: 'var(--primary)' }}>Nexus</span></span>
+          <span>Property<span style={{ color: 'var(--primary)' }}>Nest</span></span>
         </Link>
 
         {isAuthPage ? (

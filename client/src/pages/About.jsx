@@ -7,7 +7,7 @@ export default function About() {
       <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 60px' }}>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Redefining Modern Real Estate</h1>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.7 }}>
-          EstateNexus is the world’s premier real estate technology platform connecting luxury home buyers, verified property sellers, and certified estate agents through seamless digital experiences.
+          PropertyNest is India’s premier real estate technology platform connecting luxury home buyers, verified property sellers, and certified estate agents through seamless digital experiences.
         </p>
       </div>
 

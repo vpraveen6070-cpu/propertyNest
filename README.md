@@ -1,4 +1,4 @@
-# EstateNexus - Real Estate Listing & Management Platform
+# PropertyNest - Real Estate Listing & Management Platform
 
 A modern, responsive, full-stack **Real Estate Listing Platform** built for buyers, property sellers, certified real estate agents, and platform administrators.
 

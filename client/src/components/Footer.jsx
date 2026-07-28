@@ -28,10 +28,10 @@ export default function Footer() {
               <div className="brand-logo-icon">
                 <Building2 size={22} />
               </div>
-              <span>Estate<span style={{ color: 'var(--primary)' }}>Nexus</span></span>
+              <span>Property<span style={{ color: 'var(--primary)' }}>Nest</span></span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '20px' }}>
-              Premier luxury & commercial real estate marketplace. Discover dream homes, verified properties, and expert agents worldwide.
+              Premier luxury & commercial real estate marketplace. Discover dream homes, verified properties, and expert agents across India.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
               <a href="#" className="fav-btn" style={{ position: 'relative', top: 0, right: 0 }}><Facebook size={16} /></a>
@@ -45,11 +45,11 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: '1.05rem', marginBottom: '16px' }}>Popular Locations</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-              <li><Link to="/properties?city=Malibu" className="nav-link">Malibu, CA</Link></li>
-              <li><Link to="/properties?city=New+York" className="nav-link">New York, NY</Link></li>
-              <li><Link to="/properties?city=San+Francisco" className="nav-link">San Francisco, CA</Link></li>
-              <li><Link to="/properties?city=Miami" className="nav-link">Miami, FL</Link></li>
-              <li><Link to="/properties?city=Austin" className="nav-link">Austin, TX</Link></li>
+              <li><Link to="/properties?city=Mumbai" className="nav-link">Mumbai, MH</Link></li>
+              <li><Link to="/properties?city=Bengaluru" className="nav-link">Bengaluru, KA</Link></li>
+              <li><Link to="/properties?city=New+Delhi" className="nav-link">New Delhi, DL</Link></li>
+              <li><Link to="/properties?city=Hyderabad" className="nav-link">Hyderabad, TS</Link></li>
+              <li><Link to="/properties?city=Goa" className="nav-link">Goa</Link></li>
             </ul>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
               <li><Link to="/properties" className="nav-link">Browse All Listings</Link></li>
               <li><Link to="/agents" className="nav-link">Meet Our Agents</Link></li>
-              <li><Link to="/about" className="nav-link">About EstateNexus</Link></li>
+              <li><Link to="/about" className="nav-link">About PropertyNest</Link></li>
               <li><Link to="/contact" className="nav-link">Contact Support</Link></li>
               <li><Link to="/privacy-terms" className="nav-link">Privacy Policy & Terms</Link></li>
             </ul>
@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} EstateNexus Real Estate Platform. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} PropertyNest Real Estate Platform. All rights reserved.</p>
           <div style={{ display: 'flex', gap: '20px' }}>
             <Link to="/privacy-terms" className="nav-link">Privacy Policy</Link>
             <Link to="/privacy-terms" className="nav-link">Terms of Service</Link>
