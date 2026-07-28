@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Bed, Bath, Maximize, MapPin, Heart } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { toggleSavedFavourite, isPropertySaved } from '../data/mockProperties';
 
 export default function PropertyCard({ property, isSaved: initialSaved, onToggleSave }) {
   const { user } = useAuth();
-  const [isSaved, setIsSaved] = useState(initialSaved || false);
+  const [isSaved, setIsSaved] = useState(() => initialSaved ?? isPropertySaved(property.id));
 
   const handleSaveClick = (e) => {
     e.preventDefault();
@@ -21,10 +22,19 @@ export default function PropertyCard({ property, isSaved: initialSaved, onToggle
         'Authorization': `Bearer ${localStorage.getItem('estate_token')}`
       }
     })
-    .then(res => res.json())
+    .then(res => {
+      const ct = res.headers.get('content-type');
+      if (res.ok && ct && ct.includes('application/json')) return res.json();
+      throw new Error('Not JSON');
+    })
     .then(data => {
       setIsSaved(data.saved);
       if (onToggleSave) onToggleSave(property.id, data.saved);
+    })
+    .catch(() => {
+      const newSavedStatus = toggleSavedFavourite(property.id);
+      setIsSaved(newSavedStatus);
+      if (onToggleSave) onToggleSave(property.id, newSavedStatus);
     });
   };
 

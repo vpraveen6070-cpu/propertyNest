@@ -8,7 +8,7 @@ import {
 import { useAuth } from '../context/AuthContext';
 import EnquiryModal from '../components/EnquiryModal';
 import PropertyCard from '../components/PropertyCard';
-import { getMockPropertyById, MOCK_PROPERTIES } from '../data/mockProperties';
+import { getMockPropertyById, MOCK_PROPERTIES, toggleSavedFavourite, isPropertySaved } from '../data/mockProperties';
 
 export default function PropertyDetails() {
   const { id } = useParams();
@@ -19,9 +19,10 @@ export default function PropertyDetails() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);
-  const [isSaved, setIsSaved] = useState(false);
+  const [isSaved, setIsSaved] = useState(() => isPropertySaved(id));
 
   useEffect(() => {
+    setIsSaved(isPropertySaved(id));
     setLoading(true);
     fetch(`/api/properties/${id}`)
       .then(res => {
@@ -82,8 +83,16 @@ export default function PropertyDetails() {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${localStorage.getItem('estate_token')}` }
     })
-    .then(r => r.json())
-    .then(data => setIsSaved(data.saved));
+    .then(r => {
+      const ct = r.headers.get('content-type');
+      if (r.ok && ct && ct.includes('application/json')) return r.json();
+      throw new Error('Not JSON');
+    })
+    .then(data => setIsSaved(data.saved))
+    .catch(() => {
+      const newSavedStatus = toggleSavedFavourite(id);
+      setIsSaved(newSavedStatus);
+    });
   };
 
   const handleShare = () => {

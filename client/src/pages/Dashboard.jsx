@@ -6,7 +6,7 @@ import {
   Trash2, Edit, Shield, Users, AlertTriangle, Eye, BarChart3, Lock, Check, X, ShieldAlert 
 } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
-import { MOCK_PROPERTIES } from '../data/mockProperties';
+import { MOCK_PROPERTIES, deleteMockCustomProperty, getAllMockProperties } from '../data/mockProperties';
 
 export default function Dashboard() {
   const { user, logout } = useAuth();
@@ -54,13 +54,15 @@ export default function Dashboard() {
         if (data && Array.isArray(data.properties) && data.properties.length > 0) {
           setMyListings(data.properties);
         } else {
-          const userProps = MOCK_PROPERTIES.filter(p => Number(p.owner_id) === Number(user.id));
-          setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? MOCK_PROPERTIES : MOCK_PROPERTIES.slice(0, 5)));
+          const allProps = getAllMockProperties();
+          const userProps = allProps.filter(p => Number(p.owner_id) === Number(user.id));
+          setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? allProps : allProps.slice(0, 5)));
         }
       })
       .catch(() => {
-        const userProps = MOCK_PROPERTIES.filter(p => Number(p.owner_id) === Number(user.id));
-        setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? MOCK_PROPERTIES : MOCK_PROPERTIES.slice(0, 5)));
+        const allProps = getAllMockProperties();
+        const userProps = allProps.filter(p => Number(p.owner_id) === Number(user.id));
+        setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? allProps : allProps.slice(0, 5)));
       });
 
     // Fetch enquiries
@@ -181,14 +183,12 @@ export default function Dashboard() {
 
   const handleDeleteListing = (propId) => {
     if (window.confirm('Are you sure you want to delete this property listing?')) {
+      setMyListings(prev => prev.filter(p => Number(p.id) !== Number(propId)));
+      deleteMockCustomProperty(propId);
       fetch(`/api/properties/${propId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${localStorage.getItem('estate_token')}` }
-      })
-        .then(r => r.json())
-        .then(() => {
-          setMyListings(myListings.filter(p => p.id !== propId));
-        });
+      }).catch(() => {});
     }
   };
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import PropertyCard from '../components/PropertyCard';
-import { MOCK_PROPERTIES } from '../data/mockProperties';
+import { getAllMockProperties, getSavedFavourites } from '../data/mockProperties';
 
 export default function Favourites() {
   const { user } = useAuth();
@@ -20,11 +20,19 @@ export default function Favourites() {
         throw new Error('Not JSON');
       })
       .then(data => {
-        setFavourites(Array.isArray(data) ? data : MOCK_PROPERTIES.slice(0, 3));
+        if (Array.isArray(data) && data.length > 0) {
+          setFavourites(data);
+        } else {
+          const savedIds = getSavedFavourites();
+          const allProps = getAllMockProperties();
+          setFavourites(allProps.filter(p => savedIds.includes(Number(p.id))));
+        }
         setLoading(false);
       })
       .catch(() => {
-        setFavourites(MOCK_PROPERTIES.slice(0, 3));
+        const savedIds = getSavedFavourites();
+        const allProps = getAllMockProperties();
+        setFavourites(allProps.filter(p => savedIds.includes(Number(p.id))));
         setLoading(false);
       });
     } else {
