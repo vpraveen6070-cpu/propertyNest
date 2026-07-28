@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { 
-  Building2, User, Heart, MessageSquare, PlusCircle, CheckCircle, Clock, 
-  Trash2, Edit, Shield, Users, AlertTriangle, Eye, BarChart3, Lock, Check, X, ShieldAlert 
+  Building2, User, Heart, PlusCircle, CheckCircle, Clock, 
+  Trash2, Edit, Shield, Users, AlertTriangle, Eye, BarChart3, Lock, Check, X, ShieldAlert, Sparkles, MapPin, ArrowRight 
 } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
 import { MOCK_PROPERTIES } from '../data/mockProperties';
@@ -15,7 +15,7 @@ export default function Dashboard() {
   const [searchParams, setSearchParams] = useSearchParams();
   
   const isSellerOrAdmin = user?.role === 'seller' || user?.role === 'admin';
-  const defaultTab = isSellerOrAdmin ? 'listings' : 'favourites';
+  const defaultTab = isSellerOrAdmin ? 'listings' : 'projects';
   const activeTab = searchParams.get('tab') || defaultTab;
 
   // Data states
@@ -309,6 +309,13 @@ export default function Dashboard() {
 
 
         <button 
+          className={`btn btn-sm ${activeTab === 'projects' ? 'btn-primary' : 'btn-secondary'}`}
+          onClick={() => setSearchParams({ tab: 'projects' })}
+        >
+          <Sparkles size={16} /> Explore Projects
+        </button>
+
+        <button 
           className={`btn btn-sm ${activeTab === 'favourites' ? 'btn-primary' : 'btn-secondary'}`}
           onClick={() => setSearchParams({ tab: 'favourites' })}
         >
@@ -376,32 +383,83 @@ export default function Dashboard() {
         </div>
       )}
 
-      {/* TAB 2: ENQUIRIES */}
-      {activeTab === 'enquiries' && (
+      {/* TAB 2: EXPLORE PROJECTS */}
+      {activeTab === 'projects' && (
         <div>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '20px' }}>Received Buyer Enquiries</h2>
-          {enquiries.length === 0 ? (
-            <div className="glass-panel" style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
-              No enquiries received yet.
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '12px' }}>
+            <div>
+              <h2 style={{ fontSize: '1.5rem', color: 'var(--ink)' }}>Explore Mega Projects Across India</h2>
+              <p style={{ color: 'var(--ink-soft)', fontSize: '0.9rem' }}>Discover RERA-approved luxury developments, beachfront villas, and golf estates</p>
             </div>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-              {enquiries.map(enq => (
-                <div key={enq.id} className="glass-panel" style={{ padding: '20px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                    <div>
-                      <strong style={{ fontSize: '1.05rem' }}>{enq.sender_name}</strong> ({enq.sender_email})
-                      <div style={{ fontSize: '0.85rem', color: 'var(--primary)' }}>Re: {enq.property_title}</div>
-                    </div>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{new Date(enq.created_at).toLocaleString()}</span>
-                  </div>
-                  <p style={{ color: 'var(--text-main)', fontSize: '0.95rem', background: 'rgba(255,255,255,0.03)', padding: '12px', borderRadius: 'var(--radius-sm)' }}>
-                    "{enq.message}"
-                  </p>
+            <Link to="/projects" className="btn btn-primary btn-sm" style={{ borderRadius: '20px' }}>
+              <span>View All Projects Page</span>
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))', gap: '24px' }}>
+            {[
+              {
+                id: 1,
+                name: "Prestige Golfshire Estate",
+                developer: "Prestige Group",
+                city: "Bengaluru",
+                location: "Devanahalli, Bengaluru",
+                price: "₹ 4.50 Cr - ₹ 12.00 Cr",
+                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+                status: "Ready to Move"
+              },
+              {
+                id: 2,
+                name: "DLF Cybercity Crest",
+                developer: "DLF India",
+                city: "Gurgaon",
+                location: "Sector 54, Gurgaon",
+                price: "₹ 3.50 Cr - ₹ 8.80 Cr",
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+                status: "Under Construction"
+              },
+              {
+                id: 3,
+                name: "Worli Oceanfront Towers",
+                developer: "Oberoi Realty",
+                city: "Mumbai",
+                location: "Worli Sea Face, Mumbai",
+                price: "₹ 6.50 Cr - ₹ 22.00 Cr",
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+                status: "New Launch"
+              },
+              {
+                id: 4,
+                name: "Jubilee Hills Imperial Heights",
+                developer: "Aparna Constructions",
+                city: "Hyderabad",
+                location: "Jubilee Hills, Hyderabad",
+                price: "₹ 5.20 Cr - ₹ 14.50 Cr",
+                image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80",
+                status: "Ready to Move"
+              }
+            ].map(proj => (
+              <div key={proj.id} className="glass-panel glass-panel-hover" style={{ borderRadius: '14px', overflow: 'hidden', background: 'var(--white)' }}>
+                <div style={{ position: 'relative', height: '180px' }}>
+                  <img src={proj.image} alt={proj.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <span className="badge badge-sale" style={{ position: 'absolute', top: '10px', left: '10px', fontSize: '0.75rem' }}>{proj.developer}</span>
+                  <span className="badge badge-rent" style={{ position: 'absolute', top: '10px', right: '10px', fontSize: '0.75rem' }}>📍 {proj.city}</span>
                 </div>
-              ))}
-            </div>
-          )}
+                <div style={{ padding: '18px' }}>
+                  <h3 style={{ fontSize: '1.15rem', color: 'var(--ink)', marginBottom: '4px' }}>{proj.name}</h3>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--ink-soft)', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <MapPin size={13} style={{ color: 'var(--forest)' }} /> {proj.location}
+                  </p>
+                  <div style={{ fontSize: '0.92rem', color: 'var(--forest)', fontWeight: 700, marginBottom: '14px' }}>{proj.price}</div>
+                  <Link to={`/properties?city=${encodeURIComponent(proj.city)}`} className="btn btn-secondary btn-sm" style={{ width: '100%', justifyContent: 'center' }}>
+                    <span>Explore Listings</span>
+                    <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 

@@ -11,6 +11,7 @@ export default function Header() {
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
 
   const isAuthPage = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/forgot-password';
+  const isDashboardPage = location.pathname === '/dashboard';
 
   const handleLogout = () => {
     logout();
@@ -52,13 +53,15 @@ export default function Header() {
           </Link>
         ) : (
           <>
-            <nav className="nav-links">
-              <Link to="/" className="nav-link">Home</Link>
-              <Link to="/properties" className="nav-link">Explore Properties</Link>
-              <Link to="/projects" className="nav-link">Explore Projects</Link>
-              <Link to="/about" className="nav-link">About Us</Link>
-              <Link to="/contact" className="nav-link">Contact</Link>
-            </nav>
+            {!isDashboardPage && (
+              <nav className="nav-links">
+                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/properties" className="nav-link">Explore Properties</Link>
+                <Link to="/projects" className="nav-link">Explore Projects</Link>
+                <Link to="/about" className="nav-link">About Us</Link>
+                <Link to="/contact" className="nav-link">Contact</Link>
+              </nav>
+            )}
 
             {/* Right User Controls */}
             <div className="user-menu">
