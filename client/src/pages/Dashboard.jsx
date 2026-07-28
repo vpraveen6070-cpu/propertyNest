@@ -54,12 +54,12 @@ export default function Dashboard() {
         if (data && Array.isArray(data.properties) && data.properties.length > 0) {
           setMyListings(data.properties);
         } else {
-          const userProps = MOCK_PROPERTIES.filter(p => p.owner_id === user.id);
+          const userProps = MOCK_PROPERTIES.filter(p => Number(p.owner_id) === Number(user.id));
           setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? MOCK_PROPERTIES : MOCK_PROPERTIES.slice(0, 5)));
         }
       })
       .catch(() => {
-        const userProps = MOCK_PROPERTIES.filter(p => p.owner_id === user.id);
+        const userProps = MOCK_PROPERTIES.filter(p => Number(p.owner_id) === Number(user.id));
         setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? MOCK_PROPERTIES : MOCK_PROPERTIES.slice(0, 5)));
       });
 
