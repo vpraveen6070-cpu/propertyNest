@@ -2,43 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import PropertyCard from '../components/PropertyCard';
-import { getAllMockProperties, getSavedFavourites } from '../data/mockProperties';
+import { MOCK_PROPERTIES } from '../data/mockProperties';
+import { getSavedFavouriteProperties } from '../utils/favourites';
 
 export default function Favourites() {
   const { user } = useAuth();
-  const [favourites, setFavourites] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [favourites, setFavourites] = useState(() => getSavedFavouriteProperties(MOCK_PROPERTIES));
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (user) {
-      fetch('/api/favourites', {
-        headers: { 'Authorization': `Bearer ${localStorage.getItem('estate_token')}` }
-      })
-      .then(r => {
-        const ct = r.headers.get('content-type');
-        if (r.ok && ct && ct.includes('application/json')) return r.json();
-        throw new Error('Not JSON');
-      })
-      .then(data => {
-        if (Array.isArray(data) && data.length > 0) {
-          setFavourites(data);
-        } else {
-          const savedIds = getSavedFavourites();
-          const allProps = getAllMockProperties();
-          setFavourites(allProps.filter(p => savedIds.includes(Number(p.id))));
-        }
-        setLoading(false);
-      })
-      .catch(() => {
-        const savedIds = getSavedFavourites();
-        const allProps = getAllMockProperties();
-        setFavourites(allProps.filter(p => savedIds.includes(Number(p.id))));
-        setLoading(false);
-      });
-    } else {
-      setLoading(false);
-    }
-  }, [user]);
+    const updateFavs = () => {
+      setFavourites(getSavedFavouriteProperties(MOCK_PROPERTIES));
+    };
+
+    updateFavs();
+    window.addEventListener('estate_favourites_updated', updateFavs);
+    return () => window.removeEventListener('estate_favourites_updated', updateFavs);
+  }, []);
 
   const handleToggleSave = (propId, saved) => {
     if (!saved) {

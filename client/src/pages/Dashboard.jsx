@@ -6,18 +6,22 @@ import {
   Trash2, Edit, Shield, Users, AlertTriangle, Eye, BarChart3, Lock, Check, X, ShieldAlert 
 } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
-import { MOCK_PROPERTIES, deleteMockCustomProperty, getAllMockProperties } from '../data/mockProperties';
+import { MOCK_PROPERTIES } from '../data/mockProperties';
+import { getSavedFavouriteProperties } from '../utils/favourites';
 
 export default function Dashboard() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const activeTab = searchParams.get('tab') || 'listings';
+  
+  const isSellerOrAdmin = user?.role === 'seller' || user?.role === 'admin';
+  const defaultTab = isSellerOrAdmin ? 'listings' : 'favourites';
+  const activeTab = searchParams.get('tab') || defaultTab;
 
   // Data states
   const [myListings, setMyListings] = useState([]);
   const [enquiries, setEnquiries] = useState([]);
-  const [favourites, setFavourites] = useState([]);
+  const [favourites, setFavourites] = useState(() => getSavedFavouriteProperties(MOCK_PROPERTIES));
   const [adminStats, setAdminStats] = useState(null);
   const [adminUsers, setAdminUsers] = useState([]);
   const [pendingProperties, setPendingProperties] = useState([]);
@@ -34,6 +38,14 @@ export default function Dashboard() {
   const [profileMsg, setProfileMsg] = useState('');
 
   useEffect(() => {
+    const handleFavUpdate = () => {
+      setFavourites(getSavedFavouriteProperties(MOCK_PROPERTIES));
+    };
+    window.addEventListener('estate_favourites_updated', handleFavUpdate);
+    return () => window.removeEventListener('estate_favourites_updated', handleFavUpdate);
+  }, []);
+
+  useEffect(() => {
     if (!user) {
       navigate('/login');
       return;
@@ -41,29 +53,29 @@ export default function Dashboard() {
 
     const token = localStorage.getItem('estate_token');
 
-    // Fetch user listings
-    fetch(`/api/properties?owner_id=${user.id}&status=`, {
-      headers: { 'Authorization': `Bearer ${token}` }
-    })
-      .then(r => {
-        const ct = r.headers.get('content-type');
-        if (r.ok && ct && ct.includes('application/json')) return r.json();
-        throw new Error('Not JSON');
+    // Fetch user listings if seller or admin
+    if (isSellerOrAdmin) {
+      fetch(`/api/properties?owner_id=${user.id}&status=`, {
+        headers: { 'Authorization': `Bearer ${token}` }
       })
-      .then(data => {
-        if (data && Array.isArray(data.properties) && data.properties.length > 0) {
-          setMyListings(data.properties);
-        } else {
-          const allProps = getAllMockProperties();
-          const userProps = allProps.filter(p => Number(p.owner_id) === Number(user.id));
-          setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? allProps : allProps.slice(0, 5)));
-        }
-      })
-      .catch(() => {
-        const allProps = getAllMockProperties();
-        const userProps = allProps.filter(p => Number(p.owner_id) === Number(user.id));
-        setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? allProps : allProps.slice(0, 5)));
-      });
+        .then(r => {
+          const ct = r.headers.get('content-type');
+          if (r.ok && ct && ct.includes('application/json')) return r.json();
+          throw new Error('Not JSON');
+        })
+        .then(data => {
+          if (data && Array.isArray(data.properties) && data.properties.length > 0) {
+            setMyListings(data.properties);
+          } else {
+            const userProps = MOCK_PROPERTIES.filter(p => Number(p.owner_id) === Number(user.id));
+            setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? MOCK_PROPERTIES : MOCK_PROPERTIES.slice(0, 5)));
+          }
+        })
+        .catch(() => {
+          const userProps = MOCK_PROPERTIES.filter(p => Number(p.owner_id) === Number(user.id));
+          setMyListings(userProps.length > 0 ? userProps : (user.role === 'admin' ? MOCK_PROPERTIES : MOCK_PROPERTIES.slice(0, 5)));
+        });
+    }
 
     // Fetch enquiries
     fetch('/api/enquiries', {
@@ -111,8 +123,11 @@ export default function Dashboard() {
         if (r.ok && ct && ct.includes('application/json')) return r.json();
         throw new Error('Not JSON');
       })
-      .then(data => setFavourites(Array.isArray(data) ? data : []))
-      .catch(() => setFavourites(MOCK_PROPERTIES.slice(0, 2)));
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) setFavourites(data);
+        else setFavourites(getSavedFavouriteProperties(MOCK_PROPERTIES));
+      })
+      .catch(() => setFavourites(getSavedFavouriteProperties(MOCK_PROPERTIES)));
 
     // If Admin, fetch admin panel data
     if (user.role === 'admin') {
@@ -161,7 +176,7 @@ export default function Dashboard() {
     }
 
     setLoading(false);
-  }, [user, navigate]);
+  }, [user, navigate, isSellerOrAdmin]);
 
   const handleUpdateProfile = (e) => {
     e.preventDefault();
@@ -183,12 +198,14 @@ export default function Dashboard() {
 
   const handleDeleteListing = (propId) => {
     if (window.confirm('Are you sure you want to delete this property listing?')) {
-      setMyListings(prev => prev.filter(p => Number(p.id) !== Number(propId)));
-      deleteMockCustomProperty(propId);
       fetch(`/api/properties/${propId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${localStorage.getItem('estate_token')}` }
-      }).catch(() => {});
+      })
+        .then(r => r.json())
+        .then(() => {
+          setMyListings(myListings.filter(p => p.id !== propId));
+        });
     }
   };
 
@@ -270,7 +287,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {(user.role === 'seller' || user.role === 'admin') && (
+        {isSellerOrAdmin && (
           <Link to="/properties/add" className="btn btn-primary">
             <PlusCircle size={18} />
             <span>List New Property</span>
@@ -280,12 +297,14 @@ export default function Dashboard() {
 
       {/* Tabs Navigation Bar */}
       <div style={{ display: 'flex', gap: '8px', borderBottom: '1px solid var(--border-color)', marginBottom: '28px', overflowX: 'auto', paddingBottom: '4px' }}>
-        <button 
-          className={`btn btn-sm ${activeTab === 'listings' ? 'btn-primary' : 'btn-secondary'}`}
-          onClick={() => setSearchParams({ tab: 'listings' })}
-        >
-          <Building2 size={16} /> My Properties ({myListings.length})
-        </button>
+        {isSellerOrAdmin && (
+          <button 
+            className={`btn btn-sm ${activeTab === 'listings' ? 'btn-primary' : 'btn-secondary'}`}
+            onClick={() => setSearchParams({ tab: 'listings' })}
+          >
+            <Building2 size={16} /> My Properties ({myListings.length})
+          </button>
+        )}
 
         <button 
           className={`btn btn-sm ${activeTab === 'enquiries' ? 'btn-primary' : 'btn-secondary'}`}

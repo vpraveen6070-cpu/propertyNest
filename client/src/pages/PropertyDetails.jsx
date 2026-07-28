@@ -8,7 +8,8 @@ import {
 import { useAuth } from '../context/AuthContext';
 import EnquiryModal from '../components/EnquiryModal';
 import PropertyCard from '../components/PropertyCard';
-import { getMockPropertyById, MOCK_PROPERTIES, toggleSavedFavourite, isPropertySaved } from '../data/mockProperties';
+import { getMockPropertyById, MOCK_PROPERTIES } from '../data/mockProperties';
+import { isPropertySaved, toggleSavedFavourite } from '../utils/favourites';
 
 export default function PropertyDetails() {
   const { id } = useParams();
@@ -23,6 +24,12 @@ export default function PropertyDetails() {
 
   useEffect(() => {
     setIsSaved(isPropertySaved(id));
+    const handleUpdate = () => setIsSaved(isPropertySaved(id));
+    window.addEventListener('estate_favourites_updated', handleUpdate);
+    return () => window.removeEventListener('estate_favourites_updated', handleUpdate);
+  }, [id]);
+
+  useEffect(() => {
     setLoading(true);
     fetch(`/api/properties/${id}`)
       .then(res => {
@@ -35,19 +42,6 @@ export default function PropertyDetails() {
       .then(data => {
         if (data && data.id) {
           setProperty(data);
-          if (user) {
-            fetch('/api/favourites', {
-              headers: { 'Authorization': `Bearer ${localStorage.getItem('estate_token')}` }
-            })
-            .then(r => r.json())
-            .then(favs => {
-              if (Array.isArray(favs)) {
-                setIsSaved(favs.some(f => f.id === data.id));
-              }
-            })
-            .catch(() => {});
-          }
-
           fetch(`/api/properties?property_type=${data.property_type}&limit=3`)
             .then(r => r.json())
             .then(sim => setSimilarProperties((sim.properties || []).filter(p => p.id !== data.id)))
@@ -79,20 +73,13 @@ export default function PropertyDetails() {
       alert('Please log in to save properties.');
       return;
     }
+    const nextState = toggleSavedFavourite(id);
+    setIsSaved(nextState);
+
     fetch(`/api/favourites/${id}`, {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${localStorage.getItem('estate_token')}` }
-    })
-    .then(r => {
-      const ct = r.headers.get('content-type');
-      if (r.ok && ct && ct.includes('application/json')) return r.json();
-      throw new Error('Not JSON');
-    })
-    .then(data => setIsSaved(data.saved))
-    .catch(() => {
-      const newSavedStatus = toggleSavedFavourite(id);
-      setIsSaved(newSavedStatus);
-    });
+    }).catch(() => {});
   };
 
   const handleShare = () => {

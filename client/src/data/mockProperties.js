@@ -3502,22 +3502,8 @@ export const MOCK_PROPERTIES = [
   }
 ];
 
-export function getMockCustomProperties() {
-  try {
-    const saved = localStorage.getItem('estate_custom_properties');
-    return saved ? JSON.parse(saved) : [];
-  } catch (e) {
-    return [];
-  }
-}
-
-export function getAllMockProperties() {
-  const customProps = getMockCustomProperties();
-  return [...customProps, ...MOCK_PROPERTIES];
-}
-
 export function filterMockProperties(filters = {}) {
-  let result = getAllMockProperties();
+  let result = [...MOCK_PROPERTIES];
 
   if (filters.city) {
     result = result.filter(p => p.city.toLowerCase().includes(filters.city.toLowerCase()));
@@ -3556,7 +3542,7 @@ export function filterMockProperties(filters = {}) {
   }
 
   if (filters.owner_id) {
-    result = result.filter(p => Number(p.owner_id) === Number(filters.owner_id));
+    result = result.filter(p => p.owner_id === Number(filters.owner_id));
   }
 
   const sort = filters.sort || 'newest';
@@ -3583,95 +3569,13 @@ export function filterMockProperties(filters = {}) {
 }
 
 export function getMockPropertyById(id) {
-  const allProps = getAllMockProperties();
-  return allProps.find(p => Number(p.id) === Number(id)) || null;
+  return MOCK_PROPERTIES.find(p => p.id === Number(id)) || null;
 }
 
 export function getMockTypeCounts() {
   const counts = {};
-  getAllMockProperties().forEach(p => {
+  MOCK_PROPERTIES.forEach(p => {
     counts[p.property_type] = (counts[p.property_type] || 0) + 1;
   });
   return counts;
-}
-
-export function getSavedFavourites() {
-  try {
-    const saved = localStorage.getItem('estate_favourites');
-    return saved ? JSON.parse(saved) : [1, 2];
-  } catch (e) {
-    return [1, 2];
-  }
-}
-
-export function toggleSavedFavourite(propId) {
-  const current = getSavedFavourites();
-  const numId = Number(propId);
-  const exists = current.includes(numId);
-  let updated;
-  if (exists) {
-    updated = current.filter(id => Number(id) !== numId);
-  } else {
-    updated = [...current, numId];
-  }
-  localStorage.setItem('estate_favourites', JSON.stringify(updated));
-  return !exists;
-}
-
-export function isPropertySaved(propId) {
-  const current = getSavedFavourites();
-  return current.includes(Number(propId));
-}
-
-export function saveMockCustomProperty(formData, isEdit, editId, user) {
-  const current = getMockCustomProperties();
-  if (isEdit && editId) {
-    const idx = current.findIndex(p => Number(p.id) === Number(editId));
-    if (idx !== -1) {
-      current[idx] = { ...current[idx], ...formData, price: Number(formData.price) };
-      localStorage.setItem('estate_custom_properties', JSON.stringify(current));
-      return current[idx];
-    }
-  }
-  const newProp = {
-    id: Date.now(),
-    title: formData.title,
-    ref_number: `PROP-${Math.floor(1000 + Math.random() * 9000)}`,
-    description: formData.description || 'Newly added property listing.',
-    property_type: formData.property_type || 'House',
-    listing_type: formData.listing_type || 'Sale',
-    price: Number(formData.price),
-    address: formData.address,
-    city: formData.city,
-    postcode: formData.postcode || '400001',
-    bedrooms: Number(formData.bedrooms || 2),
-    bathrooms: Number(formData.bathrooms || 2),
-    area_sqft: Number(formData.area_sqft || 1200),
-    furnishing: formData.furnishing || 'Furnished',
-    parking_spaces: Number(formData.parking_spaces || 1),
-    status: 'active',
-    is_featured: 1,
-    view_count: 12,
-    owner_id: user ? Number(user.id) : 4,
-    created_at: new Date().toISOString(),
-    featured_image: (formData.images && formData.images[0]) || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    images: formData.images && formData.images.length ? formData.images : ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'],
-    amenities: formData.amenities || ['Swimming Pool', '24/7 Security'],
-    owner: {
-      id: user ? Number(user.id) : 4,
-      name: user ? user.name : 'Rajesh Varma',
-      email: user ? user.email : 'john.seller@estate.com',
-      phone: '+91 98112 34567',
-      role: 'seller'
-    }
-  };
-  current.unshift(newProp);
-  localStorage.setItem('estate_custom_properties', JSON.stringify(current));
-  return newProp;
-}
-
-export function deleteMockCustomProperty(propId) {
-  const current = getMockCustomProperties();
-  const updated = current.filter(p => Number(p.id) !== Number(propId));
-  localStorage.setItem('estate_custom_properties', JSON.stringify(updated));
 }

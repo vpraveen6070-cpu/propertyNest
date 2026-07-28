@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Bed, Bath, Maximize, MapPin, Heart } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { toggleSavedFavourite, isPropertySaved } from '../data/mockProperties';
+import { isPropertySaved, toggleSavedFavourite } from '../utils/favourites';
 
 export default function PropertyCard({ property, isSaved: initialSaved, onToggleSave }) {
   const { user } = useAuth();
-  const [isSaved, setIsSaved] = useState(() => initialSaved ?? isPropertySaved(property.id));
+  const [isSaved, setIsSaved] = useState(() => {
+    if (typeof initialSaved === 'boolean') return initialSaved;
+    return isPropertySaved(property.id);
+  });
+
+  useEffect(() => {
+    const handleUpdate = () => {
+      setIsSaved(isPropertySaved(property.id));
+    };
+    window.addEventListener('estate_favourites_updated', handleUpdate);
+    return () => window.removeEventListener('estate_favourites_updated', handleUpdate);
+  }, [property.id]);
 
   const handleSaveClick = (e) => {
     e.preventDefault();
@@ -15,27 +26,18 @@ export default function PropertyCard({ property, isSaved: initialSaved, onToggle
       alert('Please log in to save favourite properties.');
       return;
     }
-    
+
+    const nextState = toggleSavedFavourite(property.id);
+    setIsSaved(nextState);
+    if (onToggleSave) onToggleSave(property.id, nextState);
+
+    // Also sync with backend if available
     fetch(`/api/favourites/${property.id}`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('estate_token')}`
       }
-    })
-    .then(res => {
-      const ct = res.headers.get('content-type');
-      if (res.ok && ct && ct.includes('application/json')) return res.json();
-      throw new Error('Not JSON');
-    })
-    .then(data => {
-      setIsSaved(data.saved);
-      if (onToggleSave) onToggleSave(property.id, data.saved);
-    })
-    .catch(() => {
-      const newSavedStatus = toggleSavedFavourite(property.id);
-      setIsSaved(newSavedStatus);
-      if (onToggleSave) onToggleSave(property.id, newSavedStatus);
-    });
+    }).catch(() => {});
   };
 
   const formatPrice = (val, type) => {
