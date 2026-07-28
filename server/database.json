@@ -1,0 +1,672 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "System Admin",
+      "email": "admin@estate.com",
+      "password": "$2a$10$sg8GbAq6.0DNstQ6/YZ9J.A6NOFyJJ19wn0Dp5duSGvphdnvgl7PK",
+      "role": "admin",
+      "phone": "+91 98765 01928",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "bio": "Platform Administrator & Content Moderator",
+      "status": "active",
+      "created_at": "2026-07-27T15:01:42.162Z"
+    },
+    {
+      "id": 2,
+      "name": "Priya Sharma",
+      "email": "sarah.agent@estate.com",
+      "password": "$2a$10$xu5yjKSnPPITnvcdbk.D2uHy49nYJsSZ.tb2.oiCHpy0BFEjuBUzG",
+      "role": "agent",
+      "phone": "+91 98201 23456",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+      "bio": "Top Luxury Real Estate Agent with over 10 years experience in prime seafront & urban properties.",
+      "status": "active",
+      "created_at": "2026-07-27T15:01:42.163Z"
+    },
+    {
+      "id": 3,
+      "name": "Vikramaditya Rao",
+      "email": "david.agent@estate.com",
+      "password": "$2a$10$xu5yjKSnPPITnvcdbk.D2uHy49nYJsSZ.tb2.oiCHpy0BFEjuBUzG",
+      "role": "agent",
+      "phone": "+91 98450 87654",
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80",
+      "bio": "Commercial & Residential Property Consultant specializing in modern high-rise penthouses & villas.",
+      "status": "active",
+      "created_at": "2026-07-27T15:01:42.163Z"
+    },
+    {
+      "id": 4,
+      "name": "Rajesh Varma",
+      "email": "john.seller@estate.com",
+      "password": "$2a$10$PopsoA.46qQk2zY/a/4yQuUUwsaCPbmiJ7tsFBiZB6lhaVeeFzS/.",
+      "role": "seller",
+      "phone": "+91 98112 34567",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      "bio": "Private homeowner selling premium eco-friendly suburban properties & villas.",
+      "status": "active",
+      "created_at": "2026-07-27T15:01:42.163Z"
+    },
+    {
+      "id": 5,
+      "name": "Ananya Sen",
+      "email": "buyer@estate.com",
+      "password": "$2a$10$9JTD9Ry3XVQ0Xlj.vWzNQ.rWJ6zAFaZrGumExrwEwaU4ea3lT/7Kq",
+      "role": "buyer",
+      "phone": "+91 98765 43210",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
+      "bio": "Active home buyer looking for modern luxury villas and city apartments.",
+      "status": "active",
+      "created_at": "2026-07-27T15:01:42.163Z"
+    }
+  ],
+  "agent_profiles": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "agency_name": "DLF Luxury Homes",
+      "license_number": "RERA-MH-400050-A1",
+      "experience_years": 10,
+      "specialization": "Luxury Seafront Estates & Villas in Mumbai & Goa",
+      "rating": 4.9,
+      "review_count": 28
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "agency_name": "Sobha Prestige Realty",
+      "license_number": "RERA-KA-560038-B2",
+      "experience_years": 12,
+      "specialization": "Gated Villa Communities & High-Rise Penthouses in Bengaluru & Hyderabad",
+      "rating": 4.8,
+      "review_count": 19
+    }
+  ],
+  "properties": [
+    {
+      "id": 1,
+      "title": "Seafront Luxury Villa in Bandra West",
+      "ref_number": "PROP-1001",
+      "description": "An architectural masterpiece featuring floor-to-ceiling glass walls, an infinity pool overlooking Arabian Sea vistas, smart lighting systems, private wine cellar, and master suite with panoramic sea terrace.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 245000000,
+      "address": "742 Carter Road, Bandra West",
+      "city": "Mumbai",
+      "postcode": "400050",
+      "latitude": 19.0596,
+      "longitude": 72.8295,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "area_sqft": 6200,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 459,
+      "owner_id": 2,
+      "created_at": "2026-07-01T00:00:00.000Z",
+      "updated_at": "2026-07-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Sky Penthouse Overlooking Cubbon Park",
+      "ref_number": "PROP-1002",
+      "description": "Stunning downtown penthouse with private rooftop deck, gourmet Italian kitchen, customized walk-in closets, and 360-degree views of Bengaluru skyline.",
+      "property_type": "Penthouse",
+      "listing_type": "Sale",
+      "price": 185000000,
+      "address": "100 UB City Boulevard, Lavelle Road",
+      "city": "Bengaluru",
+      "postcode": "560001",
+      "latitude": 12.9716,
+      "longitude": 77.5946,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 4800,
+      "construction_year": 2022,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 550,
+      "owner_id": 3,
+      "created_at": "2026-07-05T00:00:00.000Z",
+      "updated_at": "2026-07-05T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Independent Luxury Duplex Bungalow",
+      "ref_number": "PROP-1003",
+      "description": "Beautifully maintained duplex bungalow with open-concept living area, teakwood flooring, large backyard garden with patio, updated chef kitchen, and prime Jubilee Hills location.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 78500000,
+      "address": "Road No. 36, Jubilee Hills",
+      "city": "Hyderabad",
+      "postcode": "500033",
+      "latitude": 17.4319,
+      "longitude": 78.4072,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 3800,
+      "construction_year": 2019,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 224,
+      "owner_id": 4,
+      "created_at": "2026-07-10T00:00:00.000Z",
+      "updated_at": "2026-07-10T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Modern Executive Smart Apartment",
+      "ref_number": "PROP-1004",
+      "description": "Fully furnished minimalist 2BHK smart apartment ideal for IT & corporate professionals. Features built-in storage solutions, high-speed fiber internet, club access, and 24/7 concierge.",
+      "property_type": "Apartment",
+      "listing_type": "Rent",
+      "price": 65000,
+      "address": "Golf Course Extension Road, Sector 54",
+      "city": "Gurgaon",
+      "postcode": "122002",
+      "latitude": 28.4595,
+      "longitude": 77.0266,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area_sqft": 1250,
+      "construction_year": 2021,
+      "furnishing": "Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 149,
+      "owner_id": 2,
+      "created_at": "2026-07-12T00:00:00.000Z",
+      "updated_at": "2026-07-12T00:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Grade-A Corporate Office Space in BKC",
+      "ref_number": "PROP-1005",
+      "description": "Grade A corporate office floor with customizable conference rooms, private executive suites, high-speed server room, employee lounge, and dedicated basement parking.",
+      "property_type": "Office",
+      "listing_type": "Rent",
+      "price": 350000,
+      "address": "Bandra-Kurla Complex, Block G",
+      "city": "Mumbai",
+      "postcode": "400051",
+      "latitude": 19.0657,
+      "longitude": 72.8687,
+      "bedrooms": 0,
+      "bathrooms": 4,
+      "area_sqft": 5200,
+      "construction_year": 2020,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 6,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 100,
+      "owner_id": 3,
+      "created_at": "2026-07-15T00:00:00.000Z",
+      "updated_at": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Portuguese Heritage Villa with Private Pool",
+      "ref_number": "PROP-1006",
+      "description": "Nestled near Candolim Beach, this luxury eco-friendly smart villa features private pool, outdoor fire lounge, lush tropical gardens, and heated marble flooring.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 145000000,
+      "address": "Bambolim Beach Road, Candolim",
+      "city": "Goa",
+      "postcode": "403515",
+      "latitude": 15.5177,
+      "longitude": 73.7626,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 5100,
+      "construction_year": 2024,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 298,
+      "owner_id": 2,
+      "created_at": "2026-07-18T00:00:00.000Z",
+      "updated_at": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "DLF Aralias Ultra Luxury Golf Residence",
+      "ref_number": "PROP-1007",
+      "description": "Exclusive golf course facing 4BHK apartment with private lift lobby, central VRV air conditioning, expansive balcony with panoramic greens, and clubhouse access.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 120000000,
+      "address": "DLF Phase 5, Sector 42",
+      "city": "Gurgaon",
+      "postcode": "122009",
+      "latitude": 28.4412,
+      "longitude": 77.0984,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 4500,
+      "construction_year": 2022,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 387,
+      "owner_id": 3,
+      "created_at": "2026-07-20T00:00:00.000Z",
+      "updated_at": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "Ultra Luxury Villa in Koregaon Park",
+      "ref_number": "PROP-1008",
+      "description": "Modern 4BHK gated community villa featuring private terrace garden, solar power backup, Italian marble, private elevator, and smart security systems.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 92000000,
+      "address": "Lane 7, Koregaon Park",
+      "city": "Pune",
+      "postcode": "411001",
+      "latitude": 18.5362,
+      "longitude": 73.894,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 4100,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 310,
+      "owner_id": 4,
+      "created_at": "2026-07-22T00:00:00.000Z",
+      "updated_at": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "title": "Prime High-Street Retail Space in Khan Market",
+      "ref_number": "PROP-1009",
+      "description": "Corner retail showroom with massive glass facade, high footfall zone, emergency power backup, and modern air conditioning system.",
+      "property_type": "Office",
+      "listing_type": "Rent",
+      "price": 220000,
+      "address": "Khan Market Middle Lane",
+      "city": "New Delhi",
+      "postcode": "110003",
+      "latitude": 28.6,
+      "longitude": 77.2274,
+      "bedrooms": 0,
+      "bathrooms": 2,
+      "area_sqft": 1800,
+      "construction_year": 2021,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 195,
+      "owner_id": 2,
+      "created_at": "2026-07-24T00:00:00.000Z",
+      "updated_at": "2026-07-24T00:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "title": "Prestige Golfshire Hillside Villa",
+      "ref_number": "PROP-1010",
+      "description": "Scenic villa at the foot of Nandi Hills facing 18-hole championship golf course. Features infinity pool, private deck, solar power, and 24/7 security.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 89000000,
+      "address": "Nandi Hills Road",
+      "city": "Bengaluru",
+      "postcode": "562103",
+      "latitude": 13.3702,
+      "longitude": 77.6835,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 4200,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 275,
+      "owner_id": 3,
+      "created_at": "2026-07-25T00:00:00.000Z",
+      "updated_at": "2026-07-25T00:00:00.000Z"
+    }
+  ],
+  "property_images": [
+    {
+      "id": 1,
+      "property_id": 1,
+      "image_url": "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 2,
+      "property_id": 1,
+      "image_url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 3,
+      "property_id": 2,
+      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 4,
+      "property_id": 3,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 5,
+      "property_id": 4,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 6,
+      "property_id": 5,
+      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 7,
+      "property_id": 6,
+      "image_url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 8,
+      "property_id": 7,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 9,
+      "property_id": 8,
+      "image_url": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 10,
+      "property_id": 9,
+      "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 11,
+      "property_id": 10,
+      "image_url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    }
+  ],
+  "amenities": [
+    {
+      "id": 1,
+      "name": "Swimming Pool",
+      "icon": "Waves"
+    },
+    {
+      "id": 2,
+      "name": "Private Garden",
+      "icon": "Trees"
+    },
+    {
+      "id": 3,
+      "name": "Fitness Center / Gym",
+      "icon": "Dumbbell"
+    },
+    {
+      "id": 4,
+      "name": "24/7 RERA Security",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": 5,
+      "name": "VRV Air Conditioning",
+      "icon": "Wind"
+    },
+    {
+      "id": 6,
+      "name": "Solar Power Roof",
+      "icon": "Sun"
+    },
+    {
+      "id": 7,
+      "name": "Smart Home Automation",
+      "icon": "Cpu"
+    },
+    {
+      "id": 8,
+      "name": "High-Speed Fiber Wi-Fi",
+      "icon": "Wifi"
+    },
+    {
+      "id": 9,
+      "name": "Private High-Speed Elevator",
+      "icon": "ArrowUpCircle"
+    },
+    {
+      "id": 10,
+      "name": "Terrace BBQ & Lounge",
+      "icon": "Flame"
+    },
+    {
+      "id": 11,
+      "name": "100% Power Backup",
+      "icon": "Zap"
+    }
+  ],
+  "property_amenities": [
+    {
+      "property_id": 1,
+      "amenity_id": 1
+    },
+    {
+      "property_id": 1,
+      "amenity_id": 2
+    },
+    {
+      "property_id": 1,
+      "amenity_id": 4
+    },
+    {
+      "property_id": 1,
+      "amenity_id": 7
+    },
+    {
+      "property_id": 1,
+      "amenity_id": 11
+    },
+    {
+      "property_id": 2,
+      "amenity_id": 3
+    },
+    {
+      "property_id": 2,
+      "amenity_id": 4
+    },
+    {
+      "property_id": 2,
+      "amenity_id": 5
+    },
+    {
+      "property_id": 2,
+      "amenity_id": 8
+    },
+    {
+      "property_id": 2,
+      "amenity_id": 9
+    },
+    {
+      "property_id": 3,
+      "amenity_id": 2
+    },
+    {
+      "property_id": 3,
+      "amenity_id": 4
+    },
+    {
+      "property_id": 3,
+      "amenity_id": 8
+    },
+    {
+      "property_id": 3,
+      "amenity_id": 11
+    },
+    {
+      "property_id": 4,
+      "amenity_id": 3
+    },
+    {
+      "property_id": 4,
+      "amenity_id": 5
+    },
+    {
+      "property_id": 4,
+      "amenity_id": 8
+    },
+    {
+      "property_id": 4,
+      "amenity_id": 11
+    },
+    {
+      "property_id": 5,
+      "amenity_id": 4
+    },
+    {
+      "property_id": 5,
+      "amenity_id": 5
+    },
+    {
+      "property_id": 5,
+      "amenity_id": 8
+    },
+    {
+      "property_id": 5,
+      "amenity_id": 9
+    },
+    {
+      "property_id": 5,
+      "amenity_id": 11
+    },
+    {
+      "property_id": 6,
+      "amenity_id": 1
+    },
+    {
+      "property_id": 6,
+      "amenity_id": 2
+    },
+    {
+      "property_id": 6,
+      "amenity_id": 6
+    },
+    {
+      "property_id": 6,
+      "amenity_id": 7
+    },
+    {
+      "property_id": 7,
+      "amenity_id": 1
+    },
+    {
+      "property_id": 7,
+      "amenity_id": 3
+    },
+    {
+      "property_id": 7,
+      "amenity_id": 5
+    },
+    {
+      "property_id": 7,
+      "amenity_id": 9
+    },
+    {
+      "property_id": 8,
+      "amenity_id": 2
+    },
+    {
+      "property_id": 8,
+      "amenity_id": 6
+    },
+    {
+      "property_id": 8,
+      "amenity_id": 7
+    },
+    {
+      "property_id": 8,
+      "amenity_id": 9
+    },
+    {
+      "property_id": 9,
+      "amenity_id": 4
+    },
+    {
+      "property_id": 9,
+      "amenity_id": 5
+    },
+    {
+      "property_id": 9,
+      "amenity_id": 11
+    },
+    {
+      "property_id": 10,
+      "amenity_id": 1
+    },
+    {
+      "property_id": 10,
+      "amenity_id": 2
+    },
+    {
+      "property_id": 10,
+      "amenity_id": 6
+    },
+    {
+      "property_id": 10,
+      "amenity_id": 7
+    }
+  ],
+  "favourites": [
+    {
+      "id": 1,
+      "user_id": 5,
+      "property_id": 1,
+      "created_at": "2026-07-27T15:10:00.000Z"
+    },
+    {
+      "id": 2,
+      "user_id": 5,
+      "property_id": 2,
+      "created_at": "2026-07-27T15:12:00.000Z"
+    }
+  ],
+  "enquiries": [
+    {
+      "id": 1,
+      "property_id": 1,
+      "sender_name": "Ananya Sen",
+      "sender_email": "buyer@estate.com",
+      "sender_phone": "+91 98765 43210",
+      "message": "Hi, I am interested in property PROP-1001 (Seafront Luxury Villa in Bandra West). Please schedule a site visit.",
+      "status": "unread",
+      "created_at": "2026-07-27T15:15:00.000Z"
+    }
+  ],
+  "reviews": [],
+  "reports": [],
+  "notifications": []
+}
