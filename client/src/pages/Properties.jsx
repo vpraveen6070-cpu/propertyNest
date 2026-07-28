@@ -3,12 +3,151 @@ import { useSearchParams } from 'react-router-dom';
 import { Search, Filter, LayoutGrid, List, SlidersHorizontal, ArrowUpDown, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
 
+const DEFAULT_PROPERTIES = [
+  {
+    id: 1,
+    title: "Seafront Luxury Villa in Bandra West",
+    ref_number: "PROP-1001",
+    description: "An architectural masterpiece featuring floor-to-ceiling glass walls, an infinity pool overlooking Arabian Sea vistas.",
+    property_type: "Villa",
+    listing_type: "Sale",
+    price: 245000000,
+    address: "742 Carter Road, Bandra West",
+    city: "Mumbai",
+    postcode: "400050",
+    bedrooms: 5,
+    bathrooms: 6,
+    area_sqft: 6200,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 2,
+    title: "Sky Penthouse Overlooking Cubbon Park",
+    ref_number: "PROP-1002",
+    description: "Stunning downtown penthouse with private rooftop deck, gourmet Italian kitchen, customized walk-in closets.",
+    property_type: "Penthouse",
+    listing_type: "Sale",
+    price: 185000000,
+    address: "100 UB City Boulevard, Lavelle Road",
+    city: "Bengaluru",
+    postcode: "560001",
+    bedrooms: 4,
+    bathrooms: 5,
+    area_sqft: 4800,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 3,
+    title: "Independent Luxury Duplex Bungalow",
+    ref_number: "PROP-1003",
+    description: "Beautifully maintained duplex bungalow with open-concept living area, teakwood flooring, large backyard garden.",
+    property_type: "House",
+    listing_type: "Sale",
+    price: 78500000,
+    address: "Road No. 36, Jubilee Hills",
+    city: "Hyderabad",
+    postcode: "500033",
+    bedrooms: 4,
+    bathrooms: 4,
+    area_sqft: 3800,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 4,
+    title: "Modern Executive Smart Apartment",
+    ref_number: "PROP-1004",
+    description: "Fully furnished minimalist 2BHK smart apartment ideal for IT & corporate professionals.",
+    property_type: "Apartment",
+    listing_type: "Rent",
+    price: 65000,
+    address: "Golf Course Extension Road, Sector 54",
+    city: "Gurgaon",
+    postcode: "122002",
+    bedrooms: 2,
+    bathrooms: 2,
+    area_sqft: 1250,
+    is_featured: 0,
+    featured_image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 6,
+    title: "Portuguese Heritage Villa with Private Pool",
+    ref_number: "PROP-1006",
+    description: "Nestled near Candolim Beach, this luxury eco-friendly smart villa features private pool, outdoor fire lounge.",
+    property_type: "Villa",
+    listing_type: "Sale",
+    price: 145000000,
+    address: "Bambolim Beach Road, Candolim",
+    city: "Goa",
+    postcode: "403515",
+    bedrooms: 4,
+    bathrooms: 5,
+    area_sqft: 5100,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 7,
+    title: "DLF Aralias Ultra Luxury Golf Residence",
+    ref_number: "PROP-1007",
+    description: "Exclusive golf course facing 4BHK apartment with private lift lobby, central VRV air conditioning.",
+    property_type: "Apartment",
+    listing_type: "Sale",
+    price: 120000000,
+    address: "DLF Phase 5, Sector 42",
+    city: "Gurgaon",
+    postcode: "122009",
+    bedrooms: 4,
+    bathrooms: 4,
+    area_sqft: 4500,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 8,
+    title: "Ultra Luxury Villa in Koregaon Park",
+    ref_number: "PROP-1008",
+    description: "Modern 4BHK gated community villa featuring private terrace garden, solar power backup, Italian marble.",
+    property_type: "Villa",
+    listing_type: "Sale",
+    price: 92000000,
+    address: "Lane 7, Koregaon Park",
+    city: "Pune",
+    postcode: "411001",
+    bedrooms: 4,
+    bathrooms: 4,
+    area_sqft: 4100,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 10,
+    title: "Prestige Golfshire Hillside Villa",
+    ref_number: "PROP-1010",
+    description: "Scenic villa at the foot of Nandi Hills facing 18-hole championship golf course.",
+    property_type: "Villa",
+    listing_type: "Sale",
+    price: 89000000,
+    address: "Nandi Hills Road",
+    city: "Bengaluru",
+    postcode: "562103",
+    bedrooms: 4,
+    bathrooms: 4,
+    area_sqft: 4200,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"
+  }
+];
+
 export default function Properties() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [properties, setProperties] = useState([]);
-  const [totalCount, setTotalCount] = useState(0);
+  const [properties, setProperties] = useState(DEFAULT_PROPERTIES);
+  const [totalCount, setTotalCount] = useState(DEFAULT_PROPERTIES.length);
   const [totalPages, setTotalPages] = useState(1);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
@@ -52,11 +191,17 @@ export default function Properties() {
     query.set('limit', 9);
 
     fetch(`/api/properties?${query.toString()}`)
-      .then(res => res.ok ? res.json() : {})
+      .then(res => {
+        const ct = res.headers.get('content-type');
+        if (res.ok && ct && ct.includes('application/json')) return res.json();
+        throw new Error('Not JSON');
+      })
       .then(data => {
-        setProperties(data.properties || []);
-        setTotalCount(data.totalCount || 0);
-        setTotalPages(data.totalPages || 1);
+        if (data && Array.isArray(data.properties)) {
+          setProperties(data.properties);
+          setTotalCount(data.totalCount || data.properties.length);
+          setTotalPages(data.totalPages || 1);
+        }
         setLoading(false);
       })
       .catch(() => setLoading(false));

@@ -2,17 +2,55 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, Phone, Mail, Award, ArrowRight } from 'lucide-react';
 
+const DEFAULT_AGENTS = [
+  {
+    id: 2,
+    name: "Priya Sharma",
+    agency_name: "DLF Luxury Homes",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+    rating: 4.9,
+    review_count: 28,
+    bio: "Top Luxury Real Estate Agent with over 10 years experience in prime seafront & urban properties.",
+    active_listings_count: 4
+  },
+  {
+    id: 3,
+    name: "Vikramaditya Rao",
+    agency_name: "Sobha Prestige Realty",
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80",
+    rating: 4.8,
+    review_count: 19,
+    bio: "Commercial & Residential Property Consultant specializing in modern high-rise penthouses & villas.",
+    active_listings_count: 5
+  },
+  {
+    id: 4,
+    name: "Rajesh Varma",
+    agency_name: "Independent Realty Specialist",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+    rating: 4.9,
+    review_count: 14,
+    bio: "Private homeowner & estate developer selling premium eco-friendly suburban properties & villas.",
+    active_listings_count: 3
+  }
+];
+
 export default function Agents() {
-  const [agents, setAgents] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [agents, setAgents] = useState(DEFAULT_AGENTS);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch('/api/agents')
-      .then(res => res.json())
+      .then(res => {
+        const ct = res.headers.get('content-type');
+        if (res.ok && ct && ct.includes('application/json')) return res.json();
+        throw new Error('Not JSON');
+      })
       .then(data => {
-        setAgents(Array.isArray(data) ? data : []);
+        if (Array.isArray(data) && data.length > 0) setAgents(data);
         setLoading(false);
-      });
+      })
+      .catch(() => setLoading(false));
   }, []);
 
   return (

@@ -4,12 +4,147 @@ import { Search, MapPin, Building, DollarSign, ArrowRight, Star, ShieldCheck, Sp
 import PropertyCard from '../components/PropertyCard';
 import HeroFrameAnimation from '../components/HeroFrameAnimation';
 
+const INITIAL_FEATURED = [
+  {
+    id: 1,
+    title: "Seafront Luxury Villa in Bandra West",
+    ref_number: "PROP-1001",
+    description: "An architectural masterpiece featuring floor-to-ceiling glass walls, an infinity pool overlooking Arabian Sea vistas.",
+    property_type: "Villa",
+    listing_type: "Sale",
+    price: 245000000,
+    address: "742 Carter Road, Bandra West",
+    city: "Mumbai",
+    postcode: "400050",
+    bedrooms: 5,
+    bathrooms: 6,
+    area_sqft: 6200,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 2,
+    title: "Sky Penthouse Overlooking Cubbon Park",
+    ref_number: "PROP-1002",
+    description: "Stunning downtown penthouse with private rooftop deck, gourmet Italian kitchen, customized walk-in closets.",
+    property_type: "Penthouse",
+    listing_type: "Sale",
+    price: 185000000,
+    address: "100 UB City Boulevard, Lavelle Road",
+    city: "Bengaluru",
+    postcode: "560001",
+    bedrooms: 4,
+    bathrooms: 5,
+    area_sqft: 4800,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 3,
+    title: "Independent Luxury Duplex Bungalow",
+    ref_number: "PROP-1003",
+    description: "Beautifully maintained duplex bungalow with open-concept living area, teakwood flooring, large backyard garden.",
+    property_type: "House",
+    listing_type: "Sale",
+    price: 78500000,
+    address: "Road No. 36, Jubilee Hills",
+    city: "Hyderabad",
+    postcode: "500033",
+    bedrooms: 4,
+    bathrooms: 4,
+    area_sqft: 3800,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 6,
+    title: "Portuguese Heritage Villa with Private Pool",
+    ref_number: "PROP-1006",
+    description: "Nestled near Candolim Beach, this luxury eco-friendly smart villa features private pool, outdoor fire lounge.",
+    property_type: "Villa",
+    listing_type: "Sale",
+    price: 145000000,
+    address: "Bambolim Beach Road, Candolim",
+    city: "Goa",
+    postcode: "403515",
+    bedrooms: 4,
+    bathrooms: 5,
+    area_sqft: 5100,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 7,
+    title: "DLF Aralias Ultra Luxury Golf Residence",
+    ref_number: "PROP-1007",
+    description: "Exclusive golf course facing 4BHK apartment with private lift lobby, central VRV air conditioning.",
+    property_type: "Apartment",
+    listing_type: "Sale",
+    price: 120000000,
+    address: "DLF Phase 5, Sector 42",
+    city: "Gurgaon",
+    postcode: "122009",
+    bedrooms: 4,
+    bathrooms: 4,
+    area_sqft: 4500,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: 10,
+    title: "Prestige Golfshire Hillside Villa",
+    ref_number: "PROP-1010",
+    description: "Scenic villa at the foot of Nandi Hills facing 18-hole championship golf course.",
+    property_type: "Villa",
+    listing_type: "Sale",
+    price: 89000000,
+    address: "Nandi Hills Road",
+    city: "Bengaluru",
+    postcode: "562103",
+    bedrooms: 4,
+    bathrooms: 4,
+    area_sqft: 4200,
+    is_featured: 1,
+    featured_image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"
+  }
+];
+
+const INITIAL_AGENTS = [
+  {
+    id: 2,
+    name: "Priya Sharma",
+    agency_name: "DLF Luxury Homes",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+    rating: 4.9,
+    review_count: 28,
+    active_listings_count: 4
+  },
+  {
+    id: 3,
+    name: "Vikramaditya Rao",
+    agency_name: "Sobha Prestige Realty",
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80",
+    rating: 4.8,
+    review_count: 19,
+    active_listings_count: 5
+  },
+  {
+    id: 4,
+    name: "Rajesh Varma",
+    agency_name: "Independent Realty Specialist",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+    rating: 4.9,
+    review_count: 14,
+    active_listings_count: 3
+  }
+];
+
 export default function Home() {
   const navigate = useNavigate();
   const heroTrackRef = useRef(null);
-  const [featuredProperties, setFeaturedProperties] = useState([]);
-  const [recentProperties, setRecentProperties] = useState([]);
-  const [agents, setAgents] = useState([]);
+  const [featuredProperties, setFeaturedProperties] = useState(INITIAL_FEATURED);
+  const [recentProperties, setRecentProperties] = useState(INITIAL_FEATURED);
+  const [agents, setAgents] = useState(INITIAL_AGENTS);
 
   // Search state
   const [searchParams, setSearchParams] = useState({
@@ -22,22 +157,36 @@ export default function Home() {
   });
 
   useEffect(() => {
+    // Helper to safely parse JSON response
+    const fetchJson = (url) => 
+      fetch(url)
+        .then(res => {
+          const contentType = res.headers.get('content-type');
+          if (res.ok && contentType && contentType.includes('application/json')) {
+            return res.json();
+          }
+          throw new Error('Not JSON');
+        });
+
     // Fetch featured
-    fetch('/api/properties/featured')
-      .then(res => res.ok ? res.json() : [])
-      .then(data => setFeaturedProperties(Array.isArray(data) ? data : []))
+    fetchJson('/api/properties/featured')
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) setFeaturedProperties(data);
+      })
       .catch(() => {});
 
     // Fetch recent
-    fetch('/api/properties?limit=6&sort=newest')
-      .then(res => res.ok ? res.json() : {})
-      .then(data => setRecentProperties(data.properties || []))
+    fetchJson('/api/properties?limit=6&sort=newest')
+      .then(data => {
+        if (data && Array.isArray(data.properties) && data.properties.length > 0) setRecentProperties(data.properties);
+      })
       .catch(() => {});
 
     // Fetch agents
-    fetch('/api/agents')
-      .then(res => res.ok ? res.json() : [])
-      .then(data => setAgents(Array.isArray(data) ? data : []))
+    fetchJson('/api/agents')
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) setAgents(data);
+      })
       .catch(() => {});
   }, []);
 
