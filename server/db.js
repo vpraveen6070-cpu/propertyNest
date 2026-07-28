@@ -525,13 +525,24 @@ const dbHelper = {
     return true;
   },
 
-  // Agent Profiles
   getAgentProfileByUserId: (userId) => {
-    const profile = dbData.agent_profiles.find(a => a.user_id === Number(userId));
+    const profile = dbData.agent_profiles.find(a => a.user_id === Number(userId)) || {};
     const user = dbData.users.find(u => u.id === Number(userId));
     if (!user) return null;
     return {
       ...profile,
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      phone: user.phone,
+      avatar: user.avatar,
+      bio: user.bio,
+      agency_name: profile.agency_name || 'Independent Luxury Brokerage',
+      license_number: profile.license_number || 'RE-LIC-DEFAULT',
+      experience_years: profile.experience_years || 5,
+      specialization: profile.specialization || 'Residential & Commercial',
+      rating: profile.rating || 4.9,
+      review_count: profile.review_count || 15,
       user: {
         id: user.id,
         name: user.name,

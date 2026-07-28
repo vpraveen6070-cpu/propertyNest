@@ -109,42 +109,12 @@ const INITIAL_FEATURED = [
   }
 ];
 
-const INITIAL_AGENTS = [
-  {
-    id: 2,
-    name: "Priya Sharma",
-    agency_name: "DLF Luxury Homes",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
-    rating: 4.9,
-    review_count: 28,
-    active_listings_count: 4
-  },
-  {
-    id: 3,
-    name: "Vikramaditya Rao",
-    agency_name: "Sobha Prestige Realty",
-    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80",
-    rating: 4.8,
-    review_count: 19,
-    active_listings_count: 5
-  },
-  {
-    id: 4,
-    name: "Rajesh Varma",
-    agency_name: "Independent Realty Specialist",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
-    rating: 4.9,
-    review_count: 14,
-    active_listings_count: 3
-  }
-];
-
 export default function Home() {
   const navigate = useNavigate();
   const heroTrackRef = useRef(null);
   const [featuredProperties, setFeaturedProperties] = useState(INITIAL_FEATURED);
   const [recentProperties, setRecentProperties] = useState(INITIAL_FEATURED);
-  const [agents, setAgents] = useState(INITIAL_AGENTS);
+  const [activeTab, setActiveTab] = useState('All');
 
   // Search state
   const [searchParams, setSearchParams] = useState({
@@ -156,18 +126,17 @@ export default function Home() {
     bedrooms: 'Any'
   });
 
-  useEffect(() => {
-    // Helper to safely parse JSON response
-    const fetchJson = (url) => 
-      fetch(url)
-        .then(res => {
-          const contentType = res.headers.get('content-type');
-          if (res.ok && contentType && contentType.includes('application/json')) {
-            return res.json();
-          }
-          throw new Error('Not JSON');
-        });
+  const fetchJson = (url) => 
+    fetch(url)
+      .then(res => {
+        const contentType = res.headers.get('content-type');
+        if (res.ok && contentType && contentType.includes('application/json')) {
+          return res.json();
+        }
+        throw new Error('Not JSON');
+      });
 
+  useEffect(() => {
     // Fetch featured
     fetchJson('/api/properties/featured')
       .then(data => {
@@ -181,14 +150,25 @@ export default function Home() {
         if (data && Array.isArray(data.properties) && data.properties.length > 0) setRecentProperties(data.properties);
       })
       .catch(() => {});
+  }, []);
 
-    // Fetch agents
-    fetchJson('/api/agents')
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    let query = '/api/properties?limit=6&sort=newest';
+    if (tab === 'Sale' || tab === 'Rent') {
+      query += `&listing_type=${tab}`;
+    } else if (tab !== 'All') {
+      query += `&property_type=${tab}`;
+    }
+
+    fetchJson(query)
       .then(data => {
-        if (Array.isArray(data) && data.length > 0) setAgents(data);
+        if (data && Array.isArray(data.properties) && data.properties.length > 0) {
+          setRecentProperties(data.properties);
+        }
       })
       .catch(() => {});
-  }, []);
+  };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -453,58 +433,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Latest Market Additions with Live Backend API Filter Tabs */}
+      <section style={{ padding: '70px 0', background: 'var(--paper)', borderBottom: '1px solid var(--line)' }}>
+        <div className="app-container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px', marginBottom: '36px' }}>
+            <div>
+              <div className="eyebrow-tag">LIVE MARKET LISTINGS</div>
+              <h2 style={{ fontSize: '2.2rem', color: 'var(--ink)' }}>Recent Additions Across Metros</h2>
+            </div>
+
+            {/* Backend Filter Tabs */}
+            <div style={{ display: 'flex', gap: '8px', background: 'rgba(0,0,0,0.04)', padding: '4px', borderRadius: '30px' }}>
+              {[
+                { id: 'All', label: 'All Listings' },
+                { id: 'Sale', label: 'For Sale' },
+                { id: 'Rent', label: 'For Rent' },
+                { id: 'Villa', label: 'Villas' },
+                { id: 'Apartment', label: 'Apartments' }
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => handleTabChange(tab.id)}
+                  style={{
+                    border: 'none',
+                    padding: '8px 18px',
+                    borderRadius: '24px',
+                    fontSize: '0.88rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    background: activeTab === tab.id ? 'var(--forest)' : 'transparent',
+                    color: activeTab === tab.id ? '#ffffff' : 'var(--ink-soft)'
+                  }}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="properties-grid">
+            {recentProperties.map(prop => (
+              <PropertyCard key={prop.id} property={prop} />
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '40px' }}>
+            <Link to="/properties" className="btn btn-primary" style={{ padding: '12px 32px', borderRadius: '30px' }}>
+              <span>View Full Property Directory ({recentProperties.length}+ Available)</span>
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* PropertyNest Cream Section: How It Works / Values */}
       <section style={{ padding: '80px 0', background: 'var(--cream)', borderBottom: '1px solid var(--line)' }}>
         <div className="app-container">
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 50px' }}>
             <div className="eyebrow-tag" style={{ justifyContent: 'center' }}>OUR CORE VALUES</div>
             <h2 style={{ fontSize: '2.2rem', color: 'var(--ink)', marginBottom: '12px' }}>Why Choose PropertyNest</h2>
-            <p style={{ color: 'var(--ink-soft)' }}>Built on transparency, verified listings, and direct agent communication</p>
+            <p style={{ color: 'var(--ink-soft)' }}>Built on transparency, verified listings, and direct owner communication</p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '28px' }}>
             {[
-              { step: '01', title: '100% Verified Properties', desc: 'Every villa, apartment, and penthouse listing is inspected and verified by certified agents.' },
+              { step: '01', title: '100% Verified Properties', desc: 'Every villa, apartment, and penthouse listing is inspected and verified.' },
               { step: '02', title: 'Transparent Pricing', desc: 'No hidden broker charges. View complete financial breakdown, maintenance specs, and area details.' },
-              { step: '03', title: 'Direct Agent Connect', desc: 'Instant message certified estate agents directly through our secure platform messaging engine.' },
+              { step: '03', title: 'Direct Owner Connect', desc: 'Instant message property owners directly through our secure platform messaging engine.' },
               { step: '04', title: 'End-To-End Support', desc: 'From initial search and virtual viewing to legal document signoff and key handover.' }
             ].map(item => (
               <div key={item.step} className="glass-panel" style={{ padding: '32px', background: 'var(--white)' }}>
                 <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '12px' }}>{item.step}</div>
                 <h3 style={{ fontSize: '1.2rem', color: 'var(--ink)', marginBottom: '10px' }}>{item.title}</h3>
                 <p style={{ color: 'var(--ink-soft)', fontSize: '0.92rem', lineHeight: 1.6 }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Agents */}
-      <section style={{ padding: '70px 0', background: 'var(--paper)' }}>
-        <div className="app-container">
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <div className="eyebrow-tag" style={{ justifyContent: 'center' }}>LICENSED CONSULTANTS</div>
-            <h2 style={{ fontSize: '2.2rem', color: 'var(--ink)' }}>Meet Our Top Estate Agents</h2>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
-            {agents.slice(0, 3).map(agent => (
-              <div key={agent.id} className="glass-panel glass-panel-hover" style={{ padding: '28px', textAlign: 'center' }}>
-                <img
-                  src={agent.avatar}
-                  alt={agent.name}
-                  style={{ width: '96px', height: '96px', borderRadius: '50%', objectFit: 'cover', border: '3px solid var(--forest)', margin: '0 auto 16px' }}
-                />
-                <h3 style={{ fontSize: '1.25rem', color: 'var(--ink)', marginBottom: '4px' }}>{agent.name}</h3>
-                <p style={{ color: 'var(--forest)', fontSize: '0.9rem', fontWeight: 700, marginBottom: '10px' }}>{agent.agency_name}</p>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px', color: 'var(--gold)', fontSize: '0.9rem', marginBottom: '16px' }}>
-                  <Star size={16} fill="var(--gold)" />
-                  <span style={{ fontWeight: 700, color: 'var(--ink)' }}>{agent.rating}</span>
-                  <span style={{ color: 'var(--ink-soft)' }}>({agent.review_count} client reviews)</span>
-                </div>
-                <Link to={`/agents/${agent.id}`} className="btn btn-secondary btn-sm" style={{ width: '100%' }}>
-                  View Active Portfolio ({agent.active_listings_count})
-                </Link>
               </div>
             ))}
           </div>

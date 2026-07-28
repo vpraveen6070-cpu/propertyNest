@@ -250,7 +250,7 @@ export default function PropertyDetails() {
           </div>
         </div>
 
-        {/* Sidebar Agent Contact Panel */}
+        {/* Sidebar Representative Contact Panel */}
         <aside>
           <div className="glass-panel" style={{ padding: '28px', position: 'sticky', top: '90px' }}>
             <div style={{ textAlign: 'center', marginBottom: '20px' }}>
@@ -260,7 +260,7 @@ export default function PropertyDetails() {
                 style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', border: '3px solid var(--primary)', marginBottom: '12px' }}
               />
               <h3 style={{ fontSize: '1.2rem', marginBottom: '4px' }}>{property.owner?.name}</h3>
-              <span className="badge badge-primary">{property.owner?.role === 'agent' ? 'Certified Agent' : 'Property Seller'}</span>
+              <span className="badge badge-primary">Property Representative</span>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>

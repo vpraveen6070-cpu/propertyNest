@@ -31,7 +31,7 @@ export default function Footer() {
               <span>Property<span style={{ color: 'var(--primary)' }}>Nest</span></span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '20px' }}>
-              Premier luxury & commercial real estate marketplace. Discover dream homes, verified properties, and expert agents across India.
+              Premier luxury & commercial real estate marketplace. Discover dream homes and verified properties across India.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
               <a href="#" className="fav-btn" style={{ position: 'relative', top: 0, right: 0 }}><Facebook size={16} /></a>
@@ -58,7 +58,6 @@ export default function Footer() {
             <h4 style={{ fontSize: '1.05rem', marginBottom: '16px' }}>Navigation</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
               <li><Link to="/properties" className="nav-link">Browse All Listings</Link></li>
-              <li><Link to="/agents" className="nav-link">Meet Our Agents</Link></li>
               <li><Link to="/about" className="nav-link">About PropertyNest</Link></li>
               <li><Link to="/contact" className="nav-link">Contact Support</Link></li>
               <li><Link to="/privacy-terms" className="nav-link">Privacy Policy & Terms</Link></li>

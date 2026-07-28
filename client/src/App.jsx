@@ -9,8 +9,6 @@ import Home from './pages/Home';
 import Properties from './pages/Properties';
 import PropertyDetails from './pages/PropertyDetails';
 import AddEditProperty from './pages/AddEditProperty';
-import Agents from './pages/Agents';
-import AgentProfile from './pages/AgentProfile';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
@@ -34,8 +32,6 @@ export default function App() {
               <Route path="/properties/:id" element={<PropertyDetails />} />
               <Route path="/properties/add" element={<AddEditProperty />} />
               <Route path="/properties/edit/:id" element={<AddEditProperty />} />
-              <Route path="/agents" element={<Agents />} />
-              <Route path="/agents/:id" element={<AgentProfile />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />

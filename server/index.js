@@ -21,14 +21,12 @@ const authRoutes = require('./routes/auth');
 const propertyRoutes = require('./routes/properties');
 const enquiryRoutes = require('./routes/enquiries');
 const favouriteRoutes = require('./routes/favourites');
-const agentRoutes = require('./routes/agents');
 const adminRoutes = require('./routes/admin');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/properties', propertyRoutes);
 app.use('/api/enquiries', enquiryRoutes);
 app.use('/api/favourites', favouriteRoutes);
-app.use('/api/agents', agentRoutes);
 app.use('/api/admin', adminRoutes);
 
 // Master categories & master amenities endpoint for frontend forms
