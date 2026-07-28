@@ -60,6 +60,7 @@ export default function Footer() {
             <h4 style={{ fontSize: '1.05rem', marginBottom: '16px' }}>Navigation</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
               <li><Link to="/properties" className="nav-link">Browse All Listings</Link></li>
+              <li><Link to="/projects" className="nav-link">Explore New Projects</Link></li>
               <li><Link to="/about" className="nav-link">About PropertyNest</Link></li>
               <li><Link to="/contact" className="nav-link">Contact Support</Link></li>
               <li><Link to="/privacy-terms" className="nav-link">Privacy Policy & Terms</Link></li>

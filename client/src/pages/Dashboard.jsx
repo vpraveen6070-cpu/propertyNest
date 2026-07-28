@@ -306,12 +306,7 @@ export default function Dashboard() {
           </button>
         )}
 
-        <button 
-          className={`btn btn-sm ${activeTab === 'enquiries' ? 'btn-primary' : 'btn-secondary'}`}
-          onClick={() => setSearchParams({ tab: 'enquiries' })}
-        >
-          <MessageSquare size={16} /> Enquiries Inbox ({enquiries.length})
-        </button>
+
 
         <button 
           className={`btn btn-sm ${activeTab === 'favourites' ? 'btn-primary' : 'btn-secondary'}`}

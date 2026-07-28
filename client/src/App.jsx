@@ -14,6 +14,7 @@ import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import Dashboard from './pages/Dashboard';
 import Favourites from './pages/Favourites';
+import ExploreProjects from './pages/ExploreProjects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import PrivacyTerms from './pages/PrivacyTerms';
@@ -29,6 +30,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/properties" element={<Properties />} />
+              <Route path="/projects" element={<ExploreProjects />} />
               <Route path="/properties/:id" element={<PropertyDetails />} />
               <Route path="/properties/add" element={<AddEditProperty />} />
               <Route path="/properties/edit/:id" element={<AddEditProperty />} />

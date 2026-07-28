@@ -6,10 +6,10 @@ import {
   Cpu, Wifi, ArrowUpCircle, Flame, Zap, CheckCircle2, ChevronLeft, ChevronRight, X 
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import EnquiryModal from '../components/EnquiryModal';
 import PropertyCard from '../components/PropertyCard';
 import { getMockPropertyById, MOCK_PROPERTIES } from '../data/mockProperties';
 import { isPropertySaved, toggleSavedFavourite } from '../utils/favourites';
+import { Building2 } from 'lucide-react';
 
 export default function PropertyDetails() {
   const { id } = useParams();
@@ -19,7 +19,6 @@ export default function PropertyDetails() {
   const [loading, setLoading] = useState(true);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);
   const [isSaved, setIsSaved] = useState(() => isPropertySaved(id));
 
   useEffect(() => {
@@ -283,25 +282,25 @@ export default function PropertyDetails() {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>
-              <a href={`tel:${property.owner?.phone || '+15550192834'}`} className="btn btn-secondary" style={{ width: '100%' }}>
+              <a href={`tel:${property.owner?.phone || '+91 98112 34567'}`} className="btn btn-secondary" style={{ width: '100%', justifyContent: 'center' }}>
                 <Phone size={16} />
-                <span>{property.owner?.phone || '+1 (555) 234-5678'}</span>
+                <span>{property.owner?.phone || '+91 98112 34567'}</span>
               </a>
 
-              <button className="btn btn-primary" onClick={() => setEnquiryModalOpen(true)} style={{ width: '100%' }}>
-                <MessageSquare size={16} />
-                <span>Send Direct Message</span>
-              </button>
+              <Link to="/projects" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', borderRadius: '24px' }}>
+                <Building2 size={16} />
+                <span>Explore New Projects</span>
+              </Link>
             </div>
 
             <div style={{ paddingTop: '20px', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>Views Count:</span>
-                <strong style={{ color: '#fff' }}>{property.view_count || 1} views</strong>
+                <strong style={{ color: 'var(--ink)' }}>{property.view_count || 1} views</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>Date Listed:</span>
-                <strong style={{ color: '#fff' }}>{new Date(property.created_at).toLocaleDateString()}</strong>
+                <strong style={{ color: 'var(--ink)' }}>{new Date(property.created_at).toLocaleDateString()}</strong>
               </div>
             </div>
           </div>
@@ -318,11 +317,6 @@ export default function PropertyDetails() {
             style={{ maxWidth: '90vw', maxHeight: '85vh', objectFit: 'contain', borderRadius: 'var(--radius-md)' }} 
           />
         </div>
-      )}
-
-      {/* Enquiry Modal */}
-      {enquiryModalOpen && (
-        <EnquiryModal property={property} onClose={() => setEnquiryModalOpen(false)} />
       )}
     </div>
   );

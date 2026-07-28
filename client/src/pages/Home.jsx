@@ -444,9 +444,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Explore Mega Projects Showcase */}
+      <section style={{ padding: '70px 0', background: 'var(--paper)', borderBottom: '1px solid var(--line)' }}>
+        <div className="app-container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '36px', flexWrap: 'wrap', gap: '16px' }}>
+            <div>
+              <div className="eyebrow-tag">TOP DEVELOPER TOWNSHIPS</div>
+              <h2 style={{ fontSize: '2.2rem', color: 'var(--ink)' }}>Explore Featured Mega Projects</h2>
+            </div>
+            <Link to="/projects" className="btn btn-primary" style={{ borderRadius: '24px' }}>
+              <span>View All 8+ New Projects</span>
+              <ArrowRight size={16} />
+            </Link>
+          </div>
 
-
-      {/* PropertyNest Cream Section: How It Works / Values */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+            {[
+              {
+                title: "Prestige Golfshire Estate",
+                city: "Bengaluru",
+                developer: "Prestige Group",
+                price: "₹ 4.50 Cr onwards",
+                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+                status: "Ready to Move"
+              },
+              {
+                title: "DLF Cybercity Crest",
+                city: "Gurgaon",
+                developer: "DLF India",
+                price: "₹ 3.50 Cr onwards",
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+                status: "Under Construction"
+              },
+              {
+                title: "Worli Oceanfront Towers",
+                city: "Mumbai",
+                developer: "Oberoi Realty",
+                price: "₹ 6.50 Cr onwards",
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+                status: "New Launch"
+              }
+            ].map((proj, idx) => (
+              <div key={idx} className="glass-panel glass-panel-hover" style={{ borderRadius: '16px', overflow: 'hidden', background: 'var(--white)' }}>
+                <div style={{ position: 'relative', height: '180px' }}>
+                  <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <span className="badge badge-sale" style={{ position: 'absolute', top: '12px', left: '12px', fontSize: '0.75rem' }}>
+                    {proj.developer}
+                  </span>
+                  <span className="badge badge-rent" style={{ position: 'absolute', top: '12px', right: '12px', fontSize: '0.75rem' }}>
+                    📍 {proj.city}
+                  </span>
+                </div>
+                <div style={{ padding: '20px' }}>
+                  <h3 style={{ fontSize: '1.15rem', color: 'var(--ink)', marginBottom: '6px' }}>{proj.title}</h3>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--forest)', fontWeight: 700, marginBottom: '14px' }}>{proj.price}</p>
+                  <Link to="/projects" className="btn btn-secondary btn-sm" style={{ width: '100%', justifyContent: 'center' }}>
+                    <span>Explore Project</span>
+                    <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section style={{ padding: '80px 0', background: 'var(--cream)', borderBottom: '1px solid var(--line)' }}>
         <div className="app-container">
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 50px' }}>
