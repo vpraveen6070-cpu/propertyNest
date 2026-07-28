@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Search, MapPin, Building, DollarSign, ArrowRight, Star, ShieldCheck, Sparkles, CheckCircle2, Award, Users } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
 import HeroFrameAnimation from '../components/HeroFrameAnimation';
+import { MOCK_PROPERTIES, getMockTypeCounts } from '../data/mockProperties';
 
 const INITIAL_FEATURED = [
   {
@@ -147,22 +148,25 @@ export default function Home() {
     fetchJson('/api/properties/type-counts')
       .then(counts => {
         if (counts && typeof counts === 'object') setTypeCounts(counts);
+        else setTypeCounts(getMockTypeCounts());
       })
-      .catch(() => {});
+      .catch(() => setTypeCounts(getMockTypeCounts()));
 
     // Fetch featured
     fetchJson('/api/properties/featured')
       .then(data => {
         if (Array.isArray(data) && data.length > 0) setFeaturedProperties(data);
+        else setFeaturedProperties(MOCK_PROPERTIES.filter(p => p.is_featured).slice(0, 6));
       })
-      .catch(() => {});
+      .catch(() => setFeaturedProperties(MOCK_PROPERTIES.filter(p => p.is_featured).slice(0, 6)));
 
     // Fetch recent
     fetchJson('/api/properties?limit=6&sort=newest')
       .then(data => {
         if (data && Array.isArray(data.properties) && data.properties.length > 0) setRecentProperties(data.properties);
+        else setRecentProperties(MOCK_PROPERTIES.slice(0, 6));
       })
-      .catch(() => {});
+      .catch(() => setRecentProperties(MOCK_PROPERTIES.slice(0, 6)));
   }, []);
 
   const handleTabChange = (tab) => {

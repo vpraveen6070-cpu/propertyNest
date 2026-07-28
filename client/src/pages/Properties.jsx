@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search, Filter, LayoutGrid, List, SlidersHorizontal, ArrowUpDown, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
+import { filterMockProperties } from '../data/mockProperties';
 
 const DEFAULT_PROPERTIES = [
   {
@@ -195,14 +196,25 @@ export default function Properties() {
         throw new Error('Not JSON');
       })
       .then(data => {
-        if (data && Array.isArray(data.properties)) {
+        if (data && Array.isArray(data.properties) && data.properties.length > 0) {
           setProperties(data.properties);
-          setTotalCount(data.totalCount || data.properties.length);
+          setTotalCount(data.totalCount || data.total || data.properties.length);
           setTotalPages(data.totalPages || 1);
+        } else {
+          const fallback = filterMockProperties({ ...filters, limit: 9 });
+          setProperties(fallback.properties);
+          setTotalCount(fallback.total);
+          setTotalPages(fallback.totalPages);
         }
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        const fallback = filterMockProperties({ ...filters, limit: 9 });
+        setProperties(fallback.properties);
+        setTotalCount(fallback.total);
+        setTotalPages(fallback.totalPages);
+        setLoading(false);
+      });
   };
 
   useEffect(() => {

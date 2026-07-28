@@ -8,6 +8,7 @@ import {
 import { useAuth } from '../context/AuthContext';
 import EnquiryModal from '../components/EnquiryModal';
 import PropertyCard from '../components/PropertyCard';
+import { getMockPropertyById, MOCK_PROPERTIES } from '../data/mockProperties';
 
 export default function PropertyDetails() {
   const { id } = useParams();
@@ -23,11 +24,16 @@ export default function PropertyDetails() {
   useEffect(() => {
     setLoading(true);
     fetch(`/api/properties/${id}`)
-      .then(res => res.json())
+      .then(res => {
+        const contentType = res.headers.get('content-type');
+        if (res.ok && contentType && contentType.includes('application/json')) {
+          return res.json();
+        }
+        throw new Error('Not JSON');
+      })
       .then(data => {
-        if (data.id) {
+        if (data && data.id) {
           setProperty(data);
-          // Check if saved
           if (user) {
             fetch('/api/favourites', {
               headers: { 'Authorization': `Bearer ${localStorage.getItem('estate_token')}` }
@@ -37,17 +43,34 @@ export default function PropertyDetails() {
               if (Array.isArray(favs)) {
                 setIsSaved(favs.some(f => f.id === data.id));
               }
-            });
+            })
+            .catch(() => {});
           }
 
-          // Fetch similar
           fetch(`/api/properties?property_type=${data.property_type}&limit=3`)
             .then(r => r.json())
-            .then(sim => setSimilarProperties((sim.properties || []).filter(p => p.id !== data.id)));
+            .then(sim => setSimilarProperties((sim.properties || []).filter(p => p.id !== data.id)))
+            .catch(() => {
+              const sim = MOCK_PROPERTIES.filter(p => p.property_type === data.property_type && p.id !== data.id).slice(0, 3);
+              setSimilarProperties(sim);
+            });
+        } else {
+          const fallback = getMockPropertyById(id);
+          if (fallback) {
+            setProperty(fallback);
+            setSimilarProperties(MOCK_PROPERTIES.filter(p => p.property_type === fallback.property_type && p.id !== fallback.id).slice(0, 3));
+          }
         }
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        const fallback = getMockPropertyById(id);
+        if (fallback) {
+          setProperty(fallback);
+          setSimilarProperties(MOCK_PROPERTIES.filter(p => p.property_type === fallback.property_type && p.id !== fallback.id).slice(0, 3));
+        }
+        setLoading(false);
+      });
   }, [id, user]);
 
   const handleToggleSave = () => {
