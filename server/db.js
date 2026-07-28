@@ -951,6 +951,15 @@ const dbHelper = {
       recentUsers: dbData.users.slice(-5).reverse(),
       recentProperties: dbData.properties.slice(-5).reverse()
     };
+  },
+
+  getPropertyTypeCounts: () => {
+    const activeProps = dbData.properties.filter(p => p.status === 'active');
+    const counts = {};
+    activeProps.forEach(p => {
+      counts[p.property_type] = (counts[p.property_type] || 0) + 1;
+    });
+    return counts;
   }
 };
 

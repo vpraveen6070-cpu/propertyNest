@@ -153,7 +153,6 @@ export default function Properties() {
 
   // Filter Form Controls
   const [filters, setFilters] = useState({
-    keyword: searchParams.get('keyword') || '',
     city: searchParams.get('city') || '',
     postcode: searchParams.get('postcode') || '',
     property_type: searchParams.get('property_type') || 'All',
@@ -173,7 +172,6 @@ export default function Properties() {
   const fetchProperties = () => {
     setLoading(true);
     const query = new URLSearchParams();
-    if (filters.keyword) query.set('keyword', filters.keyword);
     if (filters.city) query.set('city', filters.city);
     if (filters.postcode) query.set('postcode', filters.postcode);
     if (filters.property_type !== 'All') query.set('property_type', filters.property_type);
@@ -227,7 +225,6 @@ export default function Properties() {
 
   const handleResetFilters = () => {
     const reset = {
-      keyword: '',
       city: '',
       postcode: '',
       property_type: 'All',
@@ -316,23 +313,20 @@ export default function Properties() {
 
           <form onSubmit={handleApplyFilters}>
             <div className="form-group">
-              <label className="form-label">Keyword</label>
-              <input 
-                type="text" 
-                placeholder="Search description, address..." 
-                value={filters.keyword}
-                onChange={e => setFilters({ ...filters, keyword: e.target.value })}
-              />
-            </div>
-
-            <div className="form-group">
               <label className="form-label">City</label>
-              <input 
-                type="text" 
-                placeholder="City name..." 
+              <select 
                 value={filters.city}
                 onChange={e => setFilters({ ...filters, city: e.target.value })}
-              />
+              >
+                <option value="">All Cities</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Gurgaon">Gurgaon</option>
+                <option value="Goa">Goa</option>
+                <option value="Pune">Pune</option>
+                <option value="New Delhi">New Delhi</option>
+              </select>
             </div>
 
             <div className="form-group">

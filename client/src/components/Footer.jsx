@@ -49,6 +49,8 @@ export default function Footer() {
               <li><Link to="/properties?city=Bengaluru" className="nav-link">Bengaluru, KA</Link></li>
               <li><Link to="/properties?city=New+Delhi" className="nav-link">New Delhi, DL</Link></li>
               <li><Link to="/properties?city=Hyderabad" className="nav-link">Hyderabad, TS</Link></li>
+              <li><Link to="/properties?city=Gurgaon" className="nav-link">Gurgaon, HR</Link></li>
+              <li><Link to="/properties?city=Pune" className="nav-link">Pune, MH</Link></li>
               <li><Link to="/properties?city=Goa" className="nav-link">Goa</Link></li>
             </ul>
           </div>

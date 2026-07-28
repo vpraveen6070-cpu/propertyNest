@@ -184,7 +184,7 @@ export default function Dashboard() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <h1 style={{ fontSize: '1.6rem' }}>Welcome back, {user.name}</h1>
-              <span className={`badge ${user.role === 'admin' ? 'badge-danger' : user.role === 'agent' ? 'badge-primary' : 'badge-rent'}`}>
+              <span className={`badge ${user.role === 'admin' ? 'badge-danger' : 'badge-rent'}`}>
                 {user.role}
               </span>
             </div>
@@ -192,7 +192,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {(user.role === 'seller' || user.role === 'agent' || user.role === 'admin') && (
+        {(user.role === 'seller' || user.role === 'admin') && (
           <Link to="/properties/add" className="btn btn-primary">
             <PlusCircle size={18} />
             <span>List New Property</span>
@@ -452,7 +452,7 @@ export default function Dashboard() {
                       <td style={{ padding: '10px', fontWeight: 600 }}>{u.name}</td>
                       <td style={{ padding: '10px', color: 'var(--text-muted)' }}>{u.email}</td>
                       <td style={{ padding: '10px' }}>
-                        <span className={`badge ${u.role === 'admin' ? 'badge-danger' : u.role === 'agent' ? 'badge-primary' : 'badge-rent'}`}>
+                        <span className={`badge ${u.role === 'admin' ? 'badge-danger' : 'badge-rent'}`}>
                           {u.role}
                         </span>
                       </td>
@@ -465,7 +465,6 @@ export default function Dashboard() {
                         >
                           <option value="buyer">buyer</option>
                           <option value="seller">seller</option>
-                          <option value="agent">agent</option>
                           <option value="admin">admin</option>
                         </select>
                         <button 

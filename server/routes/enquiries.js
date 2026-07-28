@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
     });
 
     res.status(201).json({
-      message: 'Enquiry submitted successfully! The property agent or owner will contact you shortly.',
+      message: 'Enquiry submitted successfully! The property owner will contact you shortly.',
       enquiry
     });
   } catch (err) {
@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
   }
 });
 
-// GET ENQUIRIES FOR CURRENT SELLER / AGENT / ADMIN
+// GET ENQUIRIES FOR CURRENT SELLER / ADMIN
 router.get('/', authenticateToken, (req, res) => {
   try {
     let enquiries = [];

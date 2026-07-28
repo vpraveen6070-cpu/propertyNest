@@ -16,7 +16,7 @@ export default function PrivacyTerms() {
         <section style={{ marginBottom: '30px' }}>
           <h2 style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'var(--primary)' }}>2. Real Estate Listing Moderation</h2>
           <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-            All property submissions by property sellers and real estate agents undergo verification by platform administrators to ensure listing authenticity, pricing transparency, and accurate property photo assets.
+            All property submissions by property sellers undergo verification by platform administrators to ensure listing authenticity, pricing transparency, and accurate property photo assets.
           </p>
         </section>
 

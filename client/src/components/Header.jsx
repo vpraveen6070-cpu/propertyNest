@@ -61,7 +61,7 @@ export default function Header() {
 
             {/* Right User Controls */}
             <div className="user-menu">
-              {user && (user.role === 'seller' || user.role === 'agent' || user.role === 'admin') && (
+              {user && (user.role === 'seller' || user.role === 'admin') && (
                 <Link to="/properties/add" className="btn btn-primary btn-sm">
                   <PlusCircle size={16} />
                   <span>List Property</span>
@@ -76,7 +76,7 @@ export default function Header() {
                   >
                     <img src={user.avatar} alt={user.name} className="user-avatar" />
                     <span style={{ fontSize: '0.88rem', fontWeight: 600 }}>{user.name.split(' ')[0]}</span>
-                    <span className={`badge ${user.role === 'admin' ? 'badge-danger' : user.role === 'agent' ? 'badge-primary' : 'badge-rent'}`} style={{ textTransform: 'capitalize' }}>
+                    <span className={`badge ${user.role === 'admin' ? 'badge-danger' : 'badge-rent'}`} style={{ textTransform: 'capitalize' }}>
                       {user.role}
                     </span>
                   </button>

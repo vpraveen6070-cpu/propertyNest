@@ -13,30 +13,6 @@
       "created_at": "2026-07-27T15:01:42.162Z"
     },
     {
-      "id": 2,
-      "name": "Priya Sharma",
-      "email": "sarah.agent@estate.com",
-      "password": "$2a$10$xu5yjKSnPPITnvcdbk.D2uHy49nYJsSZ.tb2.oiCHpy0BFEjuBUzG",
-      "role": "agent",
-      "phone": "+91 98201 23456",
-      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
-      "bio": "Top Luxury Real Estate Agent with over 10 years experience in prime seafront & urban properties.",
-      "status": "active",
-      "created_at": "2026-07-27T15:01:42.163Z"
-    },
-    {
-      "id": 3,
-      "name": "Vikramaditya Rao",
-      "email": "david.agent@estate.com",
-      "password": "$2a$10$xu5yjKSnPPITnvcdbk.D2uHy49nYJsSZ.tb2.oiCHpy0BFEjuBUzG",
-      "role": "agent",
-      "phone": "+91 98450 87654",
-      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80",
-      "bio": "Commercial & Residential Property Consultant specializing in modern high-rise penthouses & villas.",
-      "status": "active",
-      "created_at": "2026-07-27T15:01:42.163Z"
-    },
-    {
       "id": 4,
       "name": "Rajesh Varma",
       "email": "john.seller@estate.com",
@@ -86,263 +62,2005 @@
   "properties": [
     {
       "id": 1,
-      "title": "Seafront Luxury Villa in Bandra West",
+      "title": "Grand Horizon Luxury Oceanfront Villa",
       "ref_number": "PROP-1001",
-      "description": "An architectural masterpiece featuring floor-to-ceiling glass walls, an infinity pool overlooking Arabian Sea vistas, smart lighting systems, private wine cellar, and master suite with panoramic sea terrace.",
+      "description": "Premium villa situated at 742 Carter Road, Bandra West, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
       "property_type": "Villa",
       "listing_type": "Sale",
-      "price": 245000000,
+      "price": 45000000,
       "address": "742 Carter Road, Bandra West",
       "city": "Mumbai",
-      "postcode": "400050",
-      "latitude": 19.0596,
-      "longitude": 72.8295,
-      "bedrooms": 5,
-      "bathrooms": 6,
-      "area_sqft": 6200,
-      "construction_year": 2023,
-      "furnishing": "Furnished",
-      "parking_spaces": 3,
-      "status": "active",
-      "is_featured": 1,
-      "view_count": 462,
-      "owner_id": 2,
-      "created_at": "2026-07-01T00:00:00.000Z",
-      "updated_at": "2026-07-01T00:00:00.000Z"
-    },
-    {
-      "id": 2,
-      "title": "Sky Penthouse Overlooking Cubbon Park",
-      "ref_number": "PROP-1002",
-      "description": "Stunning downtown penthouse with private rooftop deck, gourmet Italian kitchen, customized walk-in closets, and 360-degree views of Bengaluru skyline.",
-      "property_type": "Penthouse",
-      "listing_type": "Sale",
-      "price": 185000000,
-      "address": "100 UB City Boulevard, Lavelle Road",
-      "city": "Bengaluru",
-      "postcode": "560001",
-      "latitude": 12.9716,
-      "longitude": 77.5946,
-      "bedrooms": 4,
-      "bathrooms": 5,
-      "area_sqft": 4800,
-      "construction_year": 2022,
-      "furnishing": "Semi-Furnished",
-      "parking_spaces": 3,
-      "status": "active",
-      "is_featured": 1,
-      "view_count": 550,
-      "owner_id": 3,
-      "created_at": "2026-07-05T00:00:00.000Z",
-      "updated_at": "2026-07-05T00:00:00.000Z"
-    },
-    {
-      "id": 3,
-      "title": "Independent Luxury Duplex Bungalow",
-      "ref_number": "PROP-1003",
-      "description": "Beautifully maintained duplex bungalow with open-concept living area, teakwood flooring, large backyard garden with patio, updated chef kitchen, and prime Jubilee Hills location.",
-      "property_type": "House",
-      "listing_type": "Sale",
-      "price": 78500000,
-      "address": "Road No. 36, Jubilee Hills",
-      "city": "Hyderabad",
-      "postcode": "500033",
-      "latitude": 17.4319,
-      "longitude": 78.4072,
+      "postcode": "400000",
+      "latitude": 19.05,
+      "longitude": 72.82,
       "bedrooms": 4,
       "bathrooms": 4,
-      "area_sqft": 3800,
-      "construction_year": 2019,
-      "furnishing": "Unfurnished",
-      "parking_spaces": 2,
-      "status": "active",
-      "is_featured": 1,
-      "view_count": 224,
-      "owner_id": 4,
-      "created_at": "2026-07-10T00:00:00.000Z",
-      "updated_at": "2026-07-10T00:00:00.000Z"
-    },
-    {
-      "id": 4,
-      "title": "Modern Executive Smart Apartment",
-      "ref_number": "PROP-1004",
-      "description": "Fully furnished minimalist 2BHK smart apartment ideal for IT & corporate professionals. Features built-in storage solutions, high-speed fiber internet, club access, and 24/7 concierge.",
-      "property_type": "Apartment",
-      "listing_type": "Rent",
-      "price": 65000,
-      "address": "Golf Course Extension Road, Sector 54",
-      "city": "Gurgaon",
-      "postcode": "122002",
-      "latitude": 28.4595,
-      "longitude": 77.0266,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "area_sqft": 1250,
-      "construction_year": 2021,
+      "area_sqft": 2400,
+      "construction_year": 2020,
       "furnishing": "Furnished",
       "parking_spaces": 1,
       "status": "active",
-      "is_featured": 0,
-      "view_count": 149,
+      "is_featured": 1,
+      "view_count": 113,
       "owner_id": 2,
-      "created_at": "2026-07-12T00:00:00.000Z",
-      "updated_at": "2026-07-12T00:00:00.000Z"
+      "created_at": "2026-07-28T13:46:10.311Z",
+      "updated_at": "2026-07-28T13:46:10.312Z"
     },
     {
-      "id": 5,
-      "title": "Grade-A Corporate Office Space in BKC",
-      "ref_number": "PROP-1005",
-      "description": "Grade A corporate office floor with customizable conference rooms, private executive suites, high-speed server room, employee lounge, and dedicated basement parking.",
-      "property_type": "Office",
-      "listing_type": "Rent",
-      "price": 350000,
-      "address": "Bandra-Kurla Complex, Block G",
-      "city": "Mumbai",
-      "postcode": "400051",
-      "latitude": 19.0657,
-      "longitude": 72.8687,
-      "bedrooms": 0,
-      "bathrooms": 4,
-      "area_sqft": 5200,
-      "construction_year": 2020,
-      "furnishing": "Semi-Furnished",
-      "parking_spaces": 6,
-      "status": "active",
-      "is_featured": 0,
-      "view_count": 100,
-      "owner_id": 3,
-      "created_at": "2026-07-15T00:00:00.000Z",
-      "updated_at": "2026-07-15T00:00:00.000Z"
-    },
-    {
-      "id": 6,
-      "title": "Portuguese Heritage Villa with Private Pool",
-      "ref_number": "PROP-1006",
-      "description": "Nestled near Candolim Beach, this luxury eco-friendly smart villa features private pool, outdoor fire lounge, lush tropical gardens, and heated marble flooring.",
+      "id": 2,
+      "title": "Portuguese Heritage Pool Villa",
+      "ref_number": "PROP-1002",
+      "description": "Premium villa situated at Nandi Hills Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
       "property_type": "Villa",
       "listing_type": "Sale",
-      "price": 145000000,
-      "address": "Bambolim Beach Road, Candolim",
-      "city": "Goa",
-      "postcode": "403515",
-      "latitude": 15.5177,
-      "longitude": 73.7626,
-      "bedrooms": 4,
-      "bathrooms": 5,
-      "area_sqft": 5100,
-      "construction_year": 2024,
-      "furnishing": "Furnished",
-      "parking_spaces": 3,
-      "status": "active",
-      "is_featured": 1,
-      "view_count": 298,
-      "owner_id": 2,
-      "created_at": "2026-07-18T00:00:00.000Z",
-      "updated_at": "2026-07-18T00:00:00.000Z"
-    },
-    {
-      "id": 7,
-      "title": "DLF Aralias Ultra Luxury Golf Residence",
-      "ref_number": "PROP-1007",
-      "description": "Exclusive golf course facing 4BHK apartment with private lift lobby, central VRV air conditioning, expansive balcony with panoramic greens, and clubhouse access.",
-      "property_type": "Apartment",
-      "listing_type": "Sale",
-      "price": 120000000,
-      "address": "DLF Phase 5, Sector 42",
-      "city": "Gurgaon",
-      "postcode": "122009",
-      "latitude": 28.4412,
-      "longitude": 77.0984,
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "area_sqft": 4500,
-      "construction_year": 2022,
-      "furnishing": "Semi-Furnished",
-      "parking_spaces": 3,
-      "status": "active",
-      "is_featured": 1,
-      "view_count": 387,
-      "owner_id": 3,
-      "created_at": "2026-07-20T00:00:00.000Z",
-      "updated_at": "2026-07-20T00:00:00.000Z"
-    },
-    {
-      "id": 8,
-      "title": "Ultra Luxury Villa in Koregaon Park",
-      "ref_number": "PROP-1008",
-      "description": "Modern 4BHK gated community villa featuring private terrace garden, solar power backup, Italian marble, private elevator, and smart security systems.",
-      "property_type": "Villa",
-      "listing_type": "Sale",
-      "price": 92000000,
-      "address": "Lane 7, Koregaon Park",
-      "city": "Pune",
-      "postcode": "411001",
-      "latitude": 18.5362,
-      "longitude": 73.894,
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "area_sqft": 4100,
-      "construction_year": 2023,
-      "furnishing": "Furnished",
-      "parking_spaces": 2,
-      "status": "active",
-      "is_featured": 1,
-      "view_count": 310,
-      "owner_id": 4,
-      "created_at": "2026-07-22T00:00:00.000Z",
-      "updated_at": "2026-07-22T00:00:00.000Z"
-    },
-    {
-      "id": 9,
-      "title": "Prime High-Street Retail Space in Khan Market",
-      "ref_number": "PROP-1009",
-      "description": "Corner retail showroom with massive glass facade, high footfall zone, emergency power backup, and modern air conditioning system.",
-      "property_type": "Office",
-      "listing_type": "Rent",
-      "price": 220000,
-      "address": "Khan Market Middle Lane",
-      "city": "New Delhi",
-      "postcode": "110003",
-      "latitude": 28.6,
-      "longitude": 77.2274,
-      "bedrooms": 0,
-      "bathrooms": 2,
-      "area_sqft": 1800,
+      "price": 60000000,
+      "address": "Nandi Hills Road",
+      "city": "Bengaluru",
+      "postcode": "400001",
+      "latitude": 19.060000000000002,
+      "longitude": 72.83,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "area_sqft": 2750,
       "construction_year": 2021,
       "furnishing": "Semi-Furnished",
       "parking_spaces": 2,
       "status": "active",
       "is_featured": 0,
-      "view_count": 195,
+      "view_count": 140,
+      "owner_id": 3,
+      "created_at": "2026-07-25T13:46:10.312Z",
+      "updated_at": "2026-07-25T13:46:10.312Z"
+    },
+    {
+      "id": 3,
+      "title": "Ultra Luxury Gated Community Villa",
+      "ref_number": "PROP-1003",
+      "description": "Premium villa situated at Banjara Hills Road No. 12, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 75000000,
+      "address": "Banjara Hills Road No. 12",
+      "city": "Hyderabad",
+      "postcode": "400002",
+      "latitude": 19.07,
+      "longitude": 72.83999999999999,
+      "bedrooms": 6,
+      "bathrooms": 6,
+      "area_sqft": 3100,
+      "construction_year": 2022,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 174,
+      "owner_id": 4,
+      "created_at": "2026-07-22T13:46:10.312Z",
+      "updated_at": "2026-07-22T13:46:10.312Z"
+    },
+    {
+      "id": 4,
+      "title": "Royal Crest Hillside Sanctuary Villa",
+      "ref_number": "PROP-1004",
+      "description": "Premium villa situated at Sohna Road, Sector 49, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Rent",
+      "price": 255000,
+      "address": "Sohna Road, Sector 49",
+      "city": "Gurgaon",
+      "postcode": "400003",
+      "latitude": 19.080000000000002,
+      "longitude": 72.85,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 3450,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 211,
       "owner_id": 2,
-      "created_at": "2026-07-24T00:00:00.000Z",
-      "updated_at": "2026-07-24T00:00:00.000Z"
+      "created_at": "2026-07-19T13:46:10.312Z",
+      "updated_at": "2026-07-19T13:46:10.312Z"
+    },
+    {
+      "id": 5,
+      "title": "Serene Palm Grove Estate Villa",
+      "ref_number": "PROP-1005",
+      "description": "Premium villa situated at Reis Magos Fort Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 105000000,
+      "address": "Reis Magos Fort Road",
+      "city": "Goa",
+      "postcode": "400004",
+      "latitude": 19.09,
+      "longitude": 72.86,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "area_sqft": 3800,
+      "construction_year": 2024,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 248,
+      "owner_id": 3,
+      "created_at": "2026-07-16T13:46:10.312Z",
+      "updated_at": "2026-07-16T13:46:10.312Z"
+    },
+    {
+      "id": 6,
+      "title": "Prestige Golfshire Fairway Villa",
+      "ref_number": "PROP-1006",
+      "description": "Premium villa situated at Bhosale Nagar, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 120000000,
+      "address": "Bhosale Nagar",
+      "city": "Pune",
+      "postcode": "400005",
+      "latitude": 19.1,
+      "longitude": 72.86999999999999,
+      "bedrooms": 6,
+      "bathrooms": 7,
+      "area_sqft": 4150,
+      "construction_year": 2020,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 285,
+      "owner_id": 4,
+      "created_at": "2026-07-13T13:46:10.312Z",
+      "updated_at": "2026-07-13T13:46:10.312Z"
+    },
+    {
+      "id": 7,
+      "title": "Lakeside Haven Designer Villa",
+      "ref_number": "PROP-1007",
+      "description": "Premium villa situated at Khan Market Middle Lane, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 135000000,
+      "address": "Khan Market Middle Lane",
+      "city": "New Delhi",
+      "postcode": "400006",
+      "latitude": 19.11,
+      "longitude": 72.88,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 4500,
+      "construction_year": 2021,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 322,
+      "owner_id": 2,
+      "created_at": "2026-07-10T13:46:10.312Z",
+      "updated_at": "2026-07-10T13:46:10.312Z"
+    },
+    {
+      "id": 8,
+      "title": "Sea Breeze Promenade Villa",
+      "ref_number": "PROP-1008",
+      "description": "Premium villa situated at Hiranandani Gardens, Powai, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Rent",
+      "price": 355000,
+      "address": "Hiranandani Gardens, Powai",
+      "city": "Mumbai",
+      "postcode": "400007",
+      "latitude": 19.12,
+      "longitude": 72.88999999999999,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "area_sqft": 4850,
+      "construction_year": 2022,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 359,
+      "owner_id": 3,
+      "created_at": "2026-07-07T13:46:10.312Z",
+      "updated_at": "2026-07-07T13:46:10.312Z"
+    },
+    {
+      "id": 9,
+      "title": "Emerald Forest Eco Villa",
+      "ref_number": "PROP-1009",
+      "description": "Premium villa situated at 100 UB City Boulevard, Lavelle Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 165000000,
+      "address": "100 UB City Boulevard, Lavelle Road",
+      "city": "Bengaluru",
+      "postcode": "400008",
+      "latitude": 19.13,
+      "longitude": 72.89999999999999,
+      "bedrooms": 6,
+      "bathrooms": 6,
+      "area_sqft": 5200,
+      "construction_year": 2023,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 396,
+      "owner_id": 4,
+      "created_at": "2026-07-04T13:46:10.312Z",
+      "updated_at": "2026-07-04T13:46:10.312Z"
     },
     {
       "id": 10,
-      "title": "Prestige Golfshire Hillside Villa",
+      "title": "Sunset Coastline Mansion Villa",
       "ref_number": "PROP-1010",
-      "description": "Scenic villa at the foot of Nandi Hills facing 18-hole championship golf course. Features infinity pool, private deck, solar power, and 24/7 security.",
+      "description": "Premium villa situated at HITEC City Phase 2, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
       "property_type": "Villa",
       "listing_type": "Sale",
-      "price": 89000000,
-      "address": "Nandi Hills Road",
-      "city": "Bengaluru",
-      "postcode": "562103",
-      "latitude": 13.3702,
-      "longitude": 77.6835,
+      "price": 180000000,
+      "address": "HITEC City Phase 2",
+      "city": "Hyderabad",
+      "postcode": "400009",
+      "latitude": 19.14,
+      "longitude": 72.91,
       "bedrooms": 4,
-      "bathrooms": 4,
-      "area_sqft": 4200,
-      "construction_year": 2023,
+      "bathrooms": 5,
+      "area_sqft": 5550,
+      "construction_year": 2024,
       "furnishing": "Furnished",
       "parking_spaces": 2,
       "status": "active",
       "is_featured": 1,
-      "view_count": 277,
+      "view_count": 433,
+      "owner_id": 2,
+      "created_at": "2026-07-01T13:46:10.312Z",
+      "updated_at": "2026-07-01T13:46:10.312Z"
+    },
+    {
+      "id": 11,
+      "title": "Contemporary Glasshouse Haven Villa",
+      "ref_number": "PROP-1011",
+      "description": "Premium villa situated at Golf Course Extension Road, Sector 54, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 195000000,
+      "address": "Golf Course Extension Road, Sector 54",
+      "city": "Gurgaon",
+      "postcode": "400010",
+      "latitude": 19.150000000000002,
+      "longitude": 72.91999999999999,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "area_sqft": 5900,
+      "construction_year": 2020,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 470,
       "owner_id": 3,
-      "created_at": "2026-07-25T00:00:00.000Z",
-      "updated_at": "2026-07-25T00:00:00.000Z"
+      "created_at": "2026-06-28T13:46:10.312Z",
+      "updated_at": "2026-06-28T13:46:10.312Z"
+    },
+    {
+      "id": 12,
+      "title": "Magnolia Woods Private Villa",
+      "ref_number": "PROP-1012",
+      "description": "Premium villa situated at Dona Paula Jetty Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Rent",
+      "price": 455000,
+      "address": "Dona Paula Jetty Road",
+      "city": "Goa",
+      "postcode": "400011",
+      "latitude": 19.16,
+      "longitude": 72.92999999999999,
+      "bedrooms": 6,
+      "bathrooms": 7,
+      "area_sqft": 6250,
+      "construction_year": 2021,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 507,
+      "owner_id": 4,
+      "created_at": "2026-06-25T13:46:10.312Z",
+      "updated_at": "2026-06-25T13:46:10.312Z"
+    },
+    {
+      "id": 13,
+      "title": "Imperial Crest Horizon Villa",
+      "ref_number": "PROP-1013",
+      "description": "Premium villa situated at Lane 7, Koregaon Park, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 225000000,
+      "address": "Lane 7, Koregaon Park",
+      "city": "Pune",
+      "postcode": "400012",
+      "latitude": 19.17,
+      "longitude": 72.94,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 6600,
+      "construction_year": 2022,
+      "furnishing": "Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 544,
+      "owner_id": 2,
+      "created_at": "2026-06-22T13:46:10.312Z",
+      "updated_at": "2026-06-22T13:46:10.312Z"
+    },
+    {
+      "id": 14,
+      "title": "Boutique Resort Style Haven Villa",
+      "ref_number": "PROP-1014",
+      "description": "Premium villa situated at Golf Links, Central Delhi, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Villa",
+      "listing_type": "Sale",
+      "price": 240000000,
+      "address": "Golf Links, Central Delhi",
+      "city": "New Delhi",
+      "postcode": "400013",
+      "latitude": 19.18,
+      "longitude": 72.94999999999999,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "area_sqft": 6950,
+      "construction_year": 2023,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 131,
+      "owner_id": 3,
+      "created_at": "2026-06-19T13:46:10.312Z",
+      "updated_at": "2026-06-19T13:46:10.312Z"
+    },
+    {
+      "id": 15,
+      "title": "Sky Penthouse Overlooking Cubbon Park",
+      "ref_number": "PROP-1015",
+      "description": "Premium penthouse situated at 742 Carter Road, Bandra West, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Penthouse",
+      "listing_type": "Sale",
+      "price": 65000000,
+      "address": "742 Carter Road, Bandra West",
+      "city": "Mumbai",
+      "postcode": "400000",
+      "latitude": 19.05,
+      "longitude": 72.82,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 2400,
+      "construction_year": 2020,
+      "furnishing": "Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 100,
+      "owner_id": 2,
+      "created_at": "2026-07-28T13:46:10.312Z",
+      "updated_at": "2026-07-28T13:46:10.312Z"
+    },
+    {
+      "id": 16,
+      "title": "Triplex Sky Mansion with Private Infinity Pool",
+      "ref_number": "PROP-1016",
+      "description": "Premium penthouse situated at Nandi Hills Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Penthouse",
+      "listing_type": "Sale",
+      "price": 87000000,
+      "address": "Nandi Hills Road",
+      "city": "Bengaluru",
+      "postcode": "400001",
+      "latitude": 19.060000000000002,
+      "longitude": 72.83,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 2750,
+      "construction_year": 2021,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 137,
+      "owner_id": 3,
+      "created_at": "2026-07-25T13:46:10.312Z",
+      "updated_at": "2026-07-25T13:46:10.312Z"
+    },
+    {
+      "id": 17,
+      "title": "Panoramic Seafront Promenade Penthouse",
+      "ref_number": "PROP-1017",
+      "description": "Premium penthouse situated at Banjara Hills Road No. 12, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Penthouse",
+      "listing_type": "Sale",
+      "price": 109000000,
+      "address": "Banjara Hills Road No. 12",
+      "city": "Hyderabad",
+      "postcode": "400002",
+      "latitude": 19.07,
+      "longitude": 72.83999999999999,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 3100,
+      "construction_year": 2022,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 174,
+      "owner_id": 4,
+      "created_at": "2026-07-22T13:46:10.312Z",
+      "updated_at": "2026-07-22T13:46:10.312Z"
+    },
+    {
+      "id": 18,
+      "title": "Duplex Crown Jewel Penthouse",
+      "ref_number": "PROP-1018",
+      "description": "Premium penthouse situated at Sohna Road, Sector 49, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Penthouse",
+      "listing_type": "Rent",
+      "price": 355000,
+      "address": "Sohna Road, Sector 49",
+      "city": "Gurgaon",
+      "postcode": "400003",
+      "latitude": 19.080000000000002,
+      "longitude": 72.85,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 3450,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 211,
+      "owner_id": 2,
+      "created_at": "2026-07-19T13:46:10.312Z",
+      "updated_at": "2026-07-19T13:46:10.312Z"
+    },
+    {
+      "id": 19,
+      "title": "High-Rise Horizon Suite Penthouse",
+      "ref_number": "PROP-1019",
+      "description": "Premium penthouse situated at Reis Magos Fort Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Penthouse",
+      "listing_type": "Sale",
+      "price": 153000000,
+      "address": "Reis Magos Fort Road",
+      "city": "Goa",
+      "postcode": "400004",
+      "latitude": 19.09,
+      "longitude": 72.86,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 3800,
+      "construction_year": 2024,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 248,
+      "owner_id": 3,
+      "created_at": "2026-07-16T13:46:10.312Z",
+      "updated_at": "2026-07-16T13:46:10.312Z"
+    },
+    {
+      "id": 20,
+      "title": "Metropolitan Cloud View Penthouse",
+      "ref_number": "PROP-1020",
+      "description": "Premium penthouse situated at Bhosale Nagar, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Penthouse",
+      "listing_type": "Sale",
+      "price": 175000000,
+      "address": "Bhosale Nagar",
+      "city": "Pune",
+      "postcode": "400005",
+      "latitude": 19.1,
+      "longitude": 72.86999999999999,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 4150,
+      "construction_year": 2020,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 285,
+      "owner_id": 4,
+      "created_at": "2026-07-13T13:46:10.312Z",
+      "updated_at": "2026-07-13T13:46:10.312Z"
+    },
+    {
+      "id": 21,
+      "title": "Royal Zenith Executive Penthouse",
+      "ref_number": "PROP-1021",
+      "description": "Premium penthouse situated at Khan Market Middle Lane, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Penthouse",
+      "listing_type": "Sale",
+      "price": 197000000,
+      "address": "Khan Market Middle Lane",
+      "city": "New Delhi",
+      "postcode": "400006",
+      "latitude": 19.11,
+      "longitude": 72.88,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 4500,
+      "construction_year": 2021,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 322,
+      "owner_id": 2,
+      "created_at": "2026-07-10T13:46:10.312Z",
+      "updated_at": "2026-07-10T13:46:10.312Z"
+    },
+    {
+      "id": 22,
+      "title": "Imperial Heights Tower Penthouse",
+      "ref_number": "PROP-1022",
+      "description": "Premium penthouse situated at Hiranandani Gardens, Powai, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Penthouse",
+      "listing_type": "Rent",
+      "price": 495000,
+      "address": "Hiranandani Gardens, Powai",
+      "city": "Mumbai",
+      "postcode": "400007",
+      "latitude": 19.12,
+      "longitude": 72.88999999999999,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 4850,
+      "construction_year": 2022,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 359,
+      "owner_id": 3,
+      "created_at": "2026-07-07T13:46:10.312Z",
+      "updated_at": "2026-07-07T13:46:10.312Z"
+    },
+    {
+      "id": 23,
+      "title": "Modern Executive Smart Apartment",
+      "ref_number": "PROP-1023",
+      "description": "Premium apartment situated at 742 Carter Road, Bandra West, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 12000000,
+      "address": "742 Carter Road, Bandra West",
+      "city": "Mumbai",
+      "postcode": "400000",
+      "latitude": 19.05,
+      "longitude": 72.82,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area_sqft": 850,
+      "construction_year": 2020,
+      "furnishing": "Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 100,
+      "owner_id": 2,
+      "created_at": "2026-07-28T13:46:10.312Z",
+      "updated_at": "2026-07-28T13:46:10.312Z"
+    },
+    {
+      "id": 24,
+      "title": "DLF Aralias Ultra Luxury Golf Residence",
+      "ref_number": "PROP-1024",
+      "description": "Premium apartment situated at Nandi Hills Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 16500000,
+      "address": "Nandi Hills Road",
+      "city": "Bengaluru",
+      "postcode": "400001",
+      "latitude": 19.060000000000002,
+      "longitude": 72.83,
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "area_sqft": 1000,
+      "construction_year": 2021,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 137,
+      "owner_id": 3,
+      "created_at": "2026-07-25T13:46:10.312Z",
+      "updated_at": "2026-07-25T13:46:10.312Z"
+    },
+    {
+      "id": 25,
+      "title": "Seafront Promenade High-Rise Flat",
+      "ref_number": "PROP-1025",
+      "description": "Premium apartment situated at Banjara Hills Road No. 12, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 21000000,
+      "address": "Banjara Hills Road No. 12",
+      "city": "Hyderabad",
+      "postcode": "400002",
+      "latitude": 19.07,
+      "longitude": 72.83999999999999,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 1150,
+      "construction_year": 2022,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 174,
+      "owner_id": 4,
+      "created_at": "2026-07-22T13:46:10.312Z",
+      "updated_at": "2026-07-22T13:46:10.312Z"
+    },
+    {
+      "id": 26,
+      "title": "Urban Oasis Designer 3BHK Apartment",
+      "ref_number": "PROP-1026",
+      "description": "Premium apartment situated at Sohna Road, Sector 49, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Rent",
+      "price": 69000,
+      "address": "Sohna Road, Sector 49",
+      "city": "Gurgaon",
+      "postcode": "400003",
+      "latitude": 19.080000000000002,
+      "longitude": 72.85,
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "area_sqft": 1300,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 211,
+      "owner_id": 2,
+      "created_at": "2026-07-19T13:46:10.312Z",
+      "updated_at": "2026-07-19T13:46:10.312Z"
+    },
+    {
+      "id": 27,
+      "title": "Prestige Park Grove Smart Residence",
+      "ref_number": "PROP-1027",
+      "description": "Premium apartment situated at Reis Magos Fort Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 30000000,
+      "address": "Reis Magos Fort Road",
+      "city": "Goa",
+      "postcode": "400004",
+      "latitude": 19.09,
+      "longitude": 72.86,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area_sqft": 1450,
+      "construction_year": 2024,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 248,
+      "owner_id": 3,
+      "created_at": "2026-07-16T13:46:10.312Z",
+      "updated_at": "2026-07-16T13:46:10.312Z"
+    },
+    {
+      "id": 28,
+      "title": "Sobha Windsor Classic Apartment",
+      "ref_number": "PROP-1028",
+      "description": "Premium apartment situated at Bhosale Nagar, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 34500000,
+      "address": "Bhosale Nagar",
+      "city": "Pune",
+      "postcode": "400005",
+      "latitude": 19.1,
+      "longitude": 72.86999999999999,
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "area_sqft": 1600,
+      "construction_year": 2020,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 285,
+      "owner_id": 4,
+      "created_at": "2026-07-13T13:46:10.312Z",
+      "updated_at": "2026-07-13T13:46:10.312Z"
+    },
+    {
+      "id": 29,
+      "title": "Koregaon Park Green View Apartment",
+      "ref_number": "PROP-1029",
+      "description": "Premium apartment situated at Khan Market Middle Lane, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 39000000,
+      "address": "Khan Market Middle Lane",
+      "city": "New Delhi",
+      "postcode": "400006",
+      "latitude": 19.11,
+      "longitude": 72.88,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area_sqft": 1750,
+      "construction_year": 2021,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 322,
+      "owner_id": 2,
+      "created_at": "2026-07-10T13:46:10.312Z",
+      "updated_at": "2026-07-10T13:46:10.312Z"
+    },
+    {
+      "id": 30,
+      "title": "Jubilee Hills Skyline Residency",
+      "ref_number": "PROP-1030",
+      "description": "Premium apartment situated at Hiranandani Gardens, Powai, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Rent",
+      "price": 101000,
+      "address": "Hiranandani Gardens, Powai",
+      "city": "Mumbai",
+      "postcode": "400007",
+      "latitude": 19.12,
+      "longitude": 72.88999999999999,
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "area_sqft": 1900,
+      "construction_year": 2022,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 359,
+      "owner_id": 3,
+      "created_at": "2026-07-07T13:46:10.312Z",
+      "updated_at": "2026-07-07T13:46:10.312Z"
+    },
+    {
+      "id": 31,
+      "title": "Cyber City Executive Suite",
+      "ref_number": "PROP-1031",
+      "description": "Premium apartment situated at 100 UB City Boulevard, Lavelle Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 48000000,
+      "address": "100 UB City Boulevard, Lavelle Road",
+      "city": "Bengaluru",
+      "postcode": "400008",
+      "latitude": 19.13,
+      "longitude": 72.89999999999999,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 2050,
+      "construction_year": 2023,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 396,
+      "owner_id": 4,
+      "created_at": "2026-07-04T13:46:10.312Z",
+      "updated_at": "2026-07-04T13:46:10.312Z"
+    },
+    {
+      "id": 32,
+      "title": "Bandra Seaface View Residency",
+      "ref_number": "PROP-1032",
+      "description": "Premium apartment situated at HITEC City Phase 2, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 52500000,
+      "address": "HITEC City Phase 2",
+      "city": "Hyderabad",
+      "postcode": "400009",
+      "latitude": 19.14,
+      "longitude": 72.91,
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "area_sqft": 2200,
+      "construction_year": 2024,
+      "furnishing": "Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 433,
+      "owner_id": 2,
+      "created_at": "2026-07-01T13:46:10.312Z",
+      "updated_at": "2026-07-01T13:46:10.312Z"
+    },
+    {
+      "id": 33,
+      "title": "Lavelle Road Garden Court Apartment",
+      "ref_number": "PROP-1033",
+      "description": "Premium apartment situated at Golf Course Extension Road, Sector 54, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 57000000,
+      "address": "Golf Course Extension Road, Sector 54",
+      "city": "Gurgaon",
+      "postcode": "400010",
+      "latitude": 19.150000000000002,
+      "longitude": 72.91999999999999,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area_sqft": 2350,
+      "construction_year": 2020,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 470,
+      "owner_id": 3,
+      "created_at": "2026-06-28T13:46:10.312Z",
+      "updated_at": "2026-06-28T13:46:10.312Z"
+    },
+    {
+      "id": 34,
+      "title": "Worli Skyline Smart 4BHK",
+      "ref_number": "PROP-1034",
+      "description": "Premium apartment situated at Dona Paula Jetty Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Rent",
+      "price": 133000,
+      "address": "Dona Paula Jetty Road",
+      "city": "Goa",
+      "postcode": "400011",
+      "latitude": 19.16,
+      "longitude": 72.92999999999999,
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "area_sqft": 2500,
+      "construction_year": 2021,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 507,
+      "owner_id": 4,
+      "created_at": "2026-06-25T13:46:10.312Z",
+      "updated_at": "2026-06-25T13:46:10.312Z"
+    },
+    {
+      "id": 35,
+      "title": "Whitefield Tech Corridor Apartment",
+      "ref_number": "PROP-1035",
+      "description": "Premium apartment situated at Lane 7, Koregaon Park, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 66000000,
+      "address": "Lane 7, Koregaon Park",
+      "city": "Pune",
+      "postcode": "400012",
+      "latitude": 19.17,
+      "longitude": 72.94,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area_sqft": 2650,
+      "construction_year": 2022,
+      "furnishing": "Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 544,
+      "owner_id": 2,
+      "created_at": "2026-06-22T13:46:10.312Z",
+      "updated_at": "2026-06-22T13:46:10.312Z"
+    },
+    {
+      "id": 36,
+      "title": "Gachibowli Green Valley Flat",
+      "ref_number": "PROP-1036",
+      "description": "Premium apartment situated at Golf Links, Central Delhi, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 70500000,
+      "address": "Golf Links, Central Delhi",
+      "city": "New Delhi",
+      "postcode": "400013",
+      "latitude": 19.18,
+      "longitude": 72.94999999999999,
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "area_sqft": 2800,
+      "construction_year": 2023,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 131,
+      "owner_id": 3,
+      "created_at": "2026-06-19T13:46:10.312Z",
+      "updated_at": "2026-06-19T13:46:10.312Z"
+    },
+    {
+      "id": 37,
+      "title": "Vasant Vihar Parkside Residence",
+      "ref_number": "PROP-1037",
+      "description": "Premium apartment situated at Altamount Road, Cumballa Hill, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 75000000,
+      "address": "Altamount Road, Cumballa Hill",
+      "city": "Mumbai",
+      "postcode": "400014",
+      "latitude": 19.19,
+      "longitude": 72.96,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 2950,
+      "construction_year": 2024,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 168,
+      "owner_id": 4,
+      "created_at": "2026-06-16T13:46:10.312Z",
+      "updated_at": "2026-06-16T13:46:10.312Z"
+    },
+    {
+      "id": 38,
+      "title": "Anjuna Palms Coastal Apartment",
+      "ref_number": "PROP-1038",
+      "description": "Premium apartment situated at Dollar Colony, JP Nagar, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Rent",
+      "price": 165000,
+      "address": "Dollar Colony, JP Nagar",
+      "city": "Bengaluru",
+      "postcode": "400015",
+      "latitude": 19.2,
+      "longitude": 72.97,
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "area_sqft": 3100,
+      "construction_year": 2020,
+      "furnishing": "Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 205,
+      "owner_id": 2,
+      "created_at": "2026-06-13T13:46:10.312Z",
+      "updated_at": "2026-06-13T13:46:10.312Z"
+    },
+    {
+      "id": 39,
+      "title": "Nandi Hills Heights Apartment",
+      "ref_number": "PROP-1039",
+      "description": "Premium apartment situated at Madhapur Main Road, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 84000000,
+      "address": "Madhapur Main Road",
+      "city": "Hyderabad",
+      "postcode": "400016",
+      "latitude": 19.21,
+      "longitude": 72.97999999999999,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area_sqft": 3250,
+      "construction_year": 2021,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 242,
+      "owner_id": 3,
+      "created_at": "2026-06-10T13:46:10.312Z",
+      "updated_at": "2026-06-10T13:46:10.312Z"
+    },
+    {
+      "id": 40,
+      "title": "Banjara Hills Royal Apartment",
+      "ref_number": "PROP-1040",
+      "description": "Premium apartment situated at DLF Cyber City, Sector 24, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 88500000,
+      "address": "DLF Cyber City, Sector 24",
+      "city": "Gurgaon",
+      "postcode": "400017",
+      "latitude": 19.220000000000002,
+      "longitude": 72.99,
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "area_sqft": 3400,
+      "construction_year": 2022,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 279,
+      "owner_id": 4,
+      "created_at": "2026-06-07T13:46:10.312Z",
+      "updated_at": "2026-06-07T13:46:10.312Z"
+    },
+    {
+      "id": 41,
+      "title": "Indiranagar Urban Loft",
+      "ref_number": "PROP-1041",
+      "description": "Premium apartment situated at Bambolim Beach Road, Candolim, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 93000000,
+      "address": "Bambolim Beach Road, Candolim",
+      "city": "Goa",
+      "postcode": "400018",
+      "latitude": 19.23,
+      "longitude": 73,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area_sqft": 3550,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 316,
+      "owner_id": 2,
+      "created_at": "2026-06-04T13:46:10.312Z",
+      "updated_at": "2026-06-04T13:46:10.312Z"
+    },
+    {
+      "id": 42,
+      "title": "Powai Lakeview Luxury Studio",
+      "ref_number": "PROP-1042",
+      "description": "Premium apartment situated at Kalyani Nagar Main Road, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Rent",
+      "price": 197000,
+      "address": "Kalyani Nagar Main Road",
+      "city": "Pune",
+      "postcode": "400019",
+      "latitude": 19.240000000000002,
+      "longitude": 73.00999999999999,
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "area_sqft": 3700,
+      "construction_year": 2024,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 353,
+      "owner_id": 3,
+      "created_at": "2026-06-01T13:46:10.312Z",
+      "updated_at": "2026-06-01T13:46:10.312Z"
+    },
+    {
+      "id": 43,
+      "title": "Juhu Beachside Modern Apartment",
+      "ref_number": "PROP-1043",
+      "description": "Premium apartment situated at Vasant Vihar Block C, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 102000000,
+      "address": "Vasant Vihar Block C",
+      "city": "New Delhi",
+      "postcode": "400020",
+      "latitude": 19.25,
+      "longitude": 73.02,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 3850,
+      "construction_year": 2020,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 390,
+      "owner_id": 4,
+      "created_at": "2026-05-29T13:46:10.312Z",
+      "updated_at": "2026-05-29T13:46:10.312Z"
+    },
+    {
+      "id": 44,
+      "title": "Sadashivanagar Elite Suite",
+      "ref_number": "PROP-1044",
+      "description": "Premium apartment situated at Lokhandwala Complex, Andheri, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 106500000,
+      "address": "Lokhandwala Complex, Andheri",
+      "city": "Mumbai",
+      "postcode": "400021",
+      "latitude": 19.26,
+      "longitude": 73.02999999999999,
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "area_sqft": 4000,
+      "construction_year": 2021,
+      "furnishing": "Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 427,
+      "owner_id": 2,
+      "created_at": "2026-05-26T13:46:10.312Z",
+      "updated_at": "2026-05-26T13:46:10.312Z"
+    },
+    {
+      "id": 45,
+      "title": "Magarpatta Smart Executive Flat",
+      "ref_number": "PROP-1045",
+      "description": "Premium apartment situated at Prestige Golfshire, Devanahalli, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Sale",
+      "price": 111000000,
+      "address": "Prestige Golfshire, Devanahalli",
+      "city": "Bengaluru",
+      "postcode": "400022",
+      "latitude": 19.27,
+      "longitude": 73.03999999999999,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area_sqft": 4150,
+      "construction_year": 2022,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 464,
+      "owner_id": 3,
+      "created_at": "2026-05-23T13:46:10.312Z",
+      "updated_at": "2026-05-23T13:46:10.312Z"
+    },
+    {
+      "id": 46,
+      "title": "Golf Course Road Tower Flat",
+      "ref_number": "PROP-1046",
+      "description": "Premium apartment situated at Manikonda Greens, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Apartment",
+      "listing_type": "Rent",
+      "price": 229000,
+      "address": "Manikonda Greens",
+      "city": "Hyderabad",
+      "postcode": "400023",
+      "latitude": 19.28,
+      "longitude": 73.05,
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "area_sqft": 4300,
+      "construction_year": 2023,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 501,
+      "owner_id": 4,
+      "created_at": "2026-05-20T13:46:10.312Z",
+      "updated_at": "2026-05-20T13:46:10.312Z"
+    },
+    {
+      "id": 47,
+      "title": "Independent Luxury Duplex Bungalow",
+      "ref_number": "PROP-1047",
+      "description": "Premium house situated at 742 Carter Road, Bandra West, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 28000000,
+      "address": "742 Carter Road, Bandra West",
+      "city": "Mumbai",
+      "postcode": "400000",
+      "latitude": 19.05,
+      "longitude": 72.82,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 2400,
+      "construction_year": 2020,
+      "furnishing": "Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 100,
+      "owner_id": 2,
+      "created_at": "2026-07-28T13:46:10.312Z",
+      "updated_at": "2026-07-28T13:46:10.312Z"
+    },
+    {
+      "id": 48,
+      "title": "Suburban Heritage Craftsman House",
+      "ref_number": "PROP-1048",
+      "description": "Premium house situated at Nandi Hills Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 36000000,
+      "address": "Nandi Hills Road",
+      "city": "Bengaluru",
+      "postcode": "400001",
+      "latitude": 19.060000000000002,
+      "longitude": 72.83,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 2750,
+      "construction_year": 2021,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 137,
+      "owner_id": 3,
+      "created_at": "2026-07-25T13:46:10.312Z",
+      "updated_at": "2026-07-25T13:46:10.312Z"
+    },
+    {
+      "id": 49,
+      "title": "Teakwood Garden Independent Bungalow",
+      "ref_number": "PROP-1049",
+      "description": "Premium house situated at Banjara Hills Road No. 12, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 44000000,
+      "address": "Banjara Hills Road No. 12",
+      "city": "Hyderabad",
+      "postcode": "400002",
+      "latitude": 19.07,
+      "longitude": 72.83999999999999,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "area_sqft": 3100,
+      "construction_year": 2022,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 174,
+      "owner_id": 4,
+      "created_at": "2026-07-22T13:46:10.312Z",
+      "updated_at": "2026-07-22T13:46:10.312Z"
+    },
+    {
+      "id": 50,
+      "title": "Greenfield Eco Family Bungalow",
+      "ref_number": "PROP-1050",
+      "description": "Premium house situated at Sohna Road, Sector 49, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Rent",
+      "price": 111000,
+      "address": "Sohna Road, Sector 49",
+      "city": "Gurgaon",
+      "postcode": "400003",
+      "latitude": 19.080000000000002,
+      "longitude": 72.85,
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "area_sqft": 3450,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 211,
+      "owner_id": 2,
+      "created_at": "2026-07-19T13:46:10.312Z",
+      "updated_at": "2026-07-19T13:46:10.312Z"
+    },
+    {
+      "id": 51,
+      "title": "Colonial Style Heritage Bungalow",
+      "ref_number": "PROP-1051",
+      "description": "Premium house situated at Reis Magos Fort Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 60000000,
+      "address": "Reis Magos Fort Road",
+      "city": "Goa",
+      "postcode": "400004",
+      "latitude": 19.09,
+      "longitude": 72.86,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 3800,
+      "construction_year": 2024,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 248,
+      "owner_id": 3,
+      "created_at": "2026-07-16T13:46:10.312Z",
+      "updated_at": "2026-07-16T13:46:10.312Z"
+    },
+    {
+      "id": 52,
+      "title": "Modernist Urban Courtyard House",
+      "ref_number": "PROP-1052",
+      "description": "Premium house situated at Bhosale Nagar, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 68000000,
+      "address": "Bhosale Nagar",
+      "city": "Pune",
+      "postcode": "400005",
+      "latitude": 19.1,
+      "longitude": 72.86999999999999,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "area_sqft": 4150,
+      "construction_year": 2020,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 285,
+      "owner_id": 4,
+      "created_at": "2026-07-13T13:46:10.312Z",
+      "updated_at": "2026-07-13T13:46:10.312Z"
+    },
+    {
+      "id": 53,
+      "title": "Orchard Hillside Family Residence",
+      "ref_number": "PROP-1053",
+      "description": "Premium house situated at Khan Market Middle Lane, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 76000000,
+      "address": "Khan Market Middle Lane",
+      "city": "New Delhi",
+      "postcode": "400006",
+      "latitude": 19.11,
+      "longitude": 72.88,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 4500,
+      "construction_year": 2021,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 322,
+      "owner_id": 2,
+      "created_at": "2026-07-10T13:46:10.312Z",
+      "updated_at": "2026-07-10T13:46:10.312Z"
+    },
+    {
+      "id": 54,
+      "title": "Botanica Eco Smart Bungalow",
+      "ref_number": "PROP-1054",
+      "description": "Premium house situated at Hiranandani Gardens, Powai, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Rent",
+      "price": 159000,
+      "address": "Hiranandani Gardens, Powai",
+      "city": "Mumbai",
+      "postcode": "400007",
+      "latitude": 19.12,
+      "longitude": 72.88999999999999,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 4850,
+      "construction_year": 2022,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 359,
+      "owner_id": 3,
+      "created_at": "2026-07-07T13:46:10.312Z",
+      "updated_at": "2026-07-07T13:46:10.312Z"
+    },
+    {
+      "id": 55,
+      "title": "Royal Palms Independent Villa House",
+      "ref_number": "PROP-1055",
+      "description": "Premium house situated at 100 UB City Boulevard, Lavelle Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 92000000,
+      "address": "100 UB City Boulevard, Lavelle Road",
+      "city": "Bengaluru",
+      "postcode": "400008",
+      "latitude": 19.13,
+      "longitude": 72.89999999999999,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "area_sqft": 5200,
+      "construction_year": 2023,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 396,
+      "owner_id": 4,
+      "created_at": "2026-07-04T13:46:10.312Z",
+      "updated_at": "2026-07-04T13:46:10.312Z"
+    },
+    {
+      "id": 56,
+      "title": "Lakeside Suburban Family Estate",
+      "ref_number": "PROP-1056",
+      "description": "Premium house situated at HITEC City Phase 2, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 100000000,
+      "address": "HITEC City Phase 2",
+      "city": "Hyderabad",
+      "postcode": "400009",
+      "latitude": 19.14,
+      "longitude": 72.91,
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "area_sqft": 5550,
+      "construction_year": 2024,
+      "furnishing": "Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 433,
+      "owner_id": 2,
+      "created_at": "2026-07-01T13:46:10.312Z",
+      "updated_at": "2026-07-01T13:46:10.312Z"
+    },
+    {
+      "id": 57,
+      "title": "Cedar Wood Classic Bungalow",
+      "ref_number": "PROP-1057",
+      "description": "Premium house situated at Golf Course Extension Road, Sector 54, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 108000000,
+      "address": "Golf Course Extension Road, Sector 54",
+      "city": "Gurgaon",
+      "postcode": "400010",
+      "latitude": 19.150000000000002,
+      "longitude": 72.91999999999999,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 5900,
+      "construction_year": 2020,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 470,
+      "owner_id": 3,
+      "created_at": "2026-06-28T13:46:10.312Z",
+      "updated_at": "2026-06-28T13:46:10.312Z"
+    },
+    {
+      "id": 58,
+      "title": "Highland View Suburban Home",
+      "ref_number": "PROP-1058",
+      "description": "Premium house situated at Dona Paula Jetty Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Rent",
+      "price": 207000,
+      "address": "Dona Paula Jetty Road",
+      "city": "Goa",
+      "postcode": "400011",
+      "latitude": 19.16,
+      "longitude": 72.92999999999999,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "area_sqft": 6250,
+      "construction_year": 2021,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 507,
+      "owner_id": 4,
+      "created_at": "2026-06-25T13:46:10.312Z",
+      "updated_at": "2026-06-25T13:46:10.312Z"
+    },
+    {
+      "id": 59,
+      "title": "Golden Meadows Family House",
+      "ref_number": "PROP-1059",
+      "description": "Premium house situated at Lane 7, Koregaon Park, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 124000000,
+      "address": "Lane 7, Koregaon Park",
+      "city": "Pune",
+      "postcode": "400012",
+      "latitude": 19.17,
+      "longitude": 72.94,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 6600,
+      "construction_year": 2022,
+      "furnishing": "Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 544,
+      "owner_id": 2,
+      "created_at": "2026-06-22T13:46:10.312Z",
+      "updated_at": "2026-06-22T13:46:10.312Z"
+    },
+    {
+      "id": 60,
+      "title": "Pine Ridge Suburban Bungalow",
+      "ref_number": "PROP-1060",
+      "description": "Premium house situated at Golf Links, Central Delhi, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 132000000,
+      "address": "Golf Links, Central Delhi",
+      "city": "New Delhi",
+      "postcode": "400013",
+      "latitude": 19.18,
+      "longitude": 72.94999999999999,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqft": 6950,
+      "construction_year": 2023,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 131,
+      "owner_id": 3,
+      "created_at": "2026-06-19T13:46:10.312Z",
+      "updated_at": "2026-06-19T13:46:10.312Z"
+    },
+    {
+      "id": 61,
+      "title": "Heritage Court Residence",
+      "ref_number": "PROP-1061",
+      "description": "Premium house situated at Altamount Road, Cumballa Hill, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 140000000,
+      "address": "Altamount Road, Cumballa Hill",
+      "city": "Mumbai",
+      "postcode": "400014",
+      "latitude": 19.19,
+      "longitude": 72.96,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "area_sqft": 7300,
+      "construction_year": 2024,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 168,
+      "owner_id": 4,
+      "created_at": "2026-06-16T13:46:10.312Z",
+      "updated_at": "2026-06-16T13:46:10.312Z"
+    },
+    {
+      "id": 62,
+      "title": "Silver Oak Parkside House",
+      "ref_number": "PROP-1062",
+      "description": "Premium house situated at Dollar Colony, JP Nagar, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Rent",
+      "price": 255000,
+      "address": "Dollar Colony, JP Nagar",
+      "city": "Bengaluru",
+      "postcode": "400015",
+      "latitude": 19.2,
+      "longitude": 72.97,
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "area_sqft": 7650,
+      "construction_year": 2020,
+      "furnishing": "Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 205,
+      "owner_id": 2,
+      "created_at": "2026-06-13T13:46:10.312Z",
+      "updated_at": "2026-06-13T13:46:10.312Z"
+    },
+    {
+      "id": 63,
+      "title": "Amber Valley Luxury House",
+      "ref_number": "PROP-1063",
+      "description": "Premium house situated at Madhapur Main Road, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 156000000,
+      "address": "Madhapur Main Road",
+      "city": "Hyderabad",
+      "postcode": "400016",
+      "latitude": 19.21,
+      "longitude": 72.97999999999999,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area_sqft": 8000,
+      "construction_year": 2021,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 242,
+      "owner_id": 3,
+      "created_at": "2026-06-10T13:46:10.312Z",
+      "updated_at": "2026-06-10T13:46:10.312Z"
+    },
+    {
+      "id": 64,
+      "title": "Oakwood Horizon Bungalow",
+      "ref_number": "PROP-1064",
+      "description": "Premium house situated at DLF Cyber City, Sector 24, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 164000000,
+      "address": "DLF Cyber City, Sector 24",
+      "city": "Gurgaon",
+      "postcode": "400017",
+      "latitude": 19.220000000000002,
+      "longitude": 72.99,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "area_sqft": 8350,
+      "construction_year": 2022,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 279,
+      "owner_id": 4,
+      "created_at": "2026-06-07T13:46:10.312Z",
+      "updated_at": "2026-06-07T13:46:10.312Z"
+    },
+    {
+      "id": 65,
+      "title": "Crestview Suburban House",
+      "ref_number": "PROP-1065",
+      "description": "Premium house situated at Bambolim Beach Road, Candolim, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "House",
+      "listing_type": "Sale",
+      "price": 172000000,
+      "address": "Bambolim Beach Road, Candolim",
+      "city": "Goa",
+      "postcode": "400018",
+      "latitude": 19.23,
+      "longitude": 73,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqft": 8700,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 316,
+      "owner_id": 2,
+      "created_at": "2026-06-04T13:46:10.312Z",
+      "updated_at": "2026-06-04T13:46:10.312Z"
+    },
+    {
+      "id": 66,
+      "title": "Grade-A Corporate Office Space in BKC",
+      "ref_number": "PROP-1066",
+      "description": "Premium office situated at 742 Carter Road, Bandra West, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Sale",
+      "price": 35000000,
+      "address": "742 Carter Road, Bandra West",
+      "city": "Mumbai",
+      "postcode": "400000",
+      "latitude": 19.05,
+      "longitude": 72.82,
+      "bedrooms": 0,
+      "bathrooms": 2,
+      "area_sqft": 1500,
+      "construction_year": 2020,
+      "furnishing": "Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 100,
+      "owner_id": 2,
+      "created_at": "2026-07-28T13:46:10.312Z",
+      "updated_at": "2026-07-28T13:46:10.312Z"
+    },
+    {
+      "id": 67,
+      "title": "Prime High-Street Retail Space in Khan Market",
+      "ref_number": "PROP-1067",
+      "description": "Premium office situated at Nandi Hills Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Rent",
+      "price": 150000,
+      "address": "Nandi Hills Road",
+      "city": "Bengaluru",
+      "postcode": "400001",
+      "latitude": 19.060000000000002,
+      "longitude": 72.83,
+      "bedrooms": 0,
+      "bathrooms": 3,
+      "area_sqft": 1900,
+      "construction_year": 2021,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 137,
+      "owner_id": 3,
+      "created_at": "2026-07-25T13:46:10.312Z",
+      "updated_at": "2026-07-25T13:46:10.312Z"
+    },
+    {
+      "id": 68,
+      "title": "Tech Park Corporate Floor in HITEC City",
+      "ref_number": "PROP-1068",
+      "description": "Premium office situated at Banjara Hills Road No. 12, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Sale",
+      "price": 59000000,
+      "address": "Banjara Hills Road No. 12",
+      "city": "Hyderabad",
+      "postcode": "400002",
+      "latitude": 19.07,
+      "longitude": 72.83999999999999,
+      "bedrooms": 0,
+      "bathrooms": 4,
+      "area_sqft": 2300,
+      "construction_year": 2022,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 174,
+      "owner_id": 4,
+      "created_at": "2026-07-22T13:46:10.312Z",
+      "updated_at": "2026-07-22T13:46:10.312Z"
+    },
+    {
+      "id": 69,
+      "title": "Financial District Executive Office",
+      "ref_number": "PROP-1069",
+      "description": "Premium office situated at Sohna Road, Sector 49, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Rent",
+      "price": 210000,
+      "address": "Sohna Road, Sector 49",
+      "city": "Gurgaon",
+      "postcode": "400003",
+      "latitude": 19.080000000000002,
+      "longitude": 72.85,
+      "bedrooms": 0,
+      "bathrooms": 2,
+      "area_sqft": 2700,
+      "construction_year": 2023,
+      "furnishing": "Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 211,
+      "owner_id": 2,
+      "created_at": "2026-07-19T13:46:10.312Z",
+      "updated_at": "2026-07-19T13:46:10.312Z"
+    },
+    {
+      "id": 70,
+      "title": "DLF Cyber City Corporate Suite",
+      "ref_number": "PROP-1070",
+      "description": "Premium office situated at Reis Magos Fort Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Sale",
+      "price": 83000000,
+      "address": "Reis Magos Fort Road",
+      "city": "Goa",
+      "postcode": "400004",
+      "latitude": 19.09,
+      "longitude": 72.86,
+      "bedrooms": 0,
+      "bathrooms": 3,
+      "area_sqft": 3100,
+      "construction_year": 2024,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 248,
+      "owner_id": 3,
+      "created_at": "2026-07-16T13:46:10.312Z",
+      "updated_at": "2026-07-16T13:46:10.312Z"
+    },
+    {
+      "id": 71,
+      "title": "UB City Commercial Tower Floor",
+      "ref_number": "PROP-1071",
+      "description": "Premium office situated at Bhosale Nagar, Pune. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Rent",
+      "price": 270000,
+      "address": "Bhosale Nagar",
+      "city": "Pune",
+      "postcode": "400005",
+      "latitude": 19.1,
+      "longitude": 72.86999999999999,
+      "bedrooms": 0,
+      "bathrooms": 4,
+      "area_sqft": 3500,
+      "construction_year": 2020,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 285,
+      "owner_id": 4,
+      "created_at": "2026-07-13T13:46:10.312Z",
+      "updated_at": "2026-07-13T13:46:10.312Z"
+    },
+    {
+      "id": 72,
+      "title": "Koregaon Park Tech Studio",
+      "ref_number": "PROP-1072",
+      "description": "Premium office situated at Khan Market Middle Lane, New Delhi. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Sale",
+      "price": 107000000,
+      "address": "Khan Market Middle Lane",
+      "city": "New Delhi",
+      "postcode": "400006",
+      "latitude": 19.11,
+      "longitude": 72.88,
+      "bedrooms": 0,
+      "bathrooms": 2,
+      "area_sqft": 3900,
+      "construction_year": 2021,
+      "furnishing": "Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 322,
+      "owner_id": 2,
+      "created_at": "2026-07-10T13:46:10.312Z",
+      "updated_at": "2026-07-10T13:46:10.312Z"
+    },
+    {
+      "id": 73,
+      "title": "Golf Course Road Commercial Suite",
+      "ref_number": "PROP-1073",
+      "description": "Premium office situated at Hiranandani Gardens, Powai, Mumbai. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Rent",
+      "price": 330000,
+      "address": "Hiranandani Gardens, Powai",
+      "city": "Mumbai",
+      "postcode": "400007",
+      "latitude": 19.12,
+      "longitude": 72.88999999999999,
+      "bedrooms": 0,
+      "bathrooms": 3,
+      "area_sqft": 4300,
+      "construction_year": 2022,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 359,
+      "owner_id": 3,
+      "created_at": "2026-07-07T13:46:10.312Z",
+      "updated_at": "2026-07-07T13:46:10.312Z"
+    },
+    {
+      "id": 74,
+      "title": "Indiranagar Boutique Office Studio",
+      "ref_number": "PROP-1074",
+      "description": "Premium office situated at 100 UB City Boulevard, Lavelle Road, Bengaluru. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Sale",
+      "price": 131000000,
+      "address": "100 UB City Boulevard, Lavelle Road",
+      "city": "Bengaluru",
+      "postcode": "400008",
+      "latitude": 19.13,
+      "longitude": 72.89999999999999,
+      "bedrooms": 0,
+      "bathrooms": 4,
+      "area_sqft": 4700,
+      "construction_year": 2023,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 1,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 396,
+      "owner_id": 4,
+      "created_at": "2026-07-04T13:46:10.312Z",
+      "updated_at": "2026-07-04T13:46:10.312Z"
+    },
+    {
+      "id": 75,
+      "title": "Viman Nagar Corporate Plaza",
+      "ref_number": "PROP-1075",
+      "description": "Premium office situated at HITEC City Phase 2, Hyderabad. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Rent",
+      "price": 390000,
+      "address": "HITEC City Phase 2",
+      "city": "Hyderabad",
+      "postcode": "400009",
+      "latitude": 19.14,
+      "longitude": 72.91,
+      "bedrooms": 0,
+      "bathrooms": 2,
+      "area_sqft": 5100,
+      "construction_year": 2024,
+      "furnishing": "Furnished",
+      "parking_spaces": 2,
+      "status": "active",
+      "is_featured": 1,
+      "view_count": 433,
+      "owner_id": 2,
+      "created_at": "2026-07-01T13:46:10.312Z",
+      "updated_at": "2026-07-01T13:46:10.312Z"
+    },
+    {
+      "id": 76,
+      "title": "Jubilee Hills Commercial Floor",
+      "ref_number": "PROP-1076",
+      "description": "Premium office situated at Golf Course Extension Road, Sector 54, Gurgaon. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Sale",
+      "price": 155000000,
+      "address": "Golf Course Extension Road, Sector 54",
+      "city": "Gurgaon",
+      "postcode": "400010",
+      "latitude": 19.150000000000002,
+      "longitude": 72.91999999999999,
+      "bedrooms": 0,
+      "bathrooms": 3,
+      "area_sqft": 5500,
+      "construction_year": 2020,
+      "furnishing": "Semi-Furnished",
+      "parking_spaces": 3,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 470,
+      "owner_id": 3,
+      "created_at": "2026-06-28T13:46:10.312Z",
+      "updated_at": "2026-06-28T13:46:10.312Z"
+    },
+    {
+      "id": 77,
+      "title": "Powai Business Hub Office",
+      "ref_number": "PROP-1077",
+      "description": "Premium office situated at Dona Paula Jetty Road, Goa. Features luxury interior finishes, modern architecture, 24/7 security, power backup, and top-tier amenities.",
+      "property_type": "Office",
+      "listing_type": "Rent",
+      "price": 450000,
+      "address": "Dona Paula Jetty Road",
+      "city": "Goa",
+      "postcode": "400011",
+      "latitude": 19.16,
+      "longitude": 72.92999999999999,
+      "bedrooms": 0,
+      "bathrooms": 4,
+      "area_sqft": 5900,
+      "construction_year": 2021,
+      "furnishing": "Unfurnished",
+      "parking_spaces": 4,
+      "status": "active",
+      "is_featured": 0,
+      "view_count": 507,
+      "owner_id": 4,
+      "created_at": "2026-06-25T13:46:10.312Z",
+      "updated_at": "2026-06-25T13:46:10.312Z"
     }
   ],
   "property_images": [
@@ -355,62 +2073,920 @@
     {
       "id": 2,
       "property_id": 1,
-      "image_url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
       "is_primary": 0
     },
     {
       "id": 3,
       "property_id": 2,
-      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
-      "is_primary": 1
-    },
-    {
-      "id": 4,
-      "property_id": 3,
       "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
       "is_primary": 1
     },
     {
+      "id": 4,
+      "property_id": 2,
+      "image_url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
       "id": 5,
-      "property_id": 4,
-      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
-      "is_primary": 1
-    },
-    {
-      "id": 6,
-      "property_id": 5,
-      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
-      "is_primary": 1
-    },
-    {
-      "id": 7,
-      "property_id": 6,
+      "property_id": 3,
       "image_url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
       "is_primary": 1
     },
     {
-      "id": 8,
-      "property_id": 7,
-      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-      "is_primary": 1
+      "id": 6,
+      "property_id": 3,
+      "image_url": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
     },
     {
-      "id": 9,
-      "property_id": 8,
+      "id": 7,
+      "property_id": 4,
       "image_url": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
       "is_primary": 1
     },
     {
+      "id": 8,
+      "property_id": 4,
+      "image_url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 9,
+      "property_id": 5,
+      "image_url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
       "id": 10,
+      "property_id": 5,
+      "image_url": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 11,
+      "property_id": 6,
+      "image_url": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 12,
+      "property_id": 6,
+      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 13,
+      "property_id": 7,
+      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 14,
+      "property_id": 7,
+      "image_url": "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 15,
+      "property_id": 8,
+      "image_url": "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 16,
+      "property_id": 8,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 17,
       "property_id": 9,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 18,
+      "property_id": 9,
+      "image_url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 19,
+      "property_id": 10,
+      "image_url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 20,
+      "property_id": 10,
+      "image_url": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 21,
+      "property_id": 11,
+      "image_url": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 22,
+      "property_id": 11,
+      "image_url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 23,
+      "property_id": 12,
+      "image_url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 24,
+      "property_id": 12,
+      "image_url": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 25,
+      "property_id": 13,
+      "image_url": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 26,
+      "property_id": 13,
+      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 27,
+      "property_id": 14,
+      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 28,
+      "property_id": 14,
+      "image_url": "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 29,
+      "property_id": 15,
+      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 30,
+      "property_id": 15,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 31,
+      "property_id": 16,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 32,
+      "property_id": 16,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 33,
+      "property_id": 17,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 34,
+      "property_id": 17,
+      "image_url": "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 35,
+      "property_id": 18,
+      "image_url": "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 36,
+      "property_id": 18,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 37,
+      "property_id": 19,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 38,
+      "property_id": 19,
+      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 39,
+      "property_id": 20,
+      "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 40,
+      "property_id": 20,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 41,
+      "property_id": 21,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 42,
+      "property_id": 21,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 43,
+      "property_id": 22,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 44,
+      "property_id": 22,
+      "image_url": "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 45,
+      "property_id": 23,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 46,
+      "property_id": 23,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 47,
+      "property_id": 24,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 48,
+      "property_id": 24,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 49,
+      "property_id": 25,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 50,
+      "property_id": 25,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 51,
+      "property_id": 26,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 52,
+      "property_id": 26,
+      "image_url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 53,
+      "property_id": 27,
+      "image_url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 54,
+      "property_id": 27,
+      "image_url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 55,
+      "property_id": 28,
+      "image_url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 56,
+      "property_id": 28,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 57,
+      "property_id": 29,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 58,
+      "property_id": 29,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 59,
+      "property_id": 30,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 60,
+      "property_id": 30,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 61,
+      "property_id": 31,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 62,
+      "property_id": 31,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 63,
+      "property_id": 32,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 64,
+      "property_id": 32,
+      "image_url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 65,
+      "property_id": 33,
+      "image_url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 66,
+      "property_id": 33,
+      "image_url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 67,
+      "property_id": 34,
+      "image_url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 68,
+      "property_id": 34,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 69,
+      "property_id": 35,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 70,
+      "property_id": 35,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 71,
+      "property_id": 36,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 72,
+      "property_id": 36,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 73,
+      "property_id": 37,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 74,
+      "property_id": 37,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 75,
+      "property_id": 38,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 76,
+      "property_id": 38,
+      "image_url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 77,
+      "property_id": 39,
+      "image_url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 78,
+      "property_id": 39,
+      "image_url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 79,
+      "property_id": 40,
+      "image_url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 80,
+      "property_id": 40,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 81,
+      "property_id": 41,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 82,
+      "property_id": 41,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 83,
+      "property_id": 42,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 84,
+      "property_id": 42,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 85,
+      "property_id": 43,
+      "image_url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 86,
+      "property_id": 43,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 87,
+      "property_id": 44,
+      "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 88,
+      "property_id": 44,
+      "image_url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 89,
+      "property_id": 45,
+      "image_url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 90,
+      "property_id": 45,
+      "image_url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 91,
+      "property_id": 46,
+      "image_url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 92,
+      "property_id": 46,
+      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 93,
+      "property_id": 47,
+      "image_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 94,
+      "property_id": 47,
+      "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 95,
+      "property_id": 48,
+      "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 96,
+      "property_id": 48,
+      "image_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 97,
+      "property_id": 49,
+      "image_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 98,
+      "property_id": 49,
+      "image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 99,
+      "property_id": 50,
+      "image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 100,
+      "property_id": 50,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 101,
+      "property_id": 51,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 102,
+      "property_id": 51,
+      "image_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 103,
+      "property_id": 52,
+      "image_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 104,
+      "property_id": 52,
+      "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 105,
+      "property_id": 53,
+      "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 106,
+      "property_id": 53,
+      "image_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 107,
+      "property_id": 54,
+      "image_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 108,
+      "property_id": 54,
+      "image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 109,
+      "property_id": 55,
+      "image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 110,
+      "property_id": 55,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 111,
+      "property_id": 56,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 112,
+      "property_id": 56,
+      "image_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 113,
+      "property_id": 57,
+      "image_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 114,
+      "property_id": 57,
+      "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 115,
+      "property_id": 58,
+      "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 116,
+      "property_id": 58,
+      "image_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 117,
+      "property_id": 59,
+      "image_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 118,
+      "property_id": 59,
+      "image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 119,
+      "property_id": 60,
+      "image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 120,
+      "property_id": 60,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 121,
+      "property_id": 61,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 122,
+      "property_id": 61,
+      "image_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 123,
+      "property_id": 62,
+      "image_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 124,
+      "property_id": 62,
+      "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 125,
+      "property_id": 63,
+      "image_url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 126,
+      "property_id": 63,
+      "image_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 127,
+      "property_id": 64,
+      "image_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 128,
+      "property_id": 64,
+      "image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 129,
+      "property_id": 65,
+      "image_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 130,
+      "property_id": 65,
+      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 131,
+      "property_id": 66,
+      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 132,
+      "property_id": 66,
+      "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 133,
+      "property_id": 67,
+      "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 134,
+      "property_id": 67,
+      "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 135,
+      "property_id": 68,
+      "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 136,
+      "property_id": 68,
+      "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 137,
+      "property_id": 69,
       "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
       "is_primary": 1
     },
     {
-      "id": 11,
-      "property_id": 10,
-      "image_url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "id": 138,
+      "property_id": 69,
+      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 139,
+      "property_id": 70,
+      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
       "is_primary": 1
+    },
+    {
+      "id": 140,
+      "property_id": 70,
+      "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 141,
+      "property_id": 71,
+      "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 142,
+      "property_id": 71,
+      "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 143,
+      "property_id": 72,
+      "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 144,
+      "property_id": 72,
+      "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 145,
+      "property_id": 73,
+      "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 146,
+      "property_id": 73,
+      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 147,
+      "property_id": 74,
+      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 148,
+      "property_id": 74,
+      "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 149,
+      "property_id": 75,
+      "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 150,
+      "property_id": 75,
+      "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 151,
+      "property_id": 76,
+      "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 152,
+      "property_id": 76,
+      "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
+    },
+    {
+      "id": 153,
+      "property_id": 77,
+      "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 1
+    },
+    {
+      "id": 154,
+      "property_id": 77,
+      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "is_primary": 0
     }
   ],
   "amenities": [
@@ -472,172 +3048,1719 @@
   ],
   "property_amenities": [
     {
-      "property_id": 1,
-      "amenity_id": 1
-    },
-    {
+      "id": 1,
       "property_id": 1,
       "amenity_id": 2
     },
     {
+      "id": 2,
+      "property_id": 1,
+      "amenity_id": 3
+    },
+    {
+      "id": 3,
       "property_id": 1,
       "amenity_id": 4
     },
     {
-      "property_id": 1,
-      "amenity_id": 7
-    },
-    {
-      "property_id": 1,
-      "amenity_id": 11
-    },
-    {
+      "id": 4,
       "property_id": 2,
       "amenity_id": 3
     },
     {
+      "id": 5,
       "property_id": 2,
       "amenity_id": 4
     },
     {
+      "id": 6,
       "property_id": 2,
       "amenity_id": 5
     },
     {
+      "id": 7,
       "property_id": 2,
-      "amenity_id": 8
+      "amenity_id": 6
     },
     {
-      "property_id": 2,
-      "amenity_id": 9
-    },
-    {
-      "property_id": 3,
-      "amenity_id": 2
-    },
-    {
+      "id": 8,
       "property_id": 3,
       "amenity_id": 4
     },
     {
+      "id": 9,
+      "property_id": 3,
+      "amenity_id": 5
+    },
+    {
+      "id": 10,
+      "property_id": 3,
+      "amenity_id": 6
+    },
+    {
+      "id": 11,
+      "property_id": 3,
+      "amenity_id": 7
+    },
+    {
+      "id": 12,
       "property_id": 3,
       "amenity_id": 8
     },
     {
-      "property_id": 3,
-      "amenity_id": 11
+      "id": 13,
+      "property_id": 4,
+      "amenity_id": 5
     },
     {
+      "id": 14,
       "property_id": 4,
+      "amenity_id": 6
+    },
+    {
+      "id": 15,
+      "property_id": 4,
+      "amenity_id": 7
+    },
+    {
+      "id": 16,
+      "property_id": 4,
+      "amenity_id": 8
+    },
+    {
+      "id": 17,
+      "property_id": 4,
+      "amenity_id": 9
+    },
+    {
+      "id": 18,
+      "property_id": 4,
+      "amenity_id": 10
+    },
+    {
+      "id": 19,
+      "property_id": 5,
+      "amenity_id": 6
+    },
+    {
+      "id": 20,
+      "property_id": 5,
+      "amenity_id": 7
+    },
+    {
+      "id": 21,
+      "property_id": 5,
+      "amenity_id": 8
+    },
+    {
+      "id": 22,
+      "property_id": 6,
+      "amenity_id": 7
+    },
+    {
+      "id": 23,
+      "property_id": 6,
+      "amenity_id": 8
+    },
+    {
+      "id": 24,
+      "property_id": 6,
+      "amenity_id": 9
+    },
+    {
+      "id": 25,
+      "property_id": 6,
+      "amenity_id": 10
+    },
+    {
+      "id": 26,
+      "property_id": 7,
+      "amenity_id": 8
+    },
+    {
+      "id": 27,
+      "property_id": 7,
+      "amenity_id": 9
+    },
+    {
+      "id": 28,
+      "property_id": 7,
+      "amenity_id": 10
+    },
+    {
+      "id": 29,
+      "property_id": 7,
+      "amenity_id": 1
+    },
+    {
+      "id": 30,
+      "property_id": 7,
+      "amenity_id": 2
+    },
+    {
+      "id": 31,
+      "property_id": 8,
+      "amenity_id": 9
+    },
+    {
+      "id": 32,
+      "property_id": 8,
+      "amenity_id": 10
+    },
+    {
+      "id": 33,
+      "property_id": 8,
+      "amenity_id": 1
+    },
+    {
+      "id": 34,
+      "property_id": 8,
+      "amenity_id": 2
+    },
+    {
+      "id": 35,
+      "property_id": 8,
       "amenity_id": 3
     },
     {
-      "property_id": 4,
-      "amenity_id": 5
-    },
-    {
-      "property_id": 4,
-      "amenity_id": 8
-    },
-    {
-      "property_id": 4,
-      "amenity_id": 11
-    },
-    {
-      "property_id": 5,
+      "id": 36,
+      "property_id": 8,
       "amenity_id": 4
     },
     {
-      "property_id": 5,
-      "amenity_id": 5
+      "id": 37,
+      "property_id": 9,
+      "amenity_id": 10
     },
     {
-      "property_id": 5,
-      "amenity_id": 8
-    },
-    {
-      "property_id": 5,
-      "amenity_id": 9
-    },
-    {
-      "property_id": 5,
-      "amenity_id": 11
-    },
-    {
-      "property_id": 6,
+      "id": 38,
+      "property_id": 9,
       "amenity_id": 1
     },
     {
-      "property_id": 6,
+      "id": 39,
+      "property_id": 9,
       "amenity_id": 2
     },
     {
-      "property_id": 6,
-      "amenity_id": 6
-    },
-    {
-      "property_id": 6,
-      "amenity_id": 7
-    },
-    {
-      "property_id": 7,
+      "id": 40,
+      "property_id": 10,
       "amenity_id": 1
     },
     {
-      "property_id": 7,
+      "id": 41,
+      "property_id": 10,
+      "amenity_id": 2
+    },
+    {
+      "id": 42,
+      "property_id": 10,
       "amenity_id": 3
     },
     {
-      "property_id": 7,
-      "amenity_id": 5
-    },
-    {
-      "property_id": 7,
-      "amenity_id": 9
-    },
-    {
-      "property_id": 8,
-      "amenity_id": 2
-    },
-    {
-      "property_id": 8,
-      "amenity_id": 6
-    },
-    {
-      "property_id": 8,
-      "amenity_id": 7
-    },
-    {
-      "property_id": 8,
-      "amenity_id": 9
-    },
-    {
-      "property_id": 9,
+      "id": 43,
+      "property_id": 10,
       "amenity_id": 4
     },
     {
-      "property_id": 9,
-      "amenity_id": 5
-    },
-    {
-      "property_id": 9,
-      "amenity_id": 11
-    },
-    {
-      "property_id": 10,
-      "amenity_id": 1
-    },
-    {
-      "property_id": 10,
+      "id": 44,
+      "property_id": 11,
       "amenity_id": 2
     },
     {
-      "property_id": 10,
+      "id": 45,
+      "property_id": 11,
+      "amenity_id": 3
+    },
+    {
+      "id": 46,
+      "property_id": 11,
+      "amenity_id": 4
+    },
+    {
+      "id": 47,
+      "property_id": 11,
+      "amenity_id": 5
+    },
+    {
+      "id": 48,
+      "property_id": 11,
       "amenity_id": 6
     },
     {
-      "property_id": 10,
+      "id": 49,
+      "property_id": 12,
+      "amenity_id": 3
+    },
+    {
+      "id": 50,
+      "property_id": 12,
+      "amenity_id": 4
+    },
+    {
+      "id": 51,
+      "property_id": 12,
+      "amenity_id": 5
+    },
+    {
+      "id": 52,
+      "property_id": 12,
+      "amenity_id": 6
+    },
+    {
+      "id": 53,
+      "property_id": 12,
       "amenity_id": 7
+    },
+    {
+      "id": 54,
+      "property_id": 12,
+      "amenity_id": 8
+    },
+    {
+      "id": 55,
+      "property_id": 13,
+      "amenity_id": 4
+    },
+    {
+      "id": 56,
+      "property_id": 13,
+      "amenity_id": 5
+    },
+    {
+      "id": 57,
+      "property_id": 13,
+      "amenity_id": 6
+    },
+    {
+      "id": 58,
+      "property_id": 14,
+      "amenity_id": 5
+    },
+    {
+      "id": 59,
+      "property_id": 14,
+      "amenity_id": 6
+    },
+    {
+      "id": 60,
+      "property_id": 14,
+      "amenity_id": 7
+    },
+    {
+      "id": 61,
+      "property_id": 14,
+      "amenity_id": 8
+    },
+    {
+      "id": 62,
+      "property_id": 15,
+      "amenity_id": 2
+    },
+    {
+      "id": 63,
+      "property_id": 15,
+      "amenity_id": 3
+    },
+    {
+      "id": 64,
+      "property_id": 15,
+      "amenity_id": 4
+    },
+    {
+      "id": 65,
+      "property_id": 16,
+      "amenity_id": 3
+    },
+    {
+      "id": 66,
+      "property_id": 16,
+      "amenity_id": 4
+    },
+    {
+      "id": 67,
+      "property_id": 16,
+      "amenity_id": 5
+    },
+    {
+      "id": 68,
+      "property_id": 16,
+      "amenity_id": 6
+    },
+    {
+      "id": 69,
+      "property_id": 17,
+      "amenity_id": 4
+    },
+    {
+      "id": 70,
+      "property_id": 17,
+      "amenity_id": 5
+    },
+    {
+      "id": 71,
+      "property_id": 17,
+      "amenity_id": 6
+    },
+    {
+      "id": 72,
+      "property_id": 17,
+      "amenity_id": 7
+    },
+    {
+      "id": 73,
+      "property_id": 17,
+      "amenity_id": 8
+    },
+    {
+      "id": 74,
+      "property_id": 18,
+      "amenity_id": 5
+    },
+    {
+      "id": 75,
+      "property_id": 18,
+      "amenity_id": 6
+    },
+    {
+      "id": 76,
+      "property_id": 18,
+      "amenity_id": 7
+    },
+    {
+      "id": 77,
+      "property_id": 18,
+      "amenity_id": 8
+    },
+    {
+      "id": 78,
+      "property_id": 18,
+      "amenity_id": 9
+    },
+    {
+      "id": 79,
+      "property_id": 18,
+      "amenity_id": 10
+    },
+    {
+      "id": 80,
+      "property_id": 19,
+      "amenity_id": 6
+    },
+    {
+      "id": 81,
+      "property_id": 19,
+      "amenity_id": 7
+    },
+    {
+      "id": 82,
+      "property_id": 19,
+      "amenity_id": 8
+    },
+    {
+      "id": 83,
+      "property_id": 20,
+      "amenity_id": 7
+    },
+    {
+      "id": 84,
+      "property_id": 20,
+      "amenity_id": 8
+    },
+    {
+      "id": 85,
+      "property_id": 20,
+      "amenity_id": 9
+    },
+    {
+      "id": 86,
+      "property_id": 20,
+      "amenity_id": 10
+    },
+    {
+      "id": 87,
+      "property_id": 21,
+      "amenity_id": 8
+    },
+    {
+      "id": 88,
+      "property_id": 21,
+      "amenity_id": 9
+    },
+    {
+      "id": 89,
+      "property_id": 21,
+      "amenity_id": 10
+    },
+    {
+      "id": 90,
+      "property_id": 21,
+      "amenity_id": 1
+    },
+    {
+      "id": 91,
+      "property_id": 21,
+      "amenity_id": 2
+    },
+    {
+      "id": 92,
+      "property_id": 22,
+      "amenity_id": 9
+    },
+    {
+      "id": 93,
+      "property_id": 22,
+      "amenity_id": 10
+    },
+    {
+      "id": 94,
+      "property_id": 22,
+      "amenity_id": 1
+    },
+    {
+      "id": 95,
+      "property_id": 22,
+      "amenity_id": 2
+    },
+    {
+      "id": 96,
+      "property_id": 22,
+      "amenity_id": 3
+    },
+    {
+      "id": 97,
+      "property_id": 22,
+      "amenity_id": 4
+    },
+    {
+      "id": 98,
+      "property_id": 23,
+      "amenity_id": 2
+    },
+    {
+      "id": 99,
+      "property_id": 23,
+      "amenity_id": 3
+    },
+    {
+      "id": 100,
+      "property_id": 23,
+      "amenity_id": 4
+    },
+    {
+      "id": 101,
+      "property_id": 24,
+      "amenity_id": 3
+    },
+    {
+      "id": 102,
+      "property_id": 24,
+      "amenity_id": 4
+    },
+    {
+      "id": 103,
+      "property_id": 24,
+      "amenity_id": 5
+    },
+    {
+      "id": 104,
+      "property_id": 24,
+      "amenity_id": 6
+    },
+    {
+      "id": 105,
+      "property_id": 25,
+      "amenity_id": 4
+    },
+    {
+      "id": 106,
+      "property_id": 25,
+      "amenity_id": 5
+    },
+    {
+      "id": 107,
+      "property_id": 25,
+      "amenity_id": 6
+    },
+    {
+      "id": 108,
+      "property_id": 25,
+      "amenity_id": 7
+    },
+    {
+      "id": 109,
+      "property_id": 25,
+      "amenity_id": 8
+    },
+    {
+      "id": 110,
+      "property_id": 26,
+      "amenity_id": 5
+    },
+    {
+      "id": 111,
+      "property_id": 26,
+      "amenity_id": 6
+    },
+    {
+      "id": 112,
+      "property_id": 26,
+      "amenity_id": 7
+    },
+    {
+      "id": 113,
+      "property_id": 26,
+      "amenity_id": 8
+    },
+    {
+      "id": 114,
+      "property_id": 26,
+      "amenity_id": 9
+    },
+    {
+      "id": 115,
+      "property_id": 26,
+      "amenity_id": 10
+    },
+    {
+      "id": 116,
+      "property_id": 27,
+      "amenity_id": 6
+    },
+    {
+      "id": 117,
+      "property_id": 27,
+      "amenity_id": 7
+    },
+    {
+      "id": 118,
+      "property_id": 27,
+      "amenity_id": 8
+    },
+    {
+      "id": 119,
+      "property_id": 28,
+      "amenity_id": 7
+    },
+    {
+      "id": 120,
+      "property_id": 28,
+      "amenity_id": 8
+    },
+    {
+      "id": 121,
+      "property_id": 28,
+      "amenity_id": 9
+    },
+    {
+      "id": 122,
+      "property_id": 28,
+      "amenity_id": 10
+    },
+    {
+      "id": 123,
+      "property_id": 29,
+      "amenity_id": 8
+    },
+    {
+      "id": 124,
+      "property_id": 29,
+      "amenity_id": 9
+    },
+    {
+      "id": 125,
+      "property_id": 29,
+      "amenity_id": 10
+    },
+    {
+      "id": 126,
+      "property_id": 29,
+      "amenity_id": 1
+    },
+    {
+      "id": 127,
+      "property_id": 29,
+      "amenity_id": 2
+    },
+    {
+      "id": 128,
+      "property_id": 30,
+      "amenity_id": 9
+    },
+    {
+      "id": 129,
+      "property_id": 30,
+      "amenity_id": 10
+    },
+    {
+      "id": 130,
+      "property_id": 30,
+      "amenity_id": 1
+    },
+    {
+      "id": 131,
+      "property_id": 30,
+      "amenity_id": 2
+    },
+    {
+      "id": 132,
+      "property_id": 30,
+      "amenity_id": 3
+    },
+    {
+      "id": 133,
+      "property_id": 30,
+      "amenity_id": 4
+    },
+    {
+      "id": 134,
+      "property_id": 31,
+      "amenity_id": 10
+    },
+    {
+      "id": 135,
+      "property_id": 31,
+      "amenity_id": 1
+    },
+    {
+      "id": 136,
+      "property_id": 31,
+      "amenity_id": 2
+    },
+    {
+      "id": 137,
+      "property_id": 32,
+      "amenity_id": 1
+    },
+    {
+      "id": 138,
+      "property_id": 32,
+      "amenity_id": 2
+    },
+    {
+      "id": 139,
+      "property_id": 32,
+      "amenity_id": 3
+    },
+    {
+      "id": 140,
+      "property_id": 32,
+      "amenity_id": 4
+    },
+    {
+      "id": 141,
+      "property_id": 33,
+      "amenity_id": 2
+    },
+    {
+      "id": 142,
+      "property_id": 33,
+      "amenity_id": 3
+    },
+    {
+      "id": 143,
+      "property_id": 33,
+      "amenity_id": 4
+    },
+    {
+      "id": 144,
+      "property_id": 33,
+      "amenity_id": 5
+    },
+    {
+      "id": 145,
+      "property_id": 33,
+      "amenity_id": 6
+    },
+    {
+      "id": 146,
+      "property_id": 34,
+      "amenity_id": 3
+    },
+    {
+      "id": 147,
+      "property_id": 34,
+      "amenity_id": 4
+    },
+    {
+      "id": 148,
+      "property_id": 34,
+      "amenity_id": 5
+    },
+    {
+      "id": 149,
+      "property_id": 34,
+      "amenity_id": 6
+    },
+    {
+      "id": 150,
+      "property_id": 34,
+      "amenity_id": 7
+    },
+    {
+      "id": 151,
+      "property_id": 34,
+      "amenity_id": 8
+    },
+    {
+      "id": 152,
+      "property_id": 35,
+      "amenity_id": 4
+    },
+    {
+      "id": 153,
+      "property_id": 35,
+      "amenity_id": 5
+    },
+    {
+      "id": 154,
+      "property_id": 35,
+      "amenity_id": 6
+    },
+    {
+      "id": 155,
+      "property_id": 36,
+      "amenity_id": 5
+    },
+    {
+      "id": 156,
+      "property_id": 36,
+      "amenity_id": 6
+    },
+    {
+      "id": 157,
+      "property_id": 36,
+      "amenity_id": 7
+    },
+    {
+      "id": 158,
+      "property_id": 36,
+      "amenity_id": 8
+    },
+    {
+      "id": 159,
+      "property_id": 37,
+      "amenity_id": 6
+    },
+    {
+      "id": 160,
+      "property_id": 37,
+      "amenity_id": 7
+    },
+    {
+      "id": 161,
+      "property_id": 37,
+      "amenity_id": 8
+    },
+    {
+      "id": 162,
+      "property_id": 37,
+      "amenity_id": 9
+    },
+    {
+      "id": 163,
+      "property_id": 37,
+      "amenity_id": 10
+    },
+    {
+      "id": 164,
+      "property_id": 38,
+      "amenity_id": 7
+    },
+    {
+      "id": 165,
+      "property_id": 38,
+      "amenity_id": 8
+    },
+    {
+      "id": 166,
+      "property_id": 38,
+      "amenity_id": 9
+    },
+    {
+      "id": 167,
+      "property_id": 38,
+      "amenity_id": 10
+    },
+    {
+      "id": 168,
+      "property_id": 38,
+      "amenity_id": 1
+    },
+    {
+      "id": 169,
+      "property_id": 38,
+      "amenity_id": 2
+    },
+    {
+      "id": 170,
+      "property_id": 39,
+      "amenity_id": 8
+    },
+    {
+      "id": 171,
+      "property_id": 39,
+      "amenity_id": 9
+    },
+    {
+      "id": 172,
+      "property_id": 39,
+      "amenity_id": 10
+    },
+    {
+      "id": 173,
+      "property_id": 40,
+      "amenity_id": 9
+    },
+    {
+      "id": 174,
+      "property_id": 40,
+      "amenity_id": 10
+    },
+    {
+      "id": 175,
+      "property_id": 40,
+      "amenity_id": 1
+    },
+    {
+      "id": 176,
+      "property_id": 40,
+      "amenity_id": 2
+    },
+    {
+      "id": 177,
+      "property_id": 41,
+      "amenity_id": 10
+    },
+    {
+      "id": 178,
+      "property_id": 41,
+      "amenity_id": 1
+    },
+    {
+      "id": 179,
+      "property_id": 41,
+      "amenity_id": 2
+    },
+    {
+      "id": 180,
+      "property_id": 41,
+      "amenity_id": 3
+    },
+    {
+      "id": 181,
+      "property_id": 41,
+      "amenity_id": 4
+    },
+    {
+      "id": 182,
+      "property_id": 42,
+      "amenity_id": 1
+    },
+    {
+      "id": 183,
+      "property_id": 42,
+      "amenity_id": 2
+    },
+    {
+      "id": 184,
+      "property_id": 42,
+      "amenity_id": 3
+    },
+    {
+      "id": 185,
+      "property_id": 42,
+      "amenity_id": 4
+    },
+    {
+      "id": 186,
+      "property_id": 42,
+      "amenity_id": 5
+    },
+    {
+      "id": 187,
+      "property_id": 42,
+      "amenity_id": 6
+    },
+    {
+      "id": 188,
+      "property_id": 43,
+      "amenity_id": 2
+    },
+    {
+      "id": 189,
+      "property_id": 43,
+      "amenity_id": 3
+    },
+    {
+      "id": 190,
+      "property_id": 43,
+      "amenity_id": 4
+    },
+    {
+      "id": 191,
+      "property_id": 44,
+      "amenity_id": 3
+    },
+    {
+      "id": 192,
+      "property_id": 44,
+      "amenity_id": 4
+    },
+    {
+      "id": 193,
+      "property_id": 44,
+      "amenity_id": 5
+    },
+    {
+      "id": 194,
+      "property_id": 44,
+      "amenity_id": 6
+    },
+    {
+      "id": 195,
+      "property_id": 45,
+      "amenity_id": 4
+    },
+    {
+      "id": 196,
+      "property_id": 45,
+      "amenity_id": 5
+    },
+    {
+      "id": 197,
+      "property_id": 45,
+      "amenity_id": 6
+    },
+    {
+      "id": 198,
+      "property_id": 45,
+      "amenity_id": 7
+    },
+    {
+      "id": 199,
+      "property_id": 45,
+      "amenity_id": 8
+    },
+    {
+      "id": 200,
+      "property_id": 46,
+      "amenity_id": 5
+    },
+    {
+      "id": 201,
+      "property_id": 46,
+      "amenity_id": 6
+    },
+    {
+      "id": 202,
+      "property_id": 46,
+      "amenity_id": 7
+    },
+    {
+      "id": 203,
+      "property_id": 46,
+      "amenity_id": 8
+    },
+    {
+      "id": 204,
+      "property_id": 46,
+      "amenity_id": 9
+    },
+    {
+      "id": 205,
+      "property_id": 46,
+      "amenity_id": 10
+    },
+    {
+      "id": 206,
+      "property_id": 47,
+      "amenity_id": 2
+    },
+    {
+      "id": 207,
+      "property_id": 47,
+      "amenity_id": 3
+    },
+    {
+      "id": 208,
+      "property_id": 47,
+      "amenity_id": 4
+    },
+    {
+      "id": 209,
+      "property_id": 48,
+      "amenity_id": 3
+    },
+    {
+      "id": 210,
+      "property_id": 48,
+      "amenity_id": 4
+    },
+    {
+      "id": 211,
+      "property_id": 48,
+      "amenity_id": 5
+    },
+    {
+      "id": 212,
+      "property_id": 48,
+      "amenity_id": 6
+    },
+    {
+      "id": 213,
+      "property_id": 49,
+      "amenity_id": 4
+    },
+    {
+      "id": 214,
+      "property_id": 49,
+      "amenity_id": 5
+    },
+    {
+      "id": 215,
+      "property_id": 49,
+      "amenity_id": 6
+    },
+    {
+      "id": 216,
+      "property_id": 49,
+      "amenity_id": 7
+    },
+    {
+      "id": 217,
+      "property_id": 49,
+      "amenity_id": 8
+    },
+    {
+      "id": 218,
+      "property_id": 50,
+      "amenity_id": 5
+    },
+    {
+      "id": 219,
+      "property_id": 50,
+      "amenity_id": 6
+    },
+    {
+      "id": 220,
+      "property_id": 50,
+      "amenity_id": 7
+    },
+    {
+      "id": 221,
+      "property_id": 50,
+      "amenity_id": 8
+    },
+    {
+      "id": 222,
+      "property_id": 50,
+      "amenity_id": 9
+    },
+    {
+      "id": 223,
+      "property_id": 50,
+      "amenity_id": 10
+    },
+    {
+      "id": 224,
+      "property_id": 51,
+      "amenity_id": 6
+    },
+    {
+      "id": 225,
+      "property_id": 51,
+      "amenity_id": 7
+    },
+    {
+      "id": 226,
+      "property_id": 51,
+      "amenity_id": 8
+    },
+    {
+      "id": 227,
+      "property_id": 52,
+      "amenity_id": 7
+    },
+    {
+      "id": 228,
+      "property_id": 52,
+      "amenity_id": 8
+    },
+    {
+      "id": 229,
+      "property_id": 52,
+      "amenity_id": 9
+    },
+    {
+      "id": 230,
+      "property_id": 52,
+      "amenity_id": 10
+    },
+    {
+      "id": 231,
+      "property_id": 53,
+      "amenity_id": 8
+    },
+    {
+      "id": 232,
+      "property_id": 53,
+      "amenity_id": 9
+    },
+    {
+      "id": 233,
+      "property_id": 53,
+      "amenity_id": 10
+    },
+    {
+      "id": 234,
+      "property_id": 53,
+      "amenity_id": 1
+    },
+    {
+      "id": 235,
+      "property_id": 53,
+      "amenity_id": 2
+    },
+    {
+      "id": 236,
+      "property_id": 54,
+      "amenity_id": 9
+    },
+    {
+      "id": 237,
+      "property_id": 54,
+      "amenity_id": 10
+    },
+    {
+      "id": 238,
+      "property_id": 54,
+      "amenity_id": 1
+    },
+    {
+      "id": 239,
+      "property_id": 54,
+      "amenity_id": 2
+    },
+    {
+      "id": 240,
+      "property_id": 54,
+      "amenity_id": 3
+    },
+    {
+      "id": 241,
+      "property_id": 54,
+      "amenity_id": 4
+    },
+    {
+      "id": 242,
+      "property_id": 55,
+      "amenity_id": 10
+    },
+    {
+      "id": 243,
+      "property_id": 55,
+      "amenity_id": 1
+    },
+    {
+      "id": 244,
+      "property_id": 55,
+      "amenity_id": 2
+    },
+    {
+      "id": 245,
+      "property_id": 56,
+      "amenity_id": 1
+    },
+    {
+      "id": 246,
+      "property_id": 56,
+      "amenity_id": 2
+    },
+    {
+      "id": 247,
+      "property_id": 56,
+      "amenity_id": 3
+    },
+    {
+      "id": 248,
+      "property_id": 56,
+      "amenity_id": 4
+    },
+    {
+      "id": 249,
+      "property_id": 57,
+      "amenity_id": 2
+    },
+    {
+      "id": 250,
+      "property_id": 57,
+      "amenity_id": 3
+    },
+    {
+      "id": 251,
+      "property_id": 57,
+      "amenity_id": 4
+    },
+    {
+      "id": 252,
+      "property_id": 57,
+      "amenity_id": 5
+    },
+    {
+      "id": 253,
+      "property_id": 57,
+      "amenity_id": 6
+    },
+    {
+      "id": 254,
+      "property_id": 58,
+      "amenity_id": 3
+    },
+    {
+      "id": 255,
+      "property_id": 58,
+      "amenity_id": 4
+    },
+    {
+      "id": 256,
+      "property_id": 58,
+      "amenity_id": 5
+    },
+    {
+      "id": 257,
+      "property_id": 58,
+      "amenity_id": 6
+    },
+    {
+      "id": 258,
+      "property_id": 58,
+      "amenity_id": 7
+    },
+    {
+      "id": 259,
+      "property_id": 58,
+      "amenity_id": 8
+    },
+    {
+      "id": 260,
+      "property_id": 59,
+      "amenity_id": 4
+    },
+    {
+      "id": 261,
+      "property_id": 59,
+      "amenity_id": 5
+    },
+    {
+      "id": 262,
+      "property_id": 59,
+      "amenity_id": 6
+    },
+    {
+      "id": 263,
+      "property_id": 60,
+      "amenity_id": 5
+    },
+    {
+      "id": 264,
+      "property_id": 60,
+      "amenity_id": 6
+    },
+    {
+      "id": 265,
+      "property_id": 60,
+      "amenity_id": 7
+    },
+    {
+      "id": 266,
+      "property_id": 60,
+      "amenity_id": 8
+    },
+    {
+      "id": 267,
+      "property_id": 61,
+      "amenity_id": 6
+    },
+    {
+      "id": 268,
+      "property_id": 61,
+      "amenity_id": 7
+    },
+    {
+      "id": 269,
+      "property_id": 61,
+      "amenity_id": 8
+    },
+    {
+      "id": 270,
+      "property_id": 61,
+      "amenity_id": 9
+    },
+    {
+      "id": 271,
+      "property_id": 61,
+      "amenity_id": 10
+    },
+    {
+      "id": 272,
+      "property_id": 62,
+      "amenity_id": 7
+    },
+    {
+      "id": 273,
+      "property_id": 62,
+      "amenity_id": 8
+    },
+    {
+      "id": 274,
+      "property_id": 62,
+      "amenity_id": 9
+    },
+    {
+      "id": 275,
+      "property_id": 62,
+      "amenity_id": 10
+    },
+    {
+      "id": 276,
+      "property_id": 62,
+      "amenity_id": 1
+    },
+    {
+      "id": 277,
+      "property_id": 62,
+      "amenity_id": 2
+    },
+    {
+      "id": 278,
+      "property_id": 63,
+      "amenity_id": 8
+    },
+    {
+      "id": 279,
+      "property_id": 63,
+      "amenity_id": 9
+    },
+    {
+      "id": 280,
+      "property_id": 63,
+      "amenity_id": 10
+    },
+    {
+      "id": 281,
+      "property_id": 64,
+      "amenity_id": 9
+    },
+    {
+      "id": 282,
+      "property_id": 64,
+      "amenity_id": 10
+    },
+    {
+      "id": 283,
+      "property_id": 64,
+      "amenity_id": 1
+    },
+    {
+      "id": 284,
+      "property_id": 64,
+      "amenity_id": 2
+    },
+    {
+      "id": 285,
+      "property_id": 65,
+      "amenity_id": 10
+    },
+    {
+      "id": 286,
+      "property_id": 65,
+      "amenity_id": 1
+    },
+    {
+      "id": 287,
+      "property_id": 65,
+      "amenity_id": 2
+    },
+    {
+      "id": 288,
+      "property_id": 65,
+      "amenity_id": 3
+    },
+    {
+      "id": 289,
+      "property_id": 65,
+      "amenity_id": 4
+    },
+    {
+      "id": 290,
+      "property_id": 66,
+      "amenity_id": 2
+    },
+    {
+      "id": 291,
+      "property_id": 66,
+      "amenity_id": 3
+    },
+    {
+      "id": 292,
+      "property_id": 66,
+      "amenity_id": 4
+    },
+    {
+      "id": 293,
+      "property_id": 67,
+      "amenity_id": 3
+    },
+    {
+      "id": 294,
+      "property_id": 67,
+      "amenity_id": 4
+    },
+    {
+      "id": 295,
+      "property_id": 67,
+      "amenity_id": 5
+    },
+    {
+      "id": 296,
+      "property_id": 67,
+      "amenity_id": 6
+    },
+    {
+      "id": 297,
+      "property_id": 68,
+      "amenity_id": 4
+    },
+    {
+      "id": 298,
+      "property_id": 68,
+      "amenity_id": 5
+    },
+    {
+      "id": 299,
+      "property_id": 68,
+      "amenity_id": 6
+    },
+    {
+      "id": 300,
+      "property_id": 68,
+      "amenity_id": 7
+    },
+    {
+      "id": 301,
+      "property_id": 68,
+      "amenity_id": 8
+    },
+    {
+      "id": 302,
+      "property_id": 69,
+      "amenity_id": 5
+    },
+    {
+      "id": 303,
+      "property_id": 69,
+      "amenity_id": 6
+    },
+    {
+      "id": 304,
+      "property_id": 69,
+      "amenity_id": 7
+    },
+    {
+      "id": 305,
+      "property_id": 69,
+      "amenity_id": 8
+    },
+    {
+      "id": 306,
+      "property_id": 69,
+      "amenity_id": 9
+    },
+    {
+      "id": 307,
+      "property_id": 69,
+      "amenity_id": 10
+    },
+    {
+      "id": 308,
+      "property_id": 70,
+      "amenity_id": 6
+    },
+    {
+      "id": 309,
+      "property_id": 70,
+      "amenity_id": 7
+    },
+    {
+      "id": 310,
+      "property_id": 70,
+      "amenity_id": 8
+    },
+    {
+      "id": 311,
+      "property_id": 71,
+      "amenity_id": 7
+    },
+    {
+      "id": 312,
+      "property_id": 71,
+      "amenity_id": 8
+    },
+    {
+      "id": 313,
+      "property_id": 71,
+      "amenity_id": 9
+    },
+    {
+      "id": 314,
+      "property_id": 71,
+      "amenity_id": 10
+    },
+    {
+      "id": 315,
+      "property_id": 72,
+      "amenity_id": 8
+    },
+    {
+      "id": 316,
+      "property_id": 72,
+      "amenity_id": 9
+    },
+    {
+      "id": 317,
+      "property_id": 72,
+      "amenity_id": 10
+    },
+    {
+      "id": 318,
+      "property_id": 72,
+      "amenity_id": 1
+    },
+    {
+      "id": 319,
+      "property_id": 72,
+      "amenity_id": 2
+    },
+    {
+      "id": 320,
+      "property_id": 73,
+      "amenity_id": 9
+    },
+    {
+      "id": 321,
+      "property_id": 73,
+      "amenity_id": 10
+    },
+    {
+      "id": 322,
+      "property_id": 73,
+      "amenity_id": 1
+    },
+    {
+      "id": 323,
+      "property_id": 73,
+      "amenity_id": 2
+    },
+    {
+      "id": 324,
+      "property_id": 73,
+      "amenity_id": 3
+    },
+    {
+      "id": 325,
+      "property_id": 73,
+      "amenity_id": 4
+    },
+    {
+      "id": 326,
+      "property_id": 74,
+      "amenity_id": 10
+    },
+    {
+      "id": 327,
+      "property_id": 74,
+      "amenity_id": 1
+    },
+    {
+      "id": 328,
+      "property_id": 74,
+      "amenity_id": 2
+    },
+    {
+      "id": 329,
+      "property_id": 75,
+      "amenity_id": 1
+    },
+    {
+      "id": 330,
+      "property_id": 75,
+      "amenity_id": 2
+    },
+    {
+      "id": 331,
+      "property_id": 75,
+      "amenity_id": 3
+    },
+    {
+      "id": 332,
+      "property_id": 75,
+      "amenity_id": 4
+    },
+    {
+      "id": 333,
+      "property_id": 76,
+      "amenity_id": 2
+    },
+    {
+      "id": 334,
+      "property_id": 76,
+      "amenity_id": 3
+    },
+    {
+      "id": 335,
+      "property_id": 76,
+      "amenity_id": 4
+    },
+    {
+      "id": 336,
+      "property_id": 76,
+      "amenity_id": 5
+    },
+    {
+      "id": 337,
+      "property_id": 76,
+      "amenity_id": 6
+    },
+    {
+      "id": 338,
+      "property_id": 77,
+      "amenity_id": 3
+    },
+    {
+      "id": 339,
+      "property_id": 77,
+      "amenity_id": 4
+    },
+    {
+      "id": 340,
+      "property_id": 77,
+      "amenity_id": 5
+    },
+    {
+      "id": 341,
+      "property_id": 77,
+      "amenity_id": 6
+    },
+    {
+      "id": 342,
+      "property_id": 77,
+      "amenity_id": 7
+    },
+    {
+      "id": 343,
+      "property_id": 77,
+      "amenity_id": 8
     }
   ],
   "favourites": [

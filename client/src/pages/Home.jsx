@@ -115,10 +115,16 @@ export default function Home() {
   const [featuredProperties, setFeaturedProperties] = useState(INITIAL_FEATURED);
   const [recentProperties, setRecentProperties] = useState(INITIAL_FEATURED);
   const [activeTab, setActiveTab] = useState('All');
+  const [typeCounts, setTypeCounts] = useState({
+    Villa: 14,
+    Penthouse: 8,
+    Apartment: 24,
+    House: 19,
+    Office: 12
+  });
 
   // Search state
   const [searchParams, setSearchParams] = useState({
-    keyword: '',
     city: '',
     property_type: 'All',
     listing_type: 'All',
@@ -137,6 +143,13 @@ export default function Home() {
       });
 
   useEffect(() => {
+    // Fetch property type counts
+    fetchJson('/api/properties/type-counts')
+      .then(counts => {
+        if (counts && typeof counts === 'object') setTypeCounts(counts);
+      })
+      .catch(() => {});
+
     // Fetch featured
     fetchJson('/api/properties/featured')
       .then(data => {
@@ -173,7 +186,6 @@ export default function Home() {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     const query = new URLSearchParams();
-    if (searchParams.keyword) query.set('keyword', searchParams.keyword);
     if (searchParams.city) query.set('city', searchParams.city);
     if (searchParams.property_type !== 'All') query.set('property_type', searchParams.property_type);
     if (searchParams.listing_type !== 'All') query.set('listing_type', searchParams.listing_type);
@@ -264,27 +276,7 @@ export default function Home() {
           }}>
             <form onSubmit={handleSearchSubmit} style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
               <div style={{ flex: '1 1 140px', minWidth: '120px' }}>
-                <input
-                  type="text"
-                  placeholder="📍 Keyword / City"
-                  value={searchParams.keyword}
-                  onChange={e => setSearchParams({ ...searchParams, keyword: e.target.value })}
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.95)',
-                    border: '1px solid rgba(0,0,0,0.08)',
-                    borderRadius: '24px',
-                    padding: '8px 14px',
-                    fontSize: '0.88rem',
-                    width: '100%',
-                    boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.04)'
-                  }}
-                />
-              </div>
-
-              <div style={{ flex: '1 1 110px', minWidth: '100px' }}>
-                <input
-                  type="text"
-                  placeholder="🏙️ City"
+                <select
                   value={searchParams.city}
                   onChange={e => setSearchParams({ ...searchParams, city: e.target.value })}
                   style={{
@@ -294,9 +286,21 @@ export default function Home() {
                     padding: '8px 14px',
                     fontSize: '0.88rem',
                     width: '100%',
-                    boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.04)'
+                    boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.04)',
+                    color: searchParams.city ? 'var(--ink)' : '#555',
+                    fontWeight: 500,
+                    cursor: 'pointer'
                   }}
-                />
+                >
+                  <option value="">🏙️ Select City</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Bengaluru">Bengaluru</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Gurgaon">Gurgaon</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Pune">Pune</option>
+                  <option value="New Delhi">New Delhi</option>
+                </select>
               </div>
 
               <div style={{ flex: '1 1 110px', minWidth: '100px' }}>
@@ -390,23 +394,26 @@ export default function Home() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
             {[
-              { type: 'Villa', title: 'Luxury Villas', count: '14+ Listings', icon: '🏡' },
-              { type: 'Penthouse', title: 'Sky Penthouses', count: '8+ Listings', icon: '🌆' },
-              { type: 'Apartment', title: 'Modern Apartments', count: '24+ Listings', icon: '🏢' },
-              { type: 'House', title: 'Suburban Houses', count: '19+ Listings', icon: '🏠' },
-              { type: 'Office', title: 'Commercial Offices', count: '12+ Listings', icon: '💼' }
-            ].map(cat => (
-              <Link
-                key={cat.type}
-                to={`/properties?property_type=${cat.type}`}
-                className="glass-panel glass-panel-hover"
-                style={{ padding: '28px', textAlign: 'center', textDecoration: 'none' }}
-              >
-                <div style={{ fontSize: '2.6rem', marginBottom: '14px' }}>{cat.icon}</div>
-                <h3 style={{ fontSize: '1.15rem', color: 'var(--ink)', marginBottom: '4px' }}>{cat.title}</h3>
-                <p style={{ fontSize: '0.85rem', color: 'var(--ink-soft)' }}>{cat.count}</p>
-              </Link>
-            ))}
+              { type: 'Villa', title: 'Luxury Villas', icon: '🏡', defaultCount: 14 },
+              { type: 'Penthouse', title: 'Sky Penthouses', icon: '🌆', defaultCount: 8 },
+              { type: 'Apartment', title: 'Modern Apartments', icon: '🏢', defaultCount: 24 },
+              { type: 'House', title: 'Suburban Houses', icon: '🏠', defaultCount: 19 },
+              { type: 'Office', title: 'Commercial Offices', icon: '💼', defaultCount: 12 }
+            ].map(cat => {
+              const countVal = typeCounts[cat.type] ?? cat.defaultCount;
+              return (
+                <Link
+                  key={cat.type}
+                  to={`/properties?property_type=${cat.type}`}
+                  className="glass-panel glass-panel-hover"
+                  style={{ padding: '28px', textAlign: 'center', textDecoration: 'none' }}
+                >
+                  <div style={{ fontSize: '2.6rem', marginBottom: '14px' }}>{cat.icon}</div>
+                  <h3 style={{ fontSize: '1.15rem', color: 'var(--ink)', marginBottom: '4px' }}>{cat.title}</h3>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--ink-soft)', fontWeight: 600 }}>{countVal} Listings</p>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -433,59 +440,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Market Additions with Live Backend API Filter Tabs */}
-      <section style={{ padding: '70px 0', background: 'var(--paper)', borderBottom: '1px solid var(--line)' }}>
-        <div className="app-container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px', marginBottom: '36px' }}>
-            <div>
-              <div className="eyebrow-tag">LIVE MARKET LISTINGS</div>
-              <h2 style={{ fontSize: '2.2rem', color: 'var(--ink)' }}>Recent Additions Across Metros</h2>
-            </div>
 
-            {/* Backend Filter Tabs */}
-            <div style={{ display: 'flex', gap: '8px', background: 'rgba(0,0,0,0.04)', padding: '4px', borderRadius: '30px' }}>
-              {[
-                { id: 'All', label: 'All Listings' },
-                { id: 'Sale', label: 'For Sale' },
-                { id: 'Rent', label: 'For Rent' },
-                { id: 'Villa', label: 'Villas' },
-                { id: 'Apartment', label: 'Apartments' }
-              ].map(tab => (
-                <button
-                  key={tab.id}
-                  onClick={() => handleTabChange(tab.id)}
-                  style={{
-                    border: 'none',
-                    padding: '8px 18px',
-                    borderRadius: '24px',
-                    fontSize: '0.88rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    transition: 'all 0.2s ease',
-                    background: activeTab === tab.id ? 'var(--forest)' : 'transparent',
-                    color: activeTab === tab.id ? '#ffffff' : 'var(--ink-soft)'
-                  }}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="properties-grid">
-            {recentProperties.map(prop => (
-              <PropertyCard key={prop.id} property={prop} />
-            ))}
-          </div>
-
-          <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <Link to="/properties" className="btn btn-primary" style={{ padding: '12px 32px', borderRadius: '30px' }}>
-              <span>View Full Property Directory ({recentProperties.length}+ Available)</span>
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* PropertyNest Cream Section: How It Works / Values */}
       <section style={{ padding: '80px 0', background: 'var(--cream)', borderBottom: '1px solid var(--line)' }}>

@@ -224,13 +224,20 @@ export default function AddEditProperty() {
         <div className="form-row">
           <div className="form-group">
             <label className="form-label">City *</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Mumbai" 
+            <select 
               value={formData.city}
               onChange={e => setFormData({ ...formData, city: e.target.value })}
-              required 
-            />
+              required
+            >
+              <option value="">Select City</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Gurgaon">Gurgaon</option>
+              <option value="Goa">Goa</option>
+              <option value="Pune">Pune</option>
+              <option value="New Delhi">New Delhi</option>
+            </select>
           </div>
           <div className="form-group">
             <label className="form-label">Postcode / Pincode</label>

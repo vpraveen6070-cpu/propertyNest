@@ -19,7 +19,7 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ error: 'User with this email already exists' });
     }
 
-    const validRoles = ['buyer', 'seller', 'agent'];
+    const validRoles = ['buyer', 'seller'];
     const userRole = validRoles.includes(role) ? role : 'buyer';
 
     const hashedPassword = bcrypt.hashSync(password, 10);

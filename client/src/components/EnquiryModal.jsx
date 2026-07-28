@@ -52,15 +52,15 @@ export default function EnquiryModal({ property, onClose }) {
             <CheckCircle2 size={56} style={{ color: 'var(--success)', marginBottom: '16px' }} />
             <h3 style={{ fontSize: '1.4rem', marginBottom: '8px' }}>Enquiry Dispatched!</h3>
             <p style={{ color: 'var(--text-muted)', marginBottom: '24px' }}>
-              Your message regarding <strong>{property.title}</strong> has been sent directly to {property.owner?.name || 'the listing agent'}.
+              Your message regarding <strong>{property.title}</strong> has been sent directly to {property.owner?.name || 'the seller'}.
             </p>
             <button className="btn btn-primary" onClick={onClose}>Done</button>
           </div>
         ) : (
           <div>
-            <h3 style={{ fontSize: '1.3rem', marginBottom: '6px' }}>Contact Agent / Seller</h3>
+            <h3 style={{ fontSize: '1.3rem', marginBottom: '6px' }}>Contact Seller</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', marginBottom: '20px' }}>
-              Listing Ref: <strong>{property.ref_number}</strong> | Agent: <strong>{property.owner?.name}</strong>
+              Listing Ref: <strong>{property.ref_number}</strong> | Owner: <strong>{property.owner?.name}</strong>
             </p>
 
             <form onSubmit={handleSubmit}>

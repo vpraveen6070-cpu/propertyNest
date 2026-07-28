@@ -39,7 +39,7 @@ router.patch('/users/:id', (req, res) => {
     }
 
     const updates = {};
-    if (role && ['buyer', 'seller', 'agent', 'admin'].includes(role)) {
+    if (role && ['buyer', 'seller', 'admin'].includes(role)) {
       updates.role = role;
     }
     if (status && ['active', 'banned', 'inactive'].includes(status)) {

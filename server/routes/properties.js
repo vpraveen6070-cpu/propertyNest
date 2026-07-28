@@ -66,6 +66,16 @@ router.get('/featured', (req, res) => {
   }
 });
 
+// GET PROPERTY TYPE COUNTS
+router.get('/type-counts', (req, res) => {
+  try {
+    const counts = db.getPropertyTypeCounts();
+    res.json(counts);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch property type counts' });
+  }
+});
+
 // GET SINGLE PROPERTY DETAILS
 router.get('/:id', (req, res) => {
   try {
@@ -81,7 +91,7 @@ router.get('/:id', (req, res) => {
 });
 
 // CREATE NEW PROPERTY LISTING
-router.post('/', authenticateToken, requireRole(['seller', 'agent', 'admin']), (req, res) => {
+router.post('/', authenticateToken, requireRole(['seller', 'admin']), (req, res) => {
   try {
     const {
       title,
@@ -108,7 +118,7 @@ router.post('/', authenticateToken, requireRole(['seller', 'agent', 'admin']), (
       return res.status(400).json({ error: 'Title, price, address, and city are required' });
     }
 
-    // Admins publish immediately, sellers/agents submit for pending moderation
+    // Admins publish immediately, sellers submit for pending moderation
     const status = req.user.role === 'admin' ? 'active' : 'pending';
 
     const newProp = db.createProperty(

@@ -144,9 +144,8 @@ export default function Login() {
           <p style={{ fontSize: '0.8rem', color: 'var(--ink-soft)', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.5px', fontWeight: 700 }}>
             ⚡ One-Click Demo Logins
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
             <button type="button" className="btn btn-sm" style={{ background: 'rgba(255, 255, 255, 0.7)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255, 255, 255, 0.85)', color: 'var(--ink)', fontWeight: 600 }} onClick={() => handleQuickDemo('admin@estate.com', 'admin123')}>Admin</button>
-            <button type="button" className="btn btn-sm" style={{ background: 'rgba(255, 255, 255, 0.7)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255, 255, 255, 0.85)', color: 'var(--ink)', fontWeight: 600 }} onClick={() => handleQuickDemo('sarah.agent@estate.com', 'agent123')}>Agent</button>
             <button type="button" className="btn btn-sm" style={{ background: 'rgba(255, 255, 255, 0.7)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255, 255, 255, 0.85)', color: 'var(--ink)', fontWeight: 600 }} onClick={() => handleQuickDemo('john.seller@estate.com', 'seller123')}>Seller</button>
             <button type="button" className="btn btn-sm" style={{ background: 'rgba(255, 255, 255, 0.7)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255, 255, 255, 0.85)', color: 'var(--ink)', fontWeight: 600 }} onClick={() => handleQuickDemo('buyer@estate.com', 'buyer123')}>Buyer</button>
           </div>
