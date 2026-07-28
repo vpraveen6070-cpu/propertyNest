@@ -109,15 +109,17 @@ export default function Header() {
                         <span>Dashboard</span>
                       </Link>
 
-                      <Link 
-                        to="/favourites" 
-                        className="nav-link" 
-                        onClick={() => setUserDropdownOpen(false)}
-                        style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 12px', borderRadius: '6px' }}
-                      >
-                        <Heart size={16} />
-                        <span>Saved Properties</span>
-                      </Link>
+                      {user.role === 'buyer' && (
+                        <Link 
+                          to="/favourites" 
+                          className="nav-link" 
+                          onClick={() => setUserDropdownOpen(false)}
+                          style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 12px', borderRadius: '6px' }}
+                        >
+                          <Heart size={16} />
+                          <span>Saved Properties</span>
+                        </Link>
+                      )}
 
                       {user.role === 'admin' && (
                         <Link 

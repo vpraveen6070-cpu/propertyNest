@@ -315,12 +315,14 @@ export default function Dashboard() {
           <Sparkles size={16} /> Explore Projects
         </button>
 
-        <button 
-          className={`btn btn-sm ${activeTab === 'favourites' ? 'btn-primary' : 'btn-secondary'}`}
-          onClick={() => setSearchParams({ tab: 'favourites' })}
-        >
-          <Heart size={16} /> Saved Favourites ({favourites.length})
-        </button>
+        {user.role === 'buyer' && (
+          <button 
+            className={`btn btn-sm ${activeTab === 'favourites' ? 'btn-primary' : 'btn-secondary'}`}
+            onClick={() => setSearchParams({ tab: 'favourites' })}
+          >
+            <Heart size={16} /> Saved Favourites ({favourites.length})
+          </button>
+        )}
 
         <button 
           className={`btn btn-sm ${activeTab === 'profile' ? 'btn-primary' : 'btn-secondary'}`}
