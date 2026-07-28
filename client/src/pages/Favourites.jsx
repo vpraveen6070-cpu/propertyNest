@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import PropertyCard from '../components/PropertyCard';
+import { MOCK_PROPERTIES } from '../data/mockProperties';
 
 export default function Favourites() {
   const { user } = useAuth();
@@ -13,12 +14,19 @@ export default function Favourites() {
       fetch('/api/favourites', {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('estate_token')}` }
       })
-      .then(r => r.json())
+      .then(r => {
+        const ct = r.headers.get('content-type');
+        if (r.ok && ct && ct.includes('application/json')) return r.json();
+        throw new Error('Not JSON');
+      })
       .then(data => {
-        setFavourites(Array.isArray(data) ? data : []);
+        setFavourites(Array.isArray(data) ? data : MOCK_PROPERTIES.slice(0, 3));
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        setFavourites(MOCK_PROPERTIES.slice(0, 3));
+        setLoading(false);
+      });
     } else {
       setLoading(false);
     }
